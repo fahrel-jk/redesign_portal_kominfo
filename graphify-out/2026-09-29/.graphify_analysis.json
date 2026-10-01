@@ -1,0 +1,730 @@
+{
+  "communities": {
+    "0": [
+      "app_http_controllers_admin_adminauthcontroller",
+      "app_http_controllers_admin_adminauthcontroller_adminauthcontroller",
+      "app_http_controllers_admin_adminauthcontroller_adminauthcontroller_login",
+      "app_http_controllers_admin_adminauthcontroller_adminauthcontroller_logout",
+      "app_http_controllers_admin_adminauthcontroller_adminauthcontroller_showloginform",
+      "app_http_controllers_admin_admincategorycontroller",
+      "app_http_controllers_admin_admindashboardcontroller",
+      "app_http_controllers_admin_admindashboardcontroller_admindashboardcontroller",
+      "app_http_controllers_admin_admindashboardcontroller_admindashboardcontroller_index",
+      "app_http_controllers_admin_adminservicecontroller",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_create",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_destroy",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_edit",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_index",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_store",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_toggleactive",
+      "app_http_controllers_admin_adminservicecontroller_adminservicecontroller_update",
+      "app_http_controllers_admin_adminservicecontroller_closure_1",
+      "app_http_controllers_controller",
+      "app_http_controllers_controller_controller",
+      "app_http_controllers_publicportalcontroller",
+      "app_http_controllers_publicportalcontroller_closure_1",
+      "app_http_controllers_publicportalcontroller_publicportalcontroller",
+      "app_http_controllers_publicportalcontroller_publicportalcontroller_index",
+      "app_models_service",
+      "app_models_service_service",
+      "app_models_service_service_category",
+      "app_models_service_service_getpublicurlattribute",
+      "bootstrap_app",
+      "bootstrap_app_closure_1",
+      "bootstrap_app_closure_2",
+      "config_cache",
+      "config_database",
+      "config_session",
+      "illuminate_database_eloquent_relations_belongsto",
+      "illuminate_foundation_application",
+      "illuminate_foundation_configuration_exceptions",
+      "illuminate_foundation_configuration_middleware",
+      "illuminate_http_request",
+      "illuminate_support_facades_auth",
+      "illuminate_support_facades_route",
+      "illuminate_support_str",
+      "pdo_mysql",
+      "public_index",
+      "routes_web",
+      "routes_web_closure_1",
+      "routes_web_closure_2",
+      "routes_web_get",
+      "tests_feature_adminservicetest",
+      "tests_feature_adminservicetest_closure_2",
+      "tests_feature_adminservicetest_closure_3",
+      "tests_feature_adminservicetest_closure_4",
+      "tests_feature_adminservicetest_closure_5",
+      "tests_feature_adminservicetest_closure_6",
+      "tests_feature_adminservicetest_closure_7"
+    ],
+    "1": [
+      "composer",
+      "composer_autoload",
+      "composer_autoload_dev",
+      "composer_autoload_dev_psr_4",
+      "composer_autoload_psr_4",
+      "composer_description",
+      "composer_extra",
+      "composer_extra_laravel",
+      "composer_keywords",
+      "composer_laravel_dont_discover",
+      "composer_license",
+      "composer_minimum_stability",
+      "composer_name",
+      "composer_prefer_stable",
+      "composer_psr_4_app",
+      "composer_psr_4_database_factories",
+      "composer_psr_4_database_seeders",
+      "composer_psr_4_tests",
+      "composer_require",
+      "composer_require_dev",
+      "composer_require_dev_fakerphp_faker",
+      "composer_require_dev_laravel_pail",
+      "composer_require_dev_laravel_pint",
+      "composer_require_dev_laravel_sail",
+      "composer_require_dev_mockery_mockery",
+      "composer_require_dev_nunomaduro_collision",
+      "composer_require_dev_pestphp_pest",
+      "composer_require_dev_pestphp_pest_plugin_laravel",
+      "composer_require_laravel_framework",
+      "composer_require_laravel_tinker",
+      "composer_require_php",
+      "composer_schema",
+      "composer_scripts",
+      "composer_scripts_dev",
+      "composer_scripts_post_autoload_dump",
+      "composer_scripts_post_create_project_cmd",
+      "composer_scripts_post_root_package_install",
+      "composer_scripts_post_update_cmd",
+      "composer_scripts_pre_package_uninstall",
+      "composer_scripts_setup",
+      "composer_scripts_test",
+      "composer_type"
+    ],
+    "2": [
+      "resources_js_portal",
+      "resources_js_portal_backtotop",
+      "resources_js_portal_categorylist",
+      "resources_js_portal_clearsearch",
+      "resources_js_portal_closegallerymodal",
+      "resources_js_portal_createservicecard",
+      "resources_js_portal_defaultservices",
+      "resources_js_portal_emptystate",
+      "resources_js_portal_eventsdata",
+      "resources_js_portal_featuredservices",
+      "resources_js_portal_gallerydata",
+      "resources_js_portal_getfilteredservices",
+      "resources_js_portal_getservicesdata",
+      "resources_js_portal_getserviceurl",
+      "resources_js_portal_initcalendarwidget",
+      "resources_js_portal_initgallerycarousel",
+      "resources_js_portal_initheroanimation",
+      "resources_js_portal_initializeicons",
+      "resources_js_portal_initnewsfilter",
+      "resources_js_portal_mobilemenu",
+      "resources_js_portal_mobilemenubutton",
+      "resources_js_portal_navlinks",
+      "resources_js_portal_opengallerymodal",
+      "resources_js_portal_performsearch",
+      "resources_js_portal_renderfeaturedservices",
+      "resources_js_portal_renderservices",
+      "resources_js_portal_resetfilters",
+      "resources_js_portal_resultcount",
+      "resources_js_portal_searchbutton",
+      "resources_js_portal_searchkeyword",
+      "resources_js_portal_searchresultinfo",
+      "resources_js_portal_sections",
+      "resources_js_portal_servicecount",
+      "resources_js_portal_servicesearch",
+      "resources_js_portal_servicesgrid",
+      "resources_js_portal_siteheader",
+      "resources_js_portal_updateactivecategory",
+      "resources_js_portal_updatedatetime",
+      "resources_js_portal_updateeventposter",
+      "resources_js_portal_updategalleryview",
+      "resources_js_portal_updatesearchinfo",
+      "resources_js_portal_updateservicecount"
+    ],
+    "3": [
+      "app_http_controllers_admin_adminusercontroller",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller_create",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller_destroy",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller_edit",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller_index",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller_store",
+      "app_http_controllers_admin_adminusercontroller_adminusercontroller_update",
+      "app_models_user",
+      "app_models_user_user",
+      "app_models_user_user_casts",
+      "config_auth",
+      "database_factories_userfactory",
+      "database_factories_userfactory_closure_1",
+      "database_factories_userfactory_userfactory",
+      "database_factories_userfactory_userfactory_definition",
+      "database_factories_userfactory_userfactory_unverified",
+      "database_seeders_userseeder",
+      "database_seeders_userseeder_userseeder",
+      "database_seeders_userseeder_userseeder_run",
+      "illuminate_database_eloquent_factories_factory",
+      "illuminate_database_eloquent_factories_hasfactory",
+      "illuminate_foundation_auth_user",
+      "illuminate_notifications_notifiable",
+      "illuminate_support_facades_hash",
+      "static",
+      "tests_feature_adminauthtest",
+      "tests_feature_adminauthtest_closure_1",
+      "tests_feature_adminauthtest_closure_2",
+      "tests_feature_adminauthtest_closure_3",
+      "tests_feature_adminauthtest_closure_4",
+      "tests_feature_adminauthtest_closure_5",
+      "tests_feature_admincategorytest_closure_1",
+      "tests_feature_adminservicetest_closure_1",
+      "tests_feature_adminusertest",
+      "tests_feature_adminusertest_closure_1",
+      "tests_feature_adminusertest_closure_2",
+      "tests_feature_adminusertest_closure_3",
+      "tests_feature_adminusertest_closure_4",
+      "tests_feature_adminusertest_closure_5",
+      "tests_feature_adminusertest_closure_6"
+    ],
+    "4": [
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_create",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_destroy",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_edit",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_index",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_store",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_toggleactive",
+      "app_http_controllers_admin_admincategorycontroller_admincategorycontroller_update",
+      "app_models_servicecategory",
+      "app_models_servicecategory_servicecategory",
+      "app_models_servicecategory_servicecategory_activeservices",
+      "app_models_servicecategory_servicecategory_services",
+      "database_seeders_databaseseeder",
+      "database_seeders_databaseseeder_databaseseeder",
+      "database_seeders_databaseseeder_databaseseeder_run",
+      "database_seeders_servicecategoryseeder",
+      "database_seeders_servicecategoryseeder_servicecategoryseeder",
+      "database_seeders_servicecategoryseeder_servicecategoryseeder_run",
+      "database_seeders_serviceseeder",
+      "database_seeders_serviceseeder_serviceseeder",
+      "database_seeders_serviceseeder_serviceseeder_run",
+      "illuminate_database_eloquent_model",
+      "illuminate_database_eloquent_relations_hasmany",
+      "illuminate_database_seeder",
+      "tests_feature_admincategorytest",
+      "tests_feature_admincategorytest_closure_2",
+      "tests_feature_admincategorytest_closure_3",
+      "tests_feature_admincategorytest_closure_4",
+      "tests_feature_admincategorytest_closure_5",
+      "tests_feature_admincategorytest_closure_6",
+      "tests_feature_publicportaltest",
+      "tests_feature_publicportaltest_closure_1",
+      "tests_feature_publicportaltest_closure_2",
+      "tests_feature_publicportaltest_closure_3"
+    ],
+    "5": [
+      "database_migrations_0001_01_01_000000_create_users_table",
+      "database_migrations_0001_01_01_000000_create_users_table_closure_1",
+      "database_migrations_0001_01_01_000000_create_users_table_closure_2",
+      "database_migrations_0001_01_01_000000_create_users_table_closure_3",
+      "database_migrations_0001_01_01_000000_create_users_table_down",
+      "database_migrations_0001_01_01_000000_create_users_table_up",
+      "database_migrations_0001_01_01_000001_create_cache_table",
+      "database_migrations_0001_01_01_000001_create_cache_table_closure_1",
+      "database_migrations_0001_01_01_000001_create_cache_table_closure_2",
+      "database_migrations_0001_01_01_000001_create_cache_table_down",
+      "database_migrations_0001_01_01_000001_create_cache_table_up",
+      "database_migrations_0001_01_01_000002_create_jobs_table",
+      "database_migrations_0001_01_01_000002_create_jobs_table_closure_1",
+      "database_migrations_0001_01_01_000002_create_jobs_table_closure_2",
+      "database_migrations_0001_01_01_000002_create_jobs_table_closure_3",
+      "database_migrations_0001_01_01_000002_create_jobs_table_down",
+      "database_migrations_0001_01_01_000002_create_jobs_table_up",
+      "database_migrations_2026_09_28_000001_create_service_categories_table",
+      "database_migrations_2026_09_28_000001_create_service_categories_table_closure_1",
+      "database_migrations_2026_09_28_000001_create_service_categories_table_down",
+      "database_migrations_2026_09_28_000001_create_service_categories_table_up",
+      "database_migrations_2026_09_28_000002_create_services_table",
+      "database_migrations_2026_09_28_000002_create_services_table_closure_1",
+      "database_migrations_2026_09_28_000002_create_services_table_down",
+      "database_migrations_2026_09_28_000002_create_services_table_up",
+      "illuminate_database_migrations_migration",
+      "illuminate_database_schema_blueprint",
+      "illuminate_support_facades_schema"
+    ],
+    "6": [
+      "claude_skills_graphify_skill",
+      "claude_skills_graphify_skill_for_graphify_add_and_watch",
+      "claude_skills_graphify_skill_for_graphify_query",
+      "claude_skills_graphify_skill_for_the_commit_hook_and_native_claude_md_integration",
+      "claude_skills_graphify_skill_for_update_and_cluster_only",
+      "claude_skills_graphify_skill_graphify",
+      "claude_skills_graphify_skill_honesty_rules",
+      "claude_skills_graphify_skill_interpreter_guard_for_subcommands",
+      "claude_skills_graphify_skill_part_a_structural_extraction_for_code_files",
+      "claude_skills_graphify_skill_part_b_semantic_extraction_parallel_subagents",
+      "claude_skills_graphify_skill_part_c_merge_ast_semantic_into_final_extraction",
+      "claude_skills_graphify_skill_powershell_5_1_vertical_scrolling_stops_working",
+      "claude_skills_graphify_skill_step_0_github_repos_and_multi_path_merge_only_if_a_url_or_several_paths",
+      "claude_skills_graphify_skill_step_1_ensure_graphify_is_installed",
+      "claude_skills_graphify_skill_step_2_5_video_and_audio_only_if_video_files_detected",
+      "claude_skills_graphify_skill_step_2_detect_files",
+      "claude_skills_graphify_skill_step_3_extract_entities_and_relationships",
+      "claude_skills_graphify_skill_step_4_5_graph_health_check_read_only_integrity_gate",
+      "claude_skills_graphify_skill_step_4_build_graph_cluster_analyze_generate_outputs",
+      "claude_skills_graphify_skill_step_5_label_communities",
+      "claude_skills_graphify_skill_step_6_generate_obsidian_vault_opt_in_html",
+      "claude_skills_graphify_skill_step_9_save_manifest_update_cost_tracker_clean_up_and_report",
+      "claude_skills_graphify_skill_steps_6b_8_wiki_neo4j_falkordb_svg_graphml_mcp_benchmark_only_on_their_flags",
+      "claude_skills_graphify_skill_troubleshooting",
+      "claude_skills_graphify_skill_usage",
+      "claude_skills_graphify_skill_what_graphify_is_for",
+      "claude_skills_graphify_skill_what_you_must_do_when_invoked"
+    ],
+    "7": [
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_axios",
+      "package_devdependencies_concurrently",
+      "package_devdependencies_laravel_vite_plugin",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_vite",
+      "package_devdependencies_vite",
+      "package_private",
+      "package_schema",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_type",
+      "ref_axios",
+      "ref_concurrently",
+      "ref_laravel_vite_plugin",
+      "ref_tailwindcss",
+      "ref_tailwindcss_vite",
+      "ref_vite",
+      "resources_js_app",
+      "resources_js_bootstrap",
+      "vite_config"
+    ],
+    "8": [
+      "brief_portal_layanan_kominfo_jatim",
+      "brief_portal_layanan_kominfo_jatim_10_alur_pengembangan_yang_disarankan",
+      "brief_portal_layanan_kominfo_jatim_11_output_deliverables",
+      "brief_portal_layanan_kominfo_jatim_12_acceptance_criteria",
+      "brief_portal_layanan_kominfo_jatim_13_catatan_integrasi_ke_website_utama",
+      "brief_portal_layanan_kominfo_jatim_14_batasan_scope_tahap_awal",
+      "brief_portal_layanan_kominfo_jatim_1_latar_belakang",
+      "brief_portal_layanan_kominfo_jatim_2_tujuan",
+      "brief_portal_layanan_kominfo_jatim_3_1_landing_public_portal",
+      "brief_portal_layanan_kominfo_jatim_3_2_cms_admin",
+      "brief_portal_layanan_kominfo_jatim_3_ruang_lingkup",
+      "brief_portal_layanan_kominfo_jatim_4_konsep_arsitektur_data",
+      "brief_portal_layanan_kominfo_jatim_5_1_service_categories",
+      "brief_portal_layanan_kominfo_jatim_5_2_services",
+      "brief_portal_layanan_kominfo_jatim_5_3_users",
+      "brief_portal_layanan_kominfo_jatim_5_rancangan_database_minimum",
+      "brief_portal_layanan_kominfo_jatim_6_aturan_akses_service_domain_vs_path",
+      "brief_portal_layanan_kominfo_jatim_7_relasi_data",
+      "brief_portal_layanan_kominfo_jatim_8_1_landing_page",
+      "brief_portal_layanan_kominfo_jatim_8_2_halaman_cms",
+      "brief_portal_layanan_kominfo_jatim_8_rancangan_halaman",
+      "brief_portal_layanan_kominfo_jatim_9_requirement_teknis"
+    ],
+    "9": [
+      "readme",
+      "readme_1_clone_install_dependencies",
+      "readme_1_public_portal_landing_page",
+      "readme_2_konfigurasi_environment",
+      "readme_2_secret_admin_cms_admin",
+      "readme_3_migrasi_database_seeding",
+      "readme_4_kompilasi_aset_frontend_jalankan_server",
+      "readme_catatan_integrasi_ke_website_utama",
+      "readme_fitur_utama",
+      "readme_hasil_pengujian",
+      "readme_kredensial_default_admin_cms",
+      "readme_lisensi_hak_cipta",
+      "readme_panduan_instalasi_penggunaan",
+      "readme_pengujian_unit_feature_testing",
+      "readme_persyaratan_sistem",
+      "readme_portal_layanan_digital_diskominfo_jawa_timur",
+      "readme_struktur_arsitektur_data"
+    ],
+    "10": [
+      "claude_skills_graphify_references_exports",
+      "claude_skills_graphify_references_exports_graphify_reference_extra_exports_and_benchmark",
+      "claude_skills_graphify_references_exports_step_6b_wiki_only_if_wiki_flag",
+      "claude_skills_graphify_references_exports_step_7_neo4j_export_only_if_neo4j_or_neo4j_push_flag",
+      "claude_skills_graphify_references_exports_step_7a_falkordb_export_only_if_falkordb_or_falkordb_push_flag",
+      "claude_skills_graphify_references_exports_step_7b_svg_export_only_if_svg_flag",
+      "claude_skills_graphify_references_exports_step_7c_graphml_export_only_if_graphml_flag",
+      "claude_skills_graphify_references_exports_step_7d_mcp_server_only_if_mcp_flag",
+      "claude_skills_graphify_references_exports_step_8_token_reduction_benchmark_only_if_total_words_5000"
+    ],
+    "11": [
+      "composer_allow_plugins_pestphp_pest_plugin",
+      "composer_allow_plugins_php_http_discovery",
+      "composer_config",
+      "composer_config_allow_plugins",
+      "composer_config_optimize_autoloader",
+      "composer_config_preferred_install",
+      "composer_config_sort_packages"
+    ],
+    "12": [
+      "app_providers_appserviceprovider",
+      "app_providers_appserviceprovider_appserviceprovider",
+      "app_providers_appserviceprovider_appserviceprovider_boot",
+      "app_providers_appserviceprovider_appserviceprovider_register",
+      "bootstrap_providers",
+      "illuminate_support_serviceprovider"
+    ],
+    "13": [
+      "claude_skills_graphify_references_query",
+      "claude_skills_graphify_references_query_for_graphify_explain",
+      "claude_skills_graphify_references_query_for_graphify_path",
+      "claude_skills_graphify_references_query_graphify_reference_query_path_explain",
+      "claude_skills_graphify_references_query_step_0_constrained_query_expansion_required_before_traversal",
+      "claude_skills_graphify_references_query_step_1_traversal"
+    ],
+    "14": [
+      "config_logging",
+      "monolog_handler_nullhandler",
+      "monolog_handler_streamhandler",
+      "monolog_handler_syslogudphandler",
+      "monolog_processor_psrlogmessageprocessor"
+    ],
+    "15": [
+      "claude_skills_graphify_references_add_watch",
+      "claude_skills_graphify_references_add_watch_for_graphify_add",
+      "claude_skills_graphify_references_add_watch_for_watch",
+      "claude_skills_graphify_references_add_watch_graphify_reference_add_a_url_and_watch_a_folder"
+    ],
+    "16": [
+      "claude_skills_graphify_references_hooks",
+      "claude_skills_graphify_references_hooks_for_git_commit_hook",
+      "claude_skills_graphify_references_hooks_for_native_claude_md_integration",
+      "claude_skills_graphify_references_hooks_graphify_reference_commit_hook_and_native_claude_md_integration"
+    ],
+    "17": [
+      "claude_skills_graphify_references_update",
+      "claude_skills_graphify_references_update_for_cluster_only",
+      "claude_skills_graphify_references_update_for_update_incremental_re_extraction",
+      "claude_skills_graphify_references_update_graphify_reference_incremental_update_and_cluster_only"
+    ],
+    "18": [
+      "illuminate_foundation_inspiring",
+      "illuminate_support_facades_artisan",
+      "routes_console",
+      "routes_console_closure_1"
+    ],
+    "19": [
+      "application",
+      "argvinput",
+      "artisan"
+    ],
+    "20": [
+      "claude_skills_graphify_references_github_and_merge",
+      "claude_skills_graphify_references_github_and_merge_graphify_reference_github_clone_and_cross_repo_merge",
+      "claude_skills_graphify_references_github_and_merge_step_0_clone_github_repo_s_only_if_a_github_url_was_given"
+    ],
+    "21": [
+      "claude_skills_graphify_references_transcribe",
+      "claude_skills_graphify_references_transcribe_graphify_reference_transcribe_video_and_audio",
+      "claude_skills_graphify_references_transcribe_step_2_5_transcribe_video_audio_files_only_if_video_files_detected"
+    ],
+    "22": [
+      "illuminate_foundation_testing_testcase",
+      "tests_testcase",
+      "tests_testcase_testcase"
+    ],
+    "23": [
+      "tests_pest",
+      "tests_pest_closure_1",
+      "tests_pest_something"
+    ],
+    "24": [
+      "claude",
+      "claude_graphify"
+    ],
+    "25": [
+      "claude_claude",
+      "claude_claude_graphify"
+    ],
+    "26": [
+      "claude_skills_graphify_references_extraction_spec",
+      "claude_skills_graphify_references_extraction_spec_graphify_reference_extraction_subagent_prompt"
+    ],
+    "27": [
+      "gemini",
+      "gemini_graphify"
+    ],
+    "28": [
+      "tests_feature_exampletest",
+      "tests_feature_exampletest_closure_1"
+    ],
+    "29": [
+      "tests_unit_exampletest",
+      "tests_unit_exampletest_closure_1"
+    ],
+    "30": [
+      "config_app"
+    ],
+    "31": [
+      "config_filesystems"
+    ],
+    "32": [
+      "config_mail"
+    ],
+    "33": [
+      "config_queue"
+    ],
+    "34": [
+      "config_services"
+    ],
+    "35": [
+      "resources_views_admin_categories_create_blade"
+    ],
+    "36": [
+      "resources_views_admin_categories_edit_blade"
+    ],
+    "37": [
+      "resources_views_admin_categories_index_blade"
+    ],
+    "38": [
+      "resources_views_admin_dashboard_blade"
+    ],
+    "39": [
+      "resources_views_admin_layout_blade"
+    ],
+    "40": [
+      "resources_views_admin_login_blade"
+    ],
+    "41": [
+      "resources_views_admin_services_create_blade"
+    ],
+    "42": [
+      "resources_views_admin_services_edit_blade"
+    ],
+    "43": [
+      "resources_views_admin_services_index_blade"
+    ],
+    "44": [
+      "resources_views_admin_users_create_blade"
+    ],
+    "45": [
+      "resources_views_admin_users_edit_blade"
+    ],
+    "46": [
+      "resources_views_admin_users_index_blade"
+    ],
+    "47": [
+      "resources_views_landing_blade"
+    ],
+    "48": [
+      "resources_views_layouts_app_blade"
+    ],
+    "49": [
+      "resources_views_welcome_blade"
+    ]
+  },
+  "cohesion": {
+    "0": 0.05714285714285714,
+    "1": 0.047619047619047616,
+    "2": 0.0627177700348432,
+    "3": 0.07195121951219512,
+    "4": 0.0944741532976827,
+    "5": 0.11904761904761904,
+    "6": 0.07407407407407407,
+    "7": 0.09486166007905138,
+    "8": 0.09090909090909091,
+    "9": 0.11764705882352941,
+    "10": 0.2222222222222222,
+    "11": 0.2857142857142857,
+    "12": 0.4,
+    "13": 0.3333333333333333,
+    "14": 0.4,
+    "15": 0.5,
+    "16": 0.5,
+    "17": 0.5,
+    "18": 0.5,
+    "19": 0.6666666666666666,
+    "20": 0.6666666666666666,
+    "21": 0.6666666666666666,
+    "22": 1.0,
+    "23": 0.6666666666666666,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_models_servicecategory_servicecategory",
+      "label": "ServiceCategory",
+      "degree": 33
+    },
+    {
+      "id": "app_models_user_user",
+      "label": "User",
+      "degree": 27
+    },
+    {
+      "id": "app_models_service_service",
+      "label": "Service",
+      "degree": 26
+    },
+    {
+      "id": "app_http_controllers_controller_controller",
+      "label": "Controller",
+      "degree": 12
+    },
+    {
+      "id": "claude_skills_graphify_skill_what_you_must_do_when_invoked",
+      "label": "What You Must Do When Invoked",
+      "degree": 12
+    },
+    {
+      "id": "claude_skills_graphify_skill_graphify",
+      "label": "/graphify",
+      "degree": 11
+    },
+    {
+      "id": "app_http_controllers_admin_adminservicecontroller_adminservicecontroller",
+      "label": "AdminServiceController",
+      "degree": 10
+    },
+    {
+      "id": "app_http_controllers_admin_admincategorycontroller_admincategorycontroller",
+      "label": "AdminCategoryController",
+      "degree": 10
+    },
+    {
+      "id": "app_http_controllers_admin_adminusercontroller_adminusercontroller",
+      "label": "AdminUserController",
+      "degree": 9
+    },
+    {
+      "id": "composer_require_dev",
+      "label": "require-dev",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "📄 Catatan Integrasi ke Website Utama",
+      "target": "Service",
+      "source_files": [
+        "README.md",
+        "app/Models/Service.php"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities; peripheral node `📄 Catatan Integrasi ke Website Utama` unexpectedly reaches hub `Service`"
+    },
+    {
+      "source": "{closure#2}()",
+      "target": "Service",
+      "source_files": [
+        "tests/Feature/AdminServiceTest.php",
+        "app/Models/Service.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `{closure#2}()` unexpectedly reaches hub `Service`"
+    },
+    {
+      "source": "{closure#5}()",
+      "target": "Service",
+      "source_files": [
+        "tests/Feature/AdminServiceTest.php",
+        "app/Models/Service.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `{closure#5}()` unexpectedly reaches hub `Service`"
+    },
+    {
+      "source": "{closure#6}()",
+      "target": "Service",
+      "source_files": [
+        "tests/Feature/AdminServiceTest.php",
+        "app/Models/Service.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `{closure#6}()` unexpectedly reaches hub `Service`"
+    },
+    {
+      "source": "{closure#7}()",
+      "target": "Service",
+      "source_files": [
+        "tests/Feature/AdminServiceTest.php",
+        "app/Models/Service.php"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; peripheral node `{closure#7}()` unexpectedly reaches hub `Service`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Service` connect `Service` to `Portal Layanan Digital Diskominfo Jawa Timur`, `User`, `ServiceCategory`?",
+      "why": "High betweenness centrality (0.038) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `User` connect `User` to `Service`, `ServiceCategory`?",
+      "why": "High betweenness centrality (0.037) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ServiceCategory` connect `ServiceCategory` to `Service`, `User`?",
+      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `description`, `keywords`, `dont-discover` to the rest of the system?",
+      "why": "144 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Service` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.05714285714285714 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `composer.json` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.047619047619047616 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `portal.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0627177700348432 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
