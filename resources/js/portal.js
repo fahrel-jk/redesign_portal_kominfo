@@ -613,131 +613,136 @@ function initNewsFilter() {
 
 
 
-const defaultEventsData = {
-  22: {
-    tag: "Event 1",
-    title: "Workshop Cyber Security & CSIRT Pemprov Jatim 2026",
-    date: "22 September 2026",
-    location: "Ruang Bromo Diskominfo Jatim, Surabaya",
-    image: "images/galeri_event_maulid.png",
-    month: "Sep",
-    day: "22"
-  },
-  25: {
-    tag: "Event 2",
-    title: "Pembukaan Jatim Digital Hackathon & Innovation Expo 2026",
-    date: "25 September 2026",
-    location: "Grand City Convention Center, Surabaya",
-    image: "images/event_tech_summit.png",
-    month: "Sep",
-    day: "25"
-  },
-  26: {
-    tag: "Event 3",
-    title: "Pasar Murah Digital & Bazar UMKM Binaan Kominfo",
-    date: "26 September 2026",
-    location: "Halaman Utama Diskominfo Jatim, Surabaya",
-    image: "images/galeri_pasar_murah.png",
-    month: "Sep",
-    day: "26"
-  },
-  27: {
-    tag: "Event Utama",
-    title: "Kejuaraan Sepatu Roda & Marathon Jatim Digital 2026",
-    date: "25 September 2026 - 27 September 2026",
-    location: "Grand City Convention Hall & Balai Kota Surabaya",
-    image: "images/event_tech_summit.png",
-    month: "Sep",
-    day: "27"
-  },
-  30: {
-    tag: "Event 5",
-    title: "Sosialisasi Keterbukaan Informasi Publik PPID Utama",
-    date: "30 September 2026",
-    location: "Gedung Negara Grahadi, Surabaya",
-    image: "images/galeri_event_maulid.png",
-    month: "Sep",
-    day: "30"
-  }
-};
+const MONTH_NAMES_SHORT = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"];
+const MONTH_NAMES_FULL = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+const DAY_NAMES_FULL = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 
-function getEventsDataMap() {
-  if (Array.isArray(window.laravelEvents) && window.laravelEvents.length > 0) {
-    const map = {};
-    window.laravelEvents.forEach(evt => {
-      if (!evt.event_date) return;
-      const dateStr = String(evt.event_date).split('T')[0];
-      const parts = dateStr.split('-');
-      if (parts.length < 3) return;
-      const dayNum = parseInt(parts[2], 10);
-      const monthNum = parseInt(parts[1], 10) - 1;
-      const yearNum = parts[0];
+function buildEventsIndex() {
+  const index = {};
+  if (!Array.isArray(window.laravelEvents)) return index;
 
-      const monthNames = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"];
-      const fullMonths = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-      
-      let imgPath = evt.image ? (evt.image.startsWith('http') ? evt.image : '/' + evt.image.replace(/^\//, '')) : '/images/event_tech_summit.png';
+  window.laravelEvents.forEach(evt => {
+    if (!evt.event_date) return;
+    const dateStr = String(evt.event_date).split('T')[0];
+    const parts = dateStr.split('-');
+    if (parts.length < 3) return;
 
-      map[dayNum] = {
-        tag: evt.tag || 'Kegiatan',
-        title: evt.title,
-        date: evt.date_label || `${dayNum} ${fullMonths[monthNum]} ${yearNum}`,
-        location: evt.location || 'Surabaya',
-        image: imgPath,
-        month: monthNames[monthNum] || 'Sep',
-        day: dayNum
-      };
-    });
-    return map;
-  }
-  return defaultEventsData;
+    const y = parseInt(parts[0], 10);
+    const m = parseInt(parts[1], 10) - 1;
+    const d = parseInt(parts[2], 10);
+    const key = `${y}-${m}-${d}`;
+
+    let imgPath = evt.image
+      ? (evt.image.startsWith('http') ? evt.image : '/' + evt.image.replace(/^\//, ''))
+      : '/images/event_tech_summit.png';
+
+    index[key] = {
+      tag: evt.tag || 'Kegiatan',
+      title: evt.title,
+      date: evt.date_label || `${d} ${MONTH_NAMES_FULL[m]} ${y}`,
+      location: evt.location || 'Surabaya',
+      image: imgPath,
+      month: MONTH_NAMES_SHORT[m],
+      day: d
+    };
+  });
+  return index;
 }
+
+let calViewYear, calViewMonth, calEventsIndex;
 
 function initCalendarWidget() {
   const daysGrid = document.getElementById("calendarDaysGrid");
   if (!daysGrid) return;
 
-  const eventsMap = getEventsDataMap();
+  const now = new Date();
+  calViewYear = now.getFullYear();
+  calViewMonth = now.getMonth();
+  calEventsIndex = buildEventsIndex();
+
+  const prevBtn = document.getElementById("prevMonth");
+  const nextBtn = document.getElementById("nextMonth");
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      calViewMonth--;
+      if (calViewMonth < 0) { calViewMonth = 11; calViewYear--; }
+      renderCalendarMonth();
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      calViewMonth++;
+      if (calViewMonth > 11) { calViewMonth = 0; calViewYear++; }
+      renderCalendarMonth();
+    });
+  }
+
+  renderCalendarMonth();
+}
+
+function renderCalendarMonth() {
+  const daysGrid = document.getElementById("calendarDaysGrid");
+  const monthTitle = document.getElementById("calendarMonth");
+  if (!daysGrid) return;
 
   daysGrid.innerHTML = "";
 
-  // September 2026 starts on Tuesday (index 2 if 1=Mon)
-  const emptyCell = document.createElement("div");
-  emptyCell.className = "cal-day-cell empty";
-  daysGrid.appendChild(emptyCell);
+  if (monthTitle) {
+    monthTitle.textContent = `${MONTH_NAMES_FULL[calViewMonth]} ${calViewYear}`;
+  }
 
-  let activeDay = 27;
+  const now = new Date();
+  const todayY = now.getFullYear();
+  const todayM = now.getMonth();
+  const todayD = now.getDate();
+  const isCurrentMonth = (calViewYear === todayY && calViewMonth === todayM);
 
-  for (let day = 1; day <= 30; day++) {
+  // Day-of-week for the 1st (0=Sun … 6=Sat) → convert to Mon-start index (0=Mon … 6=Sun)
+  const firstDow = new Date(calViewYear, calViewMonth, 1).getDay();
+  const startOffset = (firstDow === 0) ? 6 : firstDow - 1;
+
+  const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();
+
+  // Empty cells before day 1
+  for (let i = 0; i < startOffset; i++) {
+    const empty = document.createElement("div");
+    empty.className = "cal-day-cell empty";
+    daysGrid.appendChild(empty);
+  }
+
+  let firstEventDay = null;
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const key = `${calViewYear}-${calViewMonth}-${day}`;
     const cell = document.createElement("div");
     cell.className = "cal-day-cell";
     cell.textContent = day;
 
-    if (eventsMap[day]) {
+    if (calEventsIndex[key]) {
       cell.classList.add("has-event");
-      if (day === 27 || !eventsMap[activeDay]) {
-        activeDay = day;
-      }
+      if (firstEventDay === null) firstEventDay = day;
     }
 
-    if (day === activeDay) {
-      cell.classList.add("active-date");
+    if (isCurrentMonth && day === todayD) {
+      cell.classList.add("today");
     }
 
     cell.addEventListener("click", () => {
-      document.querySelectorAll(".cal-day-cell").forEach(c => c.classList.remove("active-date"));
+      daysGrid.querySelectorAll(".cal-day-cell").forEach(c => c.classList.remove("active-date"));
       cell.classList.add("active-date");
 
-      if (eventsMap[day]) {
-        updateEventPoster(eventsMap[day]);
+      const evtKey = `${calViewYear}-${calViewMonth}-${day}`;
+      if (calEventsIndex[evtKey]) {
+        updateEventPoster(calEventsIndex[evtKey]);
       } else {
         updateEventPoster({
-          tag: `Tanggal ${day} Sep`,
-          title: `Agenda Kegiatan Dinas Komunikasi & Informatika (${day} September 2026)`,
-          date: `${day} September 2026`,
+          tag: `Tanggal ${day}`,
+          title: `Agenda Kegiatan Dinas Komunikasi & Informatika (${day} ${MONTH_NAMES_FULL[calViewMonth]} ${calViewYear})`,
+          date: `${day} ${MONTH_NAMES_FULL[calViewMonth]} ${calViewYear}`,
           location: "Kantor Diskominfo Jatim, Jl. Ahmad Yani 242-244, Surabaya",
           image: "/images/event_tech_summit.png",
-          month: "Sep",
+          month: MONTH_NAMES_SHORT[calViewMonth],
           day: day
         });
       }
@@ -746,9 +751,15 @@ function initCalendarWidget() {
     daysGrid.appendChild(cell);
   }
 
-  if (eventsMap[activeDay]) {
-    updateEventPoster(eventsMap[activeDay]);
-  }
+  // Auto-select: today if current month, else first event day, else day 1
+  let autoSelect = isCurrentMonth ? todayD : (firstEventDay || 1);
+  const allCells = daysGrid.querySelectorAll(".cal-day-cell:not(.empty)");
+  allCells.forEach(c => {
+    if (parseInt(c.textContent, 10) === autoSelect) {
+      c.classList.add("active-date");
+      c.click();
+    }
+  });
 }
 
 function updateEventPoster(event) {

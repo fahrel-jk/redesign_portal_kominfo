@@ -75,7 +75,7 @@ php artisan migrate:fresh --seed
 #### Kredensial Default Admin CMS:
 * **URL Login**: `http://localhost:8000/admin/login`
 * **Email**: `admin@kominfo.jatimprov.go.id`
-* **Password**: `password`
+* **Password**: `admin123`
 
 ### 4. Kompilasi Aset Frontend & Jalankan Server
 ```bash

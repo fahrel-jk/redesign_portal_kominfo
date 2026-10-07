@@ -477,6 +477,7 @@
           <div class="calendar-legend">
             <span class="legend-item"><span class="dot event-dot"></span> Ada Kegiatan</span>
             <span class="legend-item"><span class="dot active-dot"></span> Dipilih</span>
+            <span class="legend-item"><span class="dot today-dot"></span> Hari Ini</span>
           </div>
 
         </div>
