@@ -22,7 +22,7 @@ Aplikasi portal terpadu untuk Dinas Komunikasi dan Informatika Provinsi Jawa Tim
 
 1. Clone repository dan install dependensi PHP maupun JavaScript:
    ```bash
-   git clone https://github.com/kominfo-jatim/portal-layanan.git
+   git clone https://github.com/fahrel-jk/redesign_portal_kominfo.git
    cd redesign_portal_kominfo
    composer install
    npm install
@@ -32,10 +32,6 @@ Aplikasi portal terpadu untuk Dinas Komunikasi dan Informatika Provinsi Jawa Tim
    ```bash
    cp .env.example .env
    php artisan key:generate
-   ```
-   *Aplikasi secara default menggunakan SQLite. Jika menggunakan SQLite, pastikan file database tersedia:*
-   ```bash
-   touch database/database.sqlite
    ```
 
 3. Jalankan migrasi dan seeder untuk menyiapkan struktur tabel dan data awal:

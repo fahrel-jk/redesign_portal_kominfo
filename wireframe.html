@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe — Portal Layanan Kominfo Jawa Timur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       WIREFRAME DESIGN SYSTEM
+       Palette: grayscale-only, siap di-trace di Figma
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --c-bg:       #F5F5F5;
+      --c-surface:  #FFFFFF;
+      --c-border:   #D0D0D0;
+      --c-divider:  #E0E0E0;
+      --c-fill-lo:  #E8E8E8;
+      --c-fill-mid: #CCCCCC;
+      --c-fill-hi:  #9E9E9E;
+      --c-dark:     #424242;
+      --c-darker:   #212121;
+      --c-label:    #757575;
+      --c-accent:   #616161;
+      --radius-sm:  6px;
+      --radius-md:  10px;
+      --radius-lg:  16px;
+      --font:       'Inter', sans-serif;
+    }
+
+    body {
+      font-family: var(--font); 
+      background: var(--c-bg);
+      color: var(--c-darker);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── Helpers ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .wf-box    { background: var(--c-fill-lo); border: 1.5px dashed var(--c-border); border-radius: var(--radius-sm); }
+    .wf-block  { background: var(--c-fill-mid); border-radius: var(--radius-sm); }
+    .wf-dark   { background: var(--c-accent);   border-radius: var(--radius-sm); }
+    .wf-label  {
+      font-size: 10px; font-weight: 600; letter-spacing: .8px;
+      text-transform: uppercase; color: var(--c-label);
+      white-space: nowrap;
+    }
+    .wf-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 99px;
+      background: var(--c-fill-mid); font-size: 12px; font-weight: 500;
+      color: var(--c-dark); border: 1.5px solid var(--c-border);
+    }
+    .wf-chip.active {
+      background: var(--c-dark); color: #fff; border-color: var(--c-dark);
+    }
+    .wf-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 8px 20px; border-radius: var(--radius-sm);
+      font-size: 13px; font-weight: 600;
+      background: var(--c-dark); color: #fff; border: none; cursor: pointer;
+    }
+    .wf-btn-ghost {
+      background: transparent; border: 1.5px solid var(--c-border);
+      color: var(--c-dark);
+    }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .gap-8 { gap: 8px; }
+    .gap-16 { gap: 16px; }
+    .gap-24 { gap: 24px; }
+    .section { padding: 64px 0; }
+
+    .wf-pin {
+      display: inline-block;
+      padding: 2px 8px; border-radius: 99px;
+      background: var(--c-darker); color: #fff;
+      font-size: 9px; font-weight: 700; letter-spacing: .4px;
+      vertical-align: middle;
+    }
+
+    /* ============================================================
+       1. NAVBAR
+    ============================================================ */
+    .navbar-wf {
+      background: var(--c-darker);
+      padding: 0 24px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .navbar-wf .brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .brand-logo-box {
+      width: 40px; height: 40px; border-radius: var(--radius-sm);
+      background: var(--c-fill-mid);
+    }
+    .brand-text-lines { display: flex; flex-direction: column; gap: 3px; }
+    .brand-line { height: 8px; border-radius: 2px; background: var(--c-fill-mid); }
+    .navbar-wf .nav-links { display: flex; gap: 24px; }
+    .nav-link-wf {
+      font-size: 13px; color: var(--c-fill-mid); font-weight: 500;
+      padding-bottom: 3px; border-bottom: 2px solid transparent;
+    }
+    .nav-link-wf.active {
+      color: #fff; border-color: #fff;
+    }
+    .nav-ext-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: var(--radius-sm);
+      border: 1.5px solid var(--c-fill-hi); color: var(--c-fill-mid);
+      font-size: 12px; font-weight: 500;
+    }
+    .icon-sq {
+      width: 18px; height: 18px; border-radius: 3px;
+      background: var(--c-fill-mid); flex-shrink: 0;
+    }
+    .icon-sq.sm { width: 14px; height: 14px; }
+
+    /* ============================================================
+       2. HERO SECTION
+    ============================================================ */
+    .hero-wf {
+      background: var(--c-accent);
+      min-height: 560px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-city-bg {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 260px; background: var(--c-dark);
+      opacity: .35;
+      clip-path: polygon(
+        0% 100%, 0% 55%, 3% 55%, 3% 35%, 5% 35%, 5% 55%,
+        7% 55%, 7% 20%, 9% 20%, 9% 55%,
+        12% 55%, 12% 40%, 14% 40%, 14% 55%,
+        17% 55%, 17% 15%, 19% 15%, 19% 10%, 21% 10%, 21% 15%, 23% 15%, 23% 55%,
+        26% 55%, 26% 45%, 28% 45%, 28% 55%,
+        30% 55%, 30% 30%, 33% 30%, 33% 55%,
+        36% 55%, 36% 50%, 38% 50%, 38% 25%, 40% 25%, 40% 50%, 42% 50%, 42% 55%,
+        45% 55%, 45% 20%, 47% 20%, 47% 55%,
+        50% 55%, 50% 35%, 52% 35%, 52% 55%,
+        55% 55%, 55% 10%, 57% 10%, 57% 5%, 59% 5%, 59% 10%, 61% 10%, 61% 55%,
+        64% 55%, 64% 40%, 66% 40%, 66% 55%,
+        69% 55%, 69% 28%, 71% 28%, 71% 55%,
+        74% 55%, 74% 42%, 76% 42%, 76% 55%,
+        78% 55%, 78% 18%, 80% 18%, 80% 55%,
+        83% 55%, 83% 38%, 85% 38%, 85% 55%,
+        88% 55%, 88% 25%, 90% 25%, 90% 55%,
+        93% 55%, 93% 45%, 95% 45%, 95% 55%,
+        97% 55%, 97% 32%, 100% 32%, 100% 100%
+      );
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 340px; gap: 40px;
+      align-items: center; padding: 80px 24px 60px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .hero-h1-line {
+      height: 14px; border-radius: 4px;
+      background: rgba(255,255,255,.25); margin-bottom: 8px;
+    }
+    .hero-h1-line.lg { width: 72%; height: 20px; }
+    .hero-h1-line.md { width: 58%; }
+    .hero-h1-line.accent { width: 44%; background: rgba(255,255,255,.5); }
+    .hero-desc-line {
+      height: 9px; border-radius: 3px;
+      background: rgba(255,255,255,.18); margin-bottom: 6px;
+    }
+    .hero-desc-line.w80 { width: 80%; }
+    .hero-desc-line.w65 { width: 65%; }
+    .search-bar-wf {
+      display: flex; align-items: center;
+      background: rgba(255,255,255,.15);
+      border: 1.5px solid rgba(255,255,255,.35);
+      border-radius: var(--radius-md);
+      padding: 6px 6px 6px 16px;
+      gap: 8px; margin-top: 24px; margin-bottom: 12px;
+    }
+    .search-input-placeholder {
+      flex: 1; height: 10px; border-radius: 3px;
+      background: rgba(255,255,255,.2);
+    }
+    .search-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .search-tag {
+      font-size: 11px; padding: 3px 10px; border-radius: 99px;
+      border: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.7);
+    }
+    .hero-socials-row { display: flex; gap: 10px; margin-top: 24px; }
+    .social-icon-wf {
+      width: 34px; height: 34px; border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,.3);
+      background: rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .social-icon-inner { width: 12px; height: 12px; background: rgba(255,255,255,.4); border-radius: 2px; }
+    .hero-right { display: flex; flex-direction: column; gap: 16px; }
+    .glass-panel-wf {
+      background: rgba(255,255,255,.12);
+      border: 1.5px solid rgba(255,255,255,.25);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+    .weather-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .weather-icon-box {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,255,255,.15);
+    }
+    .weather-temp-text {
+      font-size: 36px; font-weight: 700; color: rgba(255,255,255,.9); line-height: 1;
+    }
+    .weather-loc { font-size: 11px; color: rgba(255,255,255,.6); margin-top: 2px; }
+    .weather-details-row { display: flex; gap: 10px; }
+    .weather-detail-item {
+      flex: 1; display: flex; flex-direction: column; gap: 4px;
+      padding: 8px; border-radius: 8px; background: rgba(255,255,255,.1);
+    }
+    .wd-label { font-size: 9px; color: rgba(255,255,255,.5); }
+    .wd-value { height: 9px; border-radius: 2px; background: rgba(255,255,255,.3); width: 70%; }
+    .stats-row {
+      display: flex; align-items: center; justify-content: space-around; padding: 4px 0;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 24px; font-weight: 700; color: rgba(255,255,255,.95); line-height: 1; }
+    .stat-label-txt { font-size: 10px; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .stat-divider-v { width: 1px; height: 36px; background: rgba(255,255,255,.25); }
+
+    /* ============================================================
+       3. SERVICES SECTION
+    ============================================================ */
+    .eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--c-label); margin-bottom: 6px;
+    }
+    .section-h2 { font-size: 24px; font-weight: 700; color: var(--c-darker); line-height: 1.2; }
+    .result-badge {
+      padding: 4px 14px; border-radius: 99px;
+      border: 1.5px solid var(--c-border); font-size: 12px; color: var(--c-dark);
+    }
+    .chip-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .services-grid-wf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .service-card-wf {
+      background: var(--c-surface); border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-md); padding: 16px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .service-icon-wf {
+      width: 48px; height: 48px; border-radius: 10px;
+      background: var(--c-fill-lo); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .service-icon-inner { width: 26px; height: 26px; background: var(--c-fill-mid); border-radius: 4px; }
+    .service-body { flex: 1; }
+    .service-title { height: 11px; border-radius: 3px; background: var(--c-fill-mid); width: 80%; margin-bottom: 8px; }
+    .service-desc-line { height: 8px; border-radius: 2px; background: var(--c-fill-lo); margin-bottom: 5px; }
+    .service-desc-line.w90 { width: 90%; }
+    .service-desc-line.w70 { width: 70%; }
+    .service-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 10px; color: var(--c-label);
+      padding: 2px 8px; border-radius: 99px;
+      border: 1px solid var(--c-divider); margin-top: 8px;
+    }
+    .service-arrow {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: var(--c-fill-lo); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .service-arrow-icon { width: 12px; height: 12px; background: var(--c-fill-hi); border-radius: 2px; }
+
+    /* ============================================================
+       4. NEWS SECTION
+    ============================================================ */
+    .news-grid-wf { display: grid; grid-template-columns: 1fr 320px; gap: 20px; }
+    .news-featured-wf {
+      background: var(--c-surface); border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-md); overflow: hidden;
+    }
+    .news-thumb-wf { height: 220px; background: var(--c-fill-mid); position: relative; }
+    .news-badge-wf {
+      position: absolute; top: 12px; left: 12px;
+      padding: 3px 10px; border-radius: 99px;
+      background: var(--c-dark); color: #fff; font-size: 10px; font-weight: 600;
+    }
+    .news-body-wf { padding: 20px; }
+    .news-meta-row { display: flex; gap: 12px; margin-bottom: 10px; }
+    .news-meta-item { display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--c-label); }
+    .news-meta-icon { width: 10px; height: 10px; background: var(--c-fill-mid); border-radius: 2px; }
+    .news-title-line { height: 14px; border-radius: 3px; background: var(--c-fill-mid); margin-bottom: 8px; }
+    .news-title-line.w90 { width: 90%; }
+    .news-title-line.w75 { width: 75%; }
+    .news-p-line { height: 8px; border-radius: 2px; background: var(--c-fill-lo); margin-bottom: 5px; }
+    .news-p-line.wfull { width: 100%; }
+    .news-p-line.w85 { width: 85%; }
+    .news-p-line.w60 { width: 60%; }
+    .news-side-col { display: flex; flex-direction: column; gap: 12px; }
+    .news-mini-card {
+      background: var(--c-surface); border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-md); padding: 12px;
+      display: flex; gap: 12px;
+    }
+    .news-mini-thumb { width: 72px; height: 64px; border-radius: 8px; background: var(--c-fill-mid); flex-shrink: 0; }
+    .news-mini-body { flex: 1; }
+    .news-mini-badge {
+      display: inline-block; padding: 1px 8px; border-radius: 99px;
+      background: var(--c-fill-lo); font-size: 9px; font-weight: 600; color: var(--c-dark); margin-bottom: 6px;
+    }
+    .news-mini-title { height: 9px; border-radius: 2px; background: var(--c-fill-mid); margin-bottom: 4px; }
+    .news-mini-title.w90 { width: 90%; }
+    .news-mini-title.w75 { width: 75%; }
+    .news-mini-date { display: flex; align-items: center; gap: 4px; margin-top: 8px; }
+    .news-mini-date-icon { width: 8px; height: 8px; background: var(--c-fill-mid); border-radius: 2px; }
+    .news-mini-date-text { height: 7px; width: 60px; border-radius: 2px; background: var(--c-fill-lo); }
+    .news-tabs { display: flex; gap: 4px; }
+    .news-tab-wf {
+      padding: 5px 14px; border-radius: 99px;
+      font-size: 11px; font-weight: 500; color: var(--c-label);
+      border: 1.5px solid var(--c-border);
+    }
+    .news-tab-wf.active { background: var(--c-dark); color: #fff; border-color: var(--c-dark); }
+
+    /* ============================================================
+       5. CALENDAR SECTION
+    ============================================================ */
+    .calendar-card {
+      background: var(--c-surface); border: 1.5px solid var(--c-border);
+      border-radius: var(--radius-lg); padding: 28px;
+    }
+    .calendar-inner { display: grid; grid-template-columns: 300px 1fr; gap: 28px; margin-top: 20px; }
+    .event-poster { display: flex; flex-direction: column; border-radius: var(--radius-md); overflow: hidden; border: 1.5px solid var(--c-border); }
+    .poster-img { height: 200px; background: var(--c-fill-mid); position: relative; }
+    .poster-date-badge {
+      position: absolute; bottom: 12px; right: 12px;
+      width: 48px; background: var(--c-dark); border-radius: 8px;
+      padding: 6px 0; text-align: center;
+    }
+    .poster-day { font-size: 18px; font-weight: 700; color: #fff; line-height: 1; }
+    .poster-info { background: var(--c-fill-lo); padding: 16px; }
+    .poster-title { height: 11px; border-radius: 3px; background: var(--c-fill-mid); width: 85%; margin-bottom: 10px; }
+    .event-detail-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .event-detail-icon-sq { width: 14px; height: 14px; background: var(--c-fill-mid); border-radius: 3px; flex-shrink: 0; margin-top: 2px; }
+    .event-detail-lines { display: flex; flex-direction: column; gap: 4px; }
+    .edl-strong { height: 9px; border-radius: 2px; background: var(--c-fill-mid); width: 60px; }
+    .edl-span { height: 8px; border-radius: 2px; background: var(--c-fill-lo); width: 100px; }
+    .cal-widget { border: 1.5px solid var(--c-border); border-radius: var(--radius-md); overflow: hidden; }
+    .cal-header { background: var(--c-fill-lo); padding: 14px 16px; display: flex; justify-content: space-between; align-items: center; }
+    .cal-month-title { height: 13px; border-radius: 3px; background: var(--c-fill-mid); width: 100px; }
+    .cal-nav-row { display: flex; gap: 6px; }
+    .cal-nav-btn { width: 28px; height: 28px; border-radius: 6px; background: var(--c-border); display: flex; align-items: center; justify-content: center; }
+    .cal-nav-icon { width: 10px; height: 10px; background: var(--c-dark); border-radius: 2px; }
+    .cal-days-header {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      padding: 8px 12px; gap: 4px;
+      background: var(--c-fill-lo); border-bottom: 1px solid var(--c-divider);
+    }
+    .cal-day-name { text-align: center; font-size: 10px; font-weight: 600; color: var(--c-label); padding: 4px 0; }
+    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; padding: 10px 12px 12px; }
+    .cal-cell {
+      aspect-ratio: 1; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; color: var(--c-dark); position: relative;
+    }
+    .cal-cell.today { background: var(--c-dark); color: #fff; font-weight: 700; }
+    .cal-cell.has-event::after {
+      content: ''; position: absolute; bottom: 3px;
+      width: 4px; height: 4px; border-radius: 50%; background: var(--c-label);
+    }
+    .cal-cell.empty { opacity: 0; }
+    .cal-legend { display: flex; gap: 16px; padding: 8px 12px 12px; border-top: 1px solid var(--c-divider); }
+    .legend-item { display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--c-label); }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .legend-dot.event { background: var(--c-label); }
+    .legend-dot.today { background: var(--c-dark); }
+    .legend-dot.selected { border: 2px solid var(--c-dark); }
+
+    /* ============================================================
+       6. VIDEO SECTION
+    ============================================================ */
+    .video-grid-wf { display: grid; grid-template-columns: 1fr 280px; gap: 20px; }
+    .video-player-wf {
+      background: var(--c-fill-mid); border-radius: var(--radius-md);
+      aspect-ratio: 16/9;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .play-btn-large {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: rgba(255,255,255,.3);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .play-triangle { width: 20px; height: 20px; background: #fff; clip-path: polygon(20% 0%, 100% 50%, 20% 100%); }
+    .video-featured-info-wf { padding: 16px 0; }
+    .video-feat-title { height: 13px; border-radius: 3px; background: var(--c-fill-mid); width: 85%; margin-bottom: 10px; }
+    .video-feat-meta { display: flex; gap: 10px; margin-bottom: 10px; }
+    .video-feat-date { display: flex; align-items: center; gap: 4px; }
+    .video-feat-date-icon { width: 10px; height: 10px; background: var(--c-fill-mid); border-radius: 2px; }
+    .video-feat-date-text { height: 8px; width: 80px; border-radius: 2px; background: var(--c-fill-lo); }
+    .video-cat-badge {
+      padding: 2px 10px; border-radius: 99px;
+      background: var(--c-fill-lo); font-size: 10px; color: var(--c-label); border: 1px solid var(--c-border);
+    }
+    .video-desc-line { height: 8px; border-radius: 2px; background: var(--c-fill-lo); margin-bottom: 5px; }
+    .video-desc-line.w100 { width: 100%; }
+    .video-desc-line.w80 { width: 80%; }
+    .video-desc-line.w55 { width: 55%; }
+    .video-sidebar-wf { display: flex; flex-direction: column; }
+    .video-sidebar-header {
+      display: flex; align-items: center; gap: 6px;
+      padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1.5px solid var(--c-divider);
+    }
+    .vsidebar-icon { width: 14px; height: 14px; background: var(--c-fill-mid); border-radius: 3px; }
+    .vsidebar-title { height: 10px; width: 80px; border-radius: 3px; background: var(--c-fill-mid); }
+    .video-sidebar-item { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--c-divider); }
+    .video-thumb-wf { width: 80px; height: 54px; border-radius: 8px; background: var(--c-fill-mid); flex-shrink: 0; position: relative; }
+    .video-play-sm { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .play-circle-sm { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.4); display: flex; align-items: center; justify-content: center; }
+    .play-tri-sm { width: 8px; height: 8px; background: #fff; clip-path: polygon(20% 0%, 100% 50%, 20% 100%); }
+    .video-item-body { flex: 1; }
+    .video-item-title { height: 9px; border-radius: 2px; background: var(--c-fill-mid); margin-bottom: 5px; }
+    .video-item-title.w90 { width: 90%; }
+    .video-item-title.w75 { width: 75%; }
+    .video-item-meta { display: flex; gap: 6px; margin-top: 6px; }
+    .video-item-date-txt { height: 7px; width: 70px; border-radius: 2px; background: var(--c-fill-lo); }
+    .video-item-tag { height: 7px; width: 40px; border-radius: 2px; background: var(--c-fill-lo); }
+
+    /* ============================================================
+       7. GALLERY SECTION
+    ============================================================ */
+    .gallery-carousel-wf { position: relative; overflow: hidden; border-radius: var(--radius-lg); }
+    .gallery-track { display: flex; gap: 16px; }
+    .gallery-card-wf {
+      flex: 0 0 calc(33.33% - 11px);
+      aspect-ratio: 4/3;
+      background: var(--c-fill-mid); border-radius: var(--radius-md);
+      position: relative; overflow: hidden;
+    }
+    .gallery-card-wf.active { box-shadow: 0 0 0 3px var(--c-dark); }
+    .gallery-overlay-wf {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, transparent 100%);
+      padding: 16px 14px 14px;
+    }
+    .gallery-tag-wf {
+      display: inline-block; padding: 2px 8px; border-radius: 99px;
+      background: rgba(255,255,255,.25); font-size: 9px; color: #fff; font-weight: 600; margin-bottom: 6px;
+    }
+    .gallery-title-line { height: 11px; border-radius: 3px; background: rgba(255,255,255,.5); width: 80%; }
+    .gallery-dots-wf { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+    .gallery-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-border); }
+    .gallery-dot.active { background: var(--c-dark); width: 20px; border-radius: 99px; }
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,.9); border: 1.5px solid var(--c-border);
+      display: flex; align-items: center; justify-content: center; z-index: 5;
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+    .carousel-icon { width: 12px; height: 12px; background: var(--c-dark); border-radius: 2px; }
+
+    /* ============================================================
+       8. FOOTER
+    ============================================================ */
+    .footer-wf { background: var(--c-darker); padding: 48px 24px 0; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .footer-col-title { display: flex; align-items: center; gap: 6px; margin-bottom: 14px; }
+    .footer-col-title-icon { width: 14px; height: 14px; background: var(--c-fill-hi); border-radius: 3px; }
+    .footer-col-title-text { height: 10px; width: 120px; border-radius: 3px; background: var(--c-fill-hi); }
+    .footer-map-placeholder { height: 120px; border-radius: 10px; background: var(--c-dark); margin-bottom: 10px; border: 1px solid var(--c-accent); position: relative; overflow: hidden; }
+    .map-pin-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 24px; height: 24px; border-radius: 50%; background: var(--c-fill-hi); opacity: .5; }
+    .footer-addr-lines { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+    .footer-addr-line { height: 8px; border-radius: 2px; background: var(--c-fill-hi); }
+    .footer-addr-line.w90 { width: 90%; }
+    .footer-addr-line.w70 { width: 70%; }
+    .footer-map-btn { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: var(--radius-sm); border: 1.5px solid var(--c-accent); color: var(--c-fill-hi); font-size: 11px; font-weight: 500; }
+    .footer-social-list { display: flex; flex-direction: column; gap: 10px; }
+    .footer-social-item { display: flex; align-items: center; gap: 8px; }
+    .footer-social-icon { width: 18px; height: 18px; background: var(--c-fill-hi); border-radius: 4px; opacity: .5; }
+    .footer-social-text { height: 8px; width: 100px; border-radius: 2px; background: var(--c-fill-hi); opacity: .4; }
+    .footer-stat-list { display: flex; flex-direction: column; gap: 8px; }
+    .footer-stat-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--c-accent); }
+    .footer-stat-label { display: flex; align-items: center; gap: 6px; }
+    .footer-stat-icon { width: 10px; height: 10px; background: var(--c-fill-hi); border-radius: 2px; opacity: .5; }
+    .footer-stat-text { height: 8px; width: 60px; border-radius: 2px; background: var(--c-fill-hi); opacity: .4; }
+    .footer-stat-value { height: 10px; width: 40px; border-radius: 2px; background: var(--c-fill-mid); opacity: .5; }
+    .footer-bottom-wf { background: rgba(0,0,0,.3); margin-top: 40px; padding: 14px 24px; text-align: center; }
+    .footer-copy-text { height: 8px; width: 380px; border-radius: 2px; background: var(--c-accent); margin: 0 auto; }
+
+    /* ── Section label banners ── */
+    .section-label-bar {
+      background: var(--c-darker); color: #fff;
+      padding: 6px 24px; font-size: 10px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-label-bar span { opacity: .5; }
+
+    /* ── Back to top ── */
+    .back-to-top-wf {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--c-dark); border: 1.5px solid var(--c-border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .btt-icon { width: 14px; height: 14px; background: #fff; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+
+    .section-white { background: var(--c-surface); }
+    .section-gray  { background: var(--c-bg); }
+  </style>
+</head>
+<body>
+
+<!-- BACK TO TOP -->
+<div class="back-to-top-wf" title="Kembali ke atas">
+  <div class="btt-icon"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     [0] NAVBAR
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">0</span> NAVBAR / HEADER
+  <span>sticky · dark background · logo + nav links + CTA "Website Utama"</span>
+</div>
+<nav class="navbar-wf" id="beranda">
+  <div class="brand">
+    <div class="brand-logo-box"></div>
+    <div class="brand-text-lines">
+      <div class="brand-line" style="width:64px;"></div>
+      <div class="brand-line" style="width:80px; opacity:.5;"></div>
+    </div>
+  </div>
+
+  <div class="nav-links">
+    <span class="nav-link-wf active">Beranda</span>
+    <span class="nav-link-wf">Layanan</span>
+    <span class="nav-link-wf">Berita</span>
+    <span class="nav-link-wf">Kegiatan</span>
+    <span class="nav-link-wf">Galeri</span>
+  </div>
+
+  <div class="nav-ext-btn">
+    <div class="icon-sq sm"></div>
+    <span style="color:var(--c-fill-mid); font-size:12px;">Website Utama</span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════
+     [1] HERO SECTION
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">1</span> HERO SECTION
+  <span>cityscape bg · headline + search bar + quick tags + socials · info cards (kanan)</span>
+</div>
+<section class="hero-wf">
+  <div class="hero-city-bg"></div>
+
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div>
+      <div style="margin-bottom:20px;">
+        <div class="hero-h1-line lg"></div>
+        <div class="hero-h1-line md"></div>
+        <div class="hero-h1-line accent"></div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:5px; margin-bottom:20px;">
+        <div class="hero-desc-line w80"></div>
+        <div class="hero-desc-line w65"></div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-bar-wf">
+        <div class="icon-sq sm" style="background:rgba(255,255,255,.4);"></div>
+        <div class="search-input-placeholder"></div>
+        <div style="padding:7px 18px; border-radius:7px; background:rgba(255,255,255,.9); color:var(--c-darker); font-size:12px; font-weight:600; flex-shrink:0;">Cari</div>
+      </div>
+
+      <!-- Quick tags -->
+      <div class="search-tags">
+        <span style="font-size:10px; font-weight:600; letter-spacing:.8px; text-transform:uppercase; color:rgba(255,255,255,.5);">Populer:</span>
+        <span class="search-tag">SIMA</span>
+        <span class="search-tag">Data Jatim</span>
+        <span class="search-tag">Pengaduan</span>
+        <span class="search-tag">Informasi Publik</span>
+      </div>
+
+      <!-- Socials -->
+      <div class="hero-socials-row">
+        <div class="social-icon-wf"><div class="social-icon-inner"></div></div>
+        <div class="social-icon-wf"><div class="social-icon-inner"></div></div>
+        <div class="social-icon-wf"><div class="social-icon-inner"></div></div>
+        <div class="social-icon-wf"><div class="social-icon-inner"></div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: glass cards -->
+    <div class="hero-right">
+      <!-- Weather card -->
+      <div class="glass-panel-wf">
+        <div class="weather-top">
+          <div class="weather-icon-box"></div>
+          <div>
+            <div class="weather-temp-text">33°</div>
+            <div class="weather-loc">Surabaya • Cerah Berawan</div>
+          </div>
+        </div>
+        <div class="weather-details-row">
+          <div class="weather-detail-item">
+            <div class="wd-label">Kelembapan</div>
+            <div class="wd-value"></div>
+          </div>
+          <div class="weather-detail-item">
+            <div class="wd-label">Kec. Angin</div>
+            <div class="wd-value"></div>
+          </div>
+          <div class="weather-detail-item">
+            <div class="wd-label">Arah Angin</div>
+            <div class="wd-value"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats card -->
+      <div class="glass-panel-wf">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-num">24+</div>
+            <div class="stat-label-txt">Layanan Digital</div>
+          </div>
+          <div class="stat-divider-v"></div>
+          <div class="stat-item">
+            <div class="stat-num">8</div>
+            <div class="stat-label-txt">Kategori</div>
+          </div>
+          <div class="stat-divider-v"></div>
+          <div class="stat-item">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label-txt">Akses Portal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     [2] LAYANAN & KATEGORI
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">2</span> LAYANAN &amp; KATEGORI
+  <span>result count badge · category filter chips · service card grid 3-col</span>
+</div>
+<section class="section section-white" id="layanan">
+  <div class="container">
+    <div class="flex justify-between items-center" style="margin-bottom:20px;">
+      <div>
+        <div class="eyebrow">DIREKTORI &amp; KATEGORI LAYANAN</div>
+        <div class="section-h2">Temukan Layanan Digital Jawa Timur</div>
+      </div>
+      <div class="result-badge">24 layanan tersedia</div>
+    </div>
+
+    <!-- Category chips -->
+    <div class="chip-row">
+      <span class="wf-chip active">
+        <div class="icon-sq sm"></div>
+        Semua Layanan
+      </span>
+      <span class="wf-chip"><div class="icon-sq sm"></div> Komunikasi</span>
+      <span class="wf-chip"><div class="icon-sq sm"></div> Data &amp; Informasi</span>
+      <span class="wf-chip"><div class="icon-sq sm"></div> E-Government</span>
+      <span class="wf-chip"><div class="icon-sq sm"></div> Pengaduan</span>
+      <span class="wf-chip"><div class="icon-sq sm"></div> Pendidikan Digital</span>
+    </div>
+
+    <!-- Service cards -->
+    <div class="services-grid-wf">
+      <!-- 6 cards (2 types: domain & path) -->
+      <article class="service-card-wf">
+        <div class="service-icon-wf"><div class="service-icon-inner"></div></div>
+        <div class="service-body">
+          <div class="service-title"></div>
+          <div class="service-desc-line w90"></div>
+          <div class="service-desc-line w70"></div>
+          <div class="service-badge"><div class="icon-sq sm"></div> Domain Eksternal</div>
+        </div>
+        <div class="service-arrow"><div class="service-arrow-icon"></div></div>
+      </article>
+      <article class="service-card-wf">
+        <div class="service-icon-wf"><div class="service-icon-inner"></div></div>
+        <div class="service-body">
+          <div class="service-title"></div>
+          <div class="service-desc-line w90"></div>
+          <div class="service-desc-line w70"></div>
+          <div class="service-badge"><div class="icon-sq sm"></div> Terintegrasi (Path)</div>
+        </div>
+        <div class="service-arrow"><div class="service-arrow-icon"></div></div>
+      </article>
+      <article class="service-card-wf">
+        <div class="service-icon-wf"><div class="service-icon-inner"></div></div>
+        <div class="service-body">
+          <div class="service-title"></div>
+          <div class="service-desc-line w90"></div>
+          <div class="service-desc-line w70"></div>
+          <div class="service-badge"><div class="icon-sq sm"></div> Domain Eksternal</div>
+        </div>
+        <div class="service-arrow"><div class="service-arrow-icon"></div></div>
+      </article>
+      <article class="service-card-wf">
+        <div class="service-icon-wf"><div class="service-icon-inner"></div></div>
+        <div class="service-body">
+          <div class="service-title"></div>
+          <div class="service-desc-line w90"></div>
+          <div class="service-desc-line w70"></div>
+          <div class="service-badge"><div class="icon-sq sm"></div> Terintegrasi (Path)</div>
+        </div>
+        <div class="service-arrow"><div class="service-arrow-icon"></div></div>
+      </article>
+      <article class="service-card-wf">
+        <div class="service-icon-wf"><div class="service-icon-inner"></div></div>
+        <div class="service-body">
+          <div class="service-title"></div>
+          <div class="service-desc-line w90"></div>
+          <div class="service-desc-line w70"></div>
+          <div class="service-badge"><div class="icon-sq sm"></div> Domain Eksternal</div>
+        </div>
+        <div class="service-arrow"><div class="service-arrow-icon"></div></div>
+      </article>
+      <article class="service-card-wf">
+        <div class="service-icon-wf"><div class="service-icon-inner"></div></div>
+        <div class="service-body">
+          <div class="service-title"></div>
+          <div class="service-desc-line w90"></div>
+          <div class="service-desc-line w70"></div>
+          <div class="service-badge"><div class="icon-sq sm"></div> Domain Eksternal</div>
+        </div>
+        <div class="service-arrow"><div class="service-arrow-icon"></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     [3] BERITA & KABAR
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">3</span> BERITA &amp; KABAR
+  <span>featured article (kiri lebar) + mini news list (kanan) · filter tab pills</span>
+</div>
+<section class="section section-gray" id="berita">
+  <div class="container">
+    <div class="flex justify-between items-center" style="margin-bottom:24px;">
+      <div>
+        <div class="eyebrow">BERITA &amp; KABAR</div>
+        <div class="section-h2">Informasi Terkini Jawa Timur</div>
+      </div>
+      <div class="news-tabs">
+        <span class="news-tab-wf active">Semua</span>
+        <span class="news-tab-wf">Pemerintahan</span>
+        <span class="news-tab-wf">Digitalisasi</span>
+        <span class="news-tab-wf">Pengumuman</span>
+      </div>
+    </div>
+
+    <div class="news-grid-wf">
+      <!-- Featured article -->
+      <article class="news-featured-wf">
+        <div class="news-thumb-wf">
+          <div class="news-badge-wf">Pemerintahan</div>
+        </div>
+        <div class="news-body-wf">
+          <div class="news-meta-row">
+            <div class="news-meta-item"><div class="news-meta-icon"></div> 15 Oktober 2026</div>
+            <div class="news-meta-item"><div class="news-meta-icon"></div> 3 min baca</div>
+          </div>
+          <div class="news-title-line w90"></div>
+          <div class="news-title-line w75" style="margin-bottom:12px;"></div>
+          <div class="news-p-line wfull"></div>
+          <div class="news-p-line w85"></div>
+          <div class="news-p-line w60"></div>
+          <div style="display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:600; color:var(--c-accent); margin-top:12px;">
+            Baca Selengkapnya <div class="icon-sq sm"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mini news list -->
+      <div class="news-side-col">
+        <article class="news-mini-card">
+          <div class="news-mini-thumb"></div>
+          <div class="news-mini-body">
+            <div class="news-mini-badge">Digitalisasi</div>
+            <div class="news-mini-title w90"></div>
+            <div class="news-mini-title w75"></div>
+            <div class="news-mini-date"><div class="news-mini-date-icon"></div><div class="news-mini-date-text"></div></div>
+          </div>
+        </article>
+        <article class="news-mini-card">
+          <div class="news-mini-thumb"></div>
+          <div class="news-mini-body">
+            <div class="news-mini-badge">Pengumuman</div>
+            <div class="news-mini-title w90"></div>
+            <div class="news-mini-title w75"></div>
+            <div class="news-mini-date"><div class="news-mini-date-icon"></div><div class="news-mini-date-text"></div></div>
+          </div>
+        </article>
+        <article class="news-mini-card">
+          <div class="news-mini-thumb"></div>
+          <div class="news-mini-body">
+            <div class="news-mini-badge">Pemerintahan</div>
+            <div class="news-mini-title w90"></div>
+            <div class="news-mini-title w75"></div>
+            <div class="news-mini-date"><div class="news-mini-date-icon"></div><div class="news-mini-date-text"></div></div>
+          </div>
+        </article>
+        <article class="news-mini-card">
+          <div class="news-mini-thumb"></div>
+          <div class="news-mini-body">
+            <div class="news-mini-badge">Digitalisasi</div>
+            <div class="news-mini-title w90"></div>
+            <div class="news-mini-title w75"></div>
+            <div class="news-mini-date"><div class="news-mini-date-icon"></div><div class="news-mini-date-text"></div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     [4] KALENDER KEGIATAN
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">4</span> KALENDER KEGIATAN
+  <span>event poster card (kiri) · calendar widget interaktif (kanan)</span>
+</div>
+<section class="section section-white" id="kegiatan">
+  <div class="container">
+    <div class="calendar-card">
+      <div class="flex items-center gap-8">
+        <div class="icon-sq" style="width:20px;height:20px;"></div>
+        <div style="height:14px; width:160px; border-radius:4px; background:var(--c-fill-mid);"></div>
+      </div>
+
+      <div class="calendar-inner">
+        <!-- Event poster -->
+        <div class="event-poster">
+          <div class="poster-img">
+            <div class="poster-date-badge">
+              <div style="font-size:9px; text-align:center; color:rgba(255,255,255,.6);">OKT</div>
+              <div class="poster-day">20</div>
+            </div>
+          </div>
+          <div class="poster-info">
+            <div class="poster-title"></div>
+            <div class="event-detail-row">
+              <div class="event-detail-icon-sq"></div>
+              <div class="event-detail-lines">
+                <div class="edl-strong"></div>
+                <div class="edl-span"></div>
+              </div>
+            </div>
+            <div class="event-detail-row">
+              <div class="event-detail-icon-sq"></div>
+              <div class="event-detail-lines">
+                <div class="edl-strong"></div>
+                <div class="edl-span"></div>
+              </div>
+            </div>
+            <div style="margin-top:12px;">
+              <div class="wf-btn" style="font-size:11px; padding:7px 16px;">
+                <div class="icon-sq sm" style="background:#fff; opacity:.7;"></div>
+                Lihat Detail
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calendar widget -->
+        <div class="cal-widget">
+          <div class="cal-header">
+            <div>
+              <div style="height:8px; width:120px; border-radius:2px; background:var(--c-border); margin-bottom:6px;"></div>
+              <div class="cal-month-title"></div>
+            </div>
+            <div class="cal-nav-row">
+              <div class="cal-nav-btn"><div class="cal-nav-icon"></div></div>
+              <div class="cal-nav-btn"><div class="cal-nav-icon"></div></div>
+            </div>
+          </div>
+          <div class="cal-days-header">
+            <div class="cal-day-name">Sen</div><div class="cal-day-name">Sel</div>
+            <div class="cal-day-name">Rab</div><div class="cal-day-name">Kam</div>
+            <div class="cal-day-name">Jum</div><div class="cal-day-name">Sab</div>
+            <div class="cal-day-name">Min</div>
+          </div>
+          <div class="cal-grid">
+            <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+            <div class="cal-cell">1</div><div class="cal-cell">2</div>
+            <div class="cal-cell has-event">3</div><div class="cal-cell">4</div><div class="cal-cell">5</div>
+            <div class="cal-cell">6</div><div class="cal-cell">7</div><div class="cal-cell">8</div>
+            <div class="cal-cell has-event">9</div><div class="cal-cell">10</div>
+            <div class="cal-cell">11</div><div class="cal-cell">12</div>
+            <div class="cal-cell">13</div><div class="cal-cell">14</div>
+            <div class="cal-cell today">15</div>
+            <div class="cal-cell">16</div><div class="cal-cell">17</div>
+            <div class="cal-cell">18</div><div class="cal-cell">19</div>
+            <div class="cal-cell has-event">20</div>
+            <div class="cal-cell">21</div><div class="cal-cell">22</div>
+            <div class="cal-cell">23</div><div class="cal-cell">24</div>
+            <div class="cal-cell">25</div><div class="cal-cell">26</div>
+            <div class="cal-cell">27</div><div class="cal-cell">28</div>
+            <div class="cal-cell">29</div><div class="cal-cell">30</div><div class="cal-cell">31</div>
+            <div class="cal-cell empty"></div><div class="cal-cell empty"></div>
+          </div>
+          <div class="cal-legend">
+            <div class="legend-item"><div class="legend-dot event"></div> Ada Kegiatan</div>
+            <div class="legend-item"><div class="legend-dot today"></div> Hari Ini</div>
+            <div class="legend-item"><div class="legend-dot selected"></div> Dipilih</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     [5] VIDEO & KONTEN
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">5</span> VIDEO &amp; KONTEN
+  <span>featured video player (kiri) · video list sidebar (kanan)</span>
+</div>
+<section class="section section-gray" id="video">
+  <div class="container">
+    <div class="flex justify-between items-center" style="margin-bottom:24px;">
+      <div>
+        <div class="eyebrow">VIDEO &amp; KONTEN</div>
+        <div class="section-h2">Video Seputar Jawa Timur</div>
+      </div>
+      <div class="wf-btn wf-btn-ghost" style="font-size:12px; padding:7px 16px;">
+        Selengkapnya <div class="icon-sq sm"></div>
+      </div>
+    </div>
+
+    <div class="video-grid-wf">
+      <!-- Featured video -->
+      <div>
+        <div class="video-player-wf">
+          <div class="play-btn-large"><div class="play-triangle"></div></div>
+        </div>
+        <div class="video-featured-info-wf">
+          <div class="video-feat-title"></div>
+          <div class="video-feat-meta">
+            <div class="video-feat-date">
+              <div class="video-feat-date-icon"></div>
+              <div class="video-feat-date-text"></div>
+            </div>
+            <div class="video-cat-badge">Kategori</div>
+          </div>
+          <div class="video-desc-line w100"></div>
+          <div class="video-desc-line w80"></div>
+          <div class="video-desc-line w55"></div>
+        </div>
+      </div>
+
+      <!-- Sidebar list -->
+      <div class="video-sidebar-wf">
+        <div class="video-sidebar-header">
+          <div class="vsidebar-icon"></div>
+          <div class="vsidebar-title"></div>
+        </div>
+        <!-- 4 items -->
+        <div class="video-sidebar-item">
+          <div class="video-thumb-wf"><div class="video-play-sm"><div class="play-circle-sm"><div class="play-tri-sm"></div></div></div></div>
+          <div class="video-item-body">
+            <div class="video-item-title w90"></div><div class="video-item-title w75"></div>
+            <div class="video-item-meta"><div class="video-item-date-txt"></div><div class="video-item-tag"></div></div>
+          </div>
+        </div>
+        <div class="video-sidebar-item">
+          <div class="video-thumb-wf"><div class="video-play-sm"><div class="play-circle-sm"><div class="play-tri-sm"></div></div></div></div>
+          <div class="video-item-body">
+            <div class="video-item-title w90"></div><div class="video-item-title w75"></div>
+            <div class="video-item-meta"><div class="video-item-date-txt"></div><div class="video-item-tag"></div></div>
+          </div>
+        </div>
+        <div class="video-sidebar-item">
+          <div class="video-thumb-wf"><div class="video-play-sm"><div class="play-circle-sm"><div class="play-tri-sm"></div></div></div></div>
+          <div class="video-item-body">
+            <div class="video-item-title w90"></div><div class="video-item-title w75"></div>
+            <div class="video-item-meta"><div class="video-item-date-txt"></div><div class="video-item-tag"></div></div>
+          </div>
+        </div>
+        <div class="video-sidebar-item">
+          <div class="video-thumb-wf"><div class="video-play-sm"><div class="play-circle-sm"><div class="play-tri-sm"></div></div></div></div>
+          <div class="video-item-body">
+            <div class="video-item-title w90"></div><div class="video-item-title w75"></div>
+            <div class="video-item-meta"><div class="video-item-date-txt"></div><div class="video-item-tag"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     [6] GALERI FOTO KEGIATAN
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">6</span> GALERI FOTO KEGIATAN
+  <span>carousel 3-card viewport · prev/next nav · dot indicators</span>
+</div>
+<section class="section section-white" id="galeri">
+  <div class="container">
+    <div style="margin-bottom:24px;">
+      <div class="eyebrow">DOKUMENTASI</div>
+      <div class="section-h2">Galeri Foto Kegiatan</div>
+    </div>
+
+    <div class="gallery-carousel-wf">
+      <div class="carousel-btn prev">
+        <div class="carousel-icon" style="clip-path:polygon(80% 0%, 0% 50%, 80% 100%);"></div>
+      </div>
+      <div class="carousel-btn next">
+        <div class="carousel-icon" style="clip-path:polygon(20% 0%, 100% 50%, 20% 100%);"></div>
+      </div>
+      <div class="gallery-track">
+        <div class="gallery-card-wf active">
+          <div class="gallery-overlay-wf">
+            <div class="gallery-tag-wf">KEGIATAN</div>
+            <div class="gallery-title-line"></div>
+          </div>
+        </div>
+        <div class="gallery-card-wf">
+          <div class="gallery-overlay-wf">
+            <div class="gallery-tag-wf">DIGITALISASI</div>
+            <div class="gallery-title-line"></div>
+          </div>
+        </div>
+        <div class="gallery-card-wf">
+          <div class="gallery-overlay-wf">
+            <div class="gallery-tag-wf">SEMINAR</div>
+            <div class="gallery-title-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-dots-wf">
+      <div class="gallery-dot active"></div>
+      <div class="gallery-dot"></div>
+      <div class="gallery-dot"></div>
+      <div class="gallery-dot"></div>
+      <div class="gallery-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     [7] FOOTER
+══════════════════════════════════════════════════ -->
+<div class="section-label-bar">
+  <span class="wf-pin">7</span> FOOTER
+  <span>3-col: alamat+peta · sosial media · statistik pengunjung · copyright bar</span>
+</div>
+<footer class="footer-wf">
+  <div class="footer-grid">
+    <!-- Alamat + Peta -->
+    <div>
+      <div class="footer-col-title">
+        <div class="footer-col-title-icon"></div>
+        <div class="footer-col-title-text"></div>
+      </div>
+      <div class="footer-addr-lines">
+        <div class="footer-addr-line w90"></div>
+        <div class="footer-addr-line w70"></div>
+      </div>
+      <div class="footer-map-placeholder"><div class="map-pin-center"></div></div>
+      <div class="footer-map-btn">
+        <div class="icon-sq sm" style="background:var(--c-fill-hi); opacity:.5;"></div>
+        Maps
+      </div>
+    </div>
+
+    <!-- Sosmed -->
+    <div>
+      <div class="footer-col-title">
+        <div class="footer-col-title-icon"></div>
+        <div class="footer-col-title-text"></div>
+      </div>
+      <div class="footer-social-list">
+        <div class="footer-social-item"><div class="footer-social-icon"></div><div class="footer-social-text"></div></div>
+        <div class="footer-social-item"><div class="footer-social-icon"></div><div class="footer-social-text"></div></div>
+        <div class="footer-social-item"><div class="footer-social-icon"></div><div class="footer-social-text"></div></div>
+        <div class="footer-social-item"><div class="footer-social-icon"></div><div class="footer-social-text"></div></div>
+        <div class="footer-social-item"><div class="footer-social-icon"></div><div class="footer-social-text"></div></div>
+      </div>
+    </div>
+
+    <!-- Visitor stats -->
+    <div>
+      <div class="footer-col-title">
+        <div class="footer-col-title-icon"></div>
+        <div class="footer-col-title-text"></div>
+      </div>
+      <div class="footer-stat-list">
+        <div class="footer-stat-row">
+          <div class="footer-stat-label"><div class="footer-stat-icon"></div><div class="footer-stat-text"></div></div>
+          <div class="footer-stat-value"></div>
+        </div>
+        <div class="footer-stat-row">
+          <div class="footer-stat-label"><div class="footer-stat-icon"></div><div class="footer-stat-text"></div></div>
+          <div class="footer-stat-value"></div>
+        </div>
+        <div class="footer-stat-row">
+          <div class="footer-stat-label"><div class="footer-stat-icon"></div><div class="footer-stat-text"></div></div>
+          <div class="footer-stat-value"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright bar -->
+  <div class="footer-bottom-wf">
+    <div class="footer-copy-text"></div>
+  </div>
+</footer>
+
+</body>
+</html>
