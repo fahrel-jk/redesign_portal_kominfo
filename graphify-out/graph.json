@@ -56,6 +56,19 @@
       "source_location": "L9"
     },
     {
+      "id": "database_seeders_serviceseeder_serviceseeder",
+      "label": "ServiceSeeder",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ServiceCategory",
+      "file_type": "code",
+      "norm_label": "serviceseeder",
+      "source_file": "database/seeders/ServiceSeeder.php",
+      "source_location": "L10"
+    },
+    {
       "id": "app_providers_appserviceprovider_appserviceprovider",
       "label": "AppServiceProvider",
       "_callable": true,
@@ -147,16 +160,16 @@
       "source_location": "L7"
     },
     {
-      "id": "database_seeders_eventseeder_eventseeder",
-      "label": "EventSeeder",
+      "id": "database_seeders_galleryseeder_galleryseeder",
+      "label": "GallerySeeder",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "Illuminate\\Database\\Seeder",
       "file_type": "code",
-      "norm_label": "eventseeder",
-      "source_file": "database/seeders/EventSeeder.php",
+      "norm_label": "galleryseeder",
+      "source_file": "database/seeders/GallerySeeder.php",
       "source_location": "L8"
     },
     {
@@ -186,17 +199,17 @@
       "source_location": "L9"
     },
     {
-      "id": "database_seeders_serviceseeder_serviceseeder",
-      "label": "ServiceSeeder",
+      "id": "database_seeders_videoseeder_videoseeder",
+      "label": "VideoSeeder",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 4,
       "community_name": "Illuminate\\Database\\Seeder",
       "file_type": "code",
-      "norm_label": "serviceseeder",
-      "source_file": "database/seeders/ServiceSeeder.php",
-      "source_location": "L10"
+      "norm_label": "videoseeder",
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L8"
     },
     {
       "id": "app_http_controllers_admin_adminauthcontroller_adminauthcontroller",
@@ -225,30 +238,30 @@
       "source_location": "L13"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller",
-      "label": "AdminEventController",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller",
+      "label": "AdminGalleryController",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 50,
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
-      "norm_label": "admineventcontroller",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "norm_label": "admingallerycontroller",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
       "source_location": "L9"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller",
-      "label": "AdminNewsController",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "label": "AdminVideoController",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 50,
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
-      "norm_label": "adminnewscontroller",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L10"
+      "norm_label": "adminvideocontroller",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L9"
     },
     {
       "id": "app_http_controllers_controller_controller",
@@ -274,46 +287,7 @@
       "file_type": "code",
       "norm_label": "publicportalcontroller",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L12"
-    },
-    {
-      "id": "app_models_event_event",
-      "label": "Event",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "event",
-      "source_file": "app/Models/Event.php",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_models_news_news",
-      "label": "News",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "news",
-      "source_file": "app/Models/News.php",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller",
-      "label": "AdminGalleryController",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": "admingallerycontroller",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L9"
+      "source_location": "L13"
     },
     {
       "id": "app_models_gallery_gallery",
@@ -321,24 +295,89 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "gallery",
       "source_file": "app/Models/Gallery.php",
       "source_location": "L8"
     },
     {
-      "id": "database_seeders_galleryseeder_galleryseeder",
-      "label": "GallerySeeder",
+      "id": "app_models_video_video",
+      "label": "Video",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
+      "file_type": "code",
+      "norm_label": "video",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller",
+      "label": "AdminEventController",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 51,
-      "community_name": "Gallery",
+      "community_name": "Event",
       "file_type": "code",
-      "norm_label": "galleryseeder",
-      "source_file": "database/seeders/GallerySeeder.php",
+      "norm_label": "admineventcontroller",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L9"
+    },
+    {
+      "id": "app_models_event_event",
+      "label": "Event",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "event",
+      "source_file": "app/Models/Event.php",
+      "source_location": "L8"
+    },
+    {
+      "id": "database_seeders_eventseeder_eventseeder",
+      "label": "EventSeeder",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "eventseeder",
+      "source_file": "database/seeders/EventSeeder.php",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller",
+      "label": "AdminNewsController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "adminnewscontroller",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_models_news_news",
+      "label": "News",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "news",
+      "source_file": "app/Models/News.php",
       "source_location": "L8"
     },
     {
@@ -558,16 +597,16 @@
       "source_location": "L32"
     },
     {
-      "id": "app_models_servicecategory_servicecategory_services",
-      "label": ".services()",
+      "id": "database_seeders_serviceseeder_serviceseeder_run",
+      "label": ".run()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "ServiceCategory",
       "file_type": "code",
-      "norm_label": ".services()",
-      "source_file": "app/Models/ServiceCategory.php",
-      "source_location": "L27"
+      "norm_label": ".run()",
+      "source_file": "database/seeders/ServiceSeeder.php",
+      "source_location": "L12"
     },
     {
       "id": "tests_feature_admincategorytest_closure_1",
@@ -834,6 +873,18 @@
       "source_location": "L6"
     },
     {
+      "id": "resources_js_portal_buildeventsindex",
+      "label": "buildEventsIndex()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "buildeventsindex()",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L620"
+    },
+    {
       "id": "resources_js_portal_closegallerymodal",
       "label": "closeGalleryModal()",
       "_callable": true,
@@ -843,7 +894,7 @@
       "file_type": "code",
       "norm_label": "closegallerymodal()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L906"
+      "source_location": "L885"
     },
     {
       "id": "resources_js_portal_createservicecard",
@@ -855,7 +906,7 @@
       "file_type": "code",
       "norm_label": "createservicecard()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L233"
+      "source_location": "L201"
     },
     {
       "id": "resources_js_portal_getfilteredservices",
@@ -867,19 +918,7 @@
       "file_type": "code",
       "norm_label": "getfilteredservices()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L347"
-    },
-    {
-      "id": "resources_js_portal_getserviceiconhtml",
-      "label": "getServiceIconHtml()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "portal.js",
-      "file_type": "code",
-      "norm_label": "getserviceiconhtml()",
-      "source_file": "resources/js/portal.js",
-      "source_location": "L222"
+      "source_location": "L310"
     },
     {
       "id": "resources_js_portal_getservicesdata",
@@ -891,7 +930,7 @@
       "file_type": "code",
       "norm_label": "getservicesdata()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L59"
+      "source_location": "L53"
     },
     {
       "id": "resources_js_portal_getserviceurl",
@@ -903,7 +942,7 @@
       "file_type": "code",
       "norm_label": "getserviceurl()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L210"
+      "source_location": "L191"
     },
     {
       "id": "resources_js_portal_initcalendarwidget",
@@ -915,7 +954,7 @@
       "file_type": "code",
       "norm_label": "initcalendarwidget()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L737"
+      "source_location": "L654"
     },
     {
       "id": "resources_js_portal_initgallerycarousel",
@@ -927,7 +966,43 @@
       "file_type": "code",
       "norm_label": "initgallerycarousel()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L841"
+      "source_location": "L789"
+    },
+    {
+      "id": "resources_js_portal_initgallerycarousel_getmaxindex",
+      "label": "getMaxIndex()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "getmaxindex()",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L805"
+    },
+    {
+      "id": "resources_js_portal_initgallerycarousel_getvisiblecardscount",
+      "label": "getVisibleCardsCount()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "getvisiblecardscount()",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L798"
+    },
+    {
+      "id": "resources_js_portal_initgallerycarousel_updategalleryview",
+      "label": "updateGalleryView()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "updategalleryview()",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L810"
     },
     {
       "id": "resources_js_portal_initheroanimation",
@@ -939,7 +1014,7 @@
       "file_type": "code",
       "norm_label": "initheroanimation()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L915"
+      "source_location": "L892"
     },
     {
       "id": "resources_js_portal_initializeicons",
@@ -951,7 +1026,7 @@
       "file_type": "code",
       "norm_label": "initializeicons()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L163"
+      "source_location": "L149"
     },
     {
       "id": "resources_js_portal_initnewsfilter",
@@ -963,7 +1038,7 @@
       "file_type": "code",
       "norm_label": "initnewsfilter()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L661"
+      "source_location": "L590"
     },
     {
       "id": "resources_js_portal_opengallerymodal",
@@ -975,7 +1050,7 @@
       "file_type": "code",
       "norm_label": "opengallerymodal()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L889"
+      "source_location": "L868"
     },
     {
       "id": "resources_js_portal_performsearch",
@@ -987,7 +1062,19 @@
       "file_type": "code",
       "norm_label": "performsearch()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L417"
+      "source_location": "L374"
+    },
+    {
+      "id": "resources_js_portal_rendercalendarmonth",
+      "label": "renderCalendarMonth()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "rendercalendarmonth()",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L684"
     },
     {
       "id": "resources_js_portal_renderfeaturedservices",
@@ -999,7 +1086,7 @@
       "file_type": "code",
       "norm_label": "renderfeaturedservices()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L323"
+      "source_location": "L288"
     },
     {
       "id": "resources_js_portal_renderservices",
@@ -1011,7 +1098,7 @@
       "file_type": "code",
       "norm_label": "renderservices()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L377"
+      "source_location": "L338"
     },
     {
       "id": "resources_js_portal_updateactivecategory",
@@ -1023,7 +1110,7 @@
       "file_type": "code",
       "norm_label": "updateactivecategory()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L499"
+      "source_location": "L446"
     },
     {
       "id": "resources_js_portal_updatedatetime",
@@ -1035,7 +1122,7 @@
       "file_type": "code",
       "norm_label": "updatedatetime()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L174"
+      "source_location": "L158"
     },
     {
       "id": "resources_js_portal_updateeventposter",
@@ -1047,19 +1134,7 @@
       "file_type": "code",
       "norm_label": "updateeventposter()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L787"
-    },
-    {
-      "id": "resources_js_portal_updategalleryview",
-      "label": "updateGalleryView()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "portal.js",
-      "file_type": "code",
-      "norm_label": "updategalleryview()",
-      "source_file": "resources/js/portal.js",
-      "source_location": "L868"
+      "source_location": "L765"
     },
     {
       "id": "resources_js_portal_updatesearchinfo",
@@ -1071,7 +1146,7 @@
       "file_type": "code",
       "norm_label": "updatesearchinfo()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L403"
+      "source_location": "L362"
     },
     {
       "id": "resources_js_portal_updateservicecount",
@@ -1083,7 +1158,7 @@
       "file_type": "code",
       "norm_label": "updateservicecount()",
       "source_file": "resources/js/portal.js",
-      "source_location": "L543"
+      "source_location": "L484"
     },
     {
       "id": "tests_pest_closure_1",
@@ -1410,7 +1485,7 @@
       "source_location": "L12"
     },
     {
-      "id": "database_seeders_eventseeder_eventseeder_run",
+      "id": "database_seeders_galleryseeder_galleryseeder_run",
       "label": ".run()",
       "_callable": true,
       "_origin": "ast",
@@ -1418,7 +1493,7 @@
       "community_name": "Illuminate\\Database\\Seeder",
       "file_type": "code",
       "norm_label": ".run()",
-      "source_file": "database/seeders/EventSeeder.php",
+      "source_file": "database/seeders/GallerySeeder.php",
       "source_location": "L10"
     },
     {
@@ -1446,7 +1521,7 @@
       "source_location": "L11"
     },
     {
-      "id": "database_seeders_serviceseeder_serviceseeder_run",
+      "id": "database_seeders_videoseeder_videoseeder_run",
       "label": ".run()",
       "_callable": true,
       "_origin": "ast",
@@ -1454,8 +1529,8 @@
       "community_name": "Illuminate\\Database\\Seeder",
       "file_type": "code",
       "norm_label": ".run()",
-      "source_file": "database/seeders/ServiceSeeder.php",
-      "source_location": "L12"
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L10"
     },
     {
       "id": "database_migrations_0001_01_01_000000_create_users_table_closure_1",
@@ -1806,6 +1881,42 @@
       "source_location": "L9"
     },
     {
+      "id": "database_migrations_2026_09_30_000001_create_videos_table_closure_1",
+      "label": "{closure#1}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Illuminate\\Database\\Schema\\Blueprint",
+      "file_type": "code",
+      "norm_label": "{closure#1}()",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L11"
+    },
+    {
+      "id": "database_migrations_2026_09_30_000001_create_videos_table_down",
+      "label": "down()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Illuminate\\Database\\Schema\\Blueprint",
+      "file_type": "code",
+      "norm_label": "down()",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L24"
+    },
+    {
+      "id": "database_migrations_2026_09_30_000001_create_videos_table_up",
+      "label": "up()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Illuminate\\Database\\Schema\\Blueprint",
+      "file_type": "code",
+      "norm_label": "up()",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L9"
+    },
+    {
       "id": "app_http_controllers_admin_adminauthcontroller_adminauthcontroller_login",
       "label": ".login()",
       "_callable": true,
@@ -1854,7 +1965,7 @@
       "source_location": "L15"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_create",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_create",
       "label": ".create()",
       "_callable": true,
       "_origin": "ast",
@@ -1862,11 +1973,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".create()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
       "source_location": "L26"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_destroy",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_destroy",
       "label": ".destroy()",
       "_callable": true,
       "_origin": "ast",
@@ -1874,11 +1985,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".destroy()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L77"
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L93"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_edit",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_edit",
       "label": ".edit()",
       "_callable": true,
       "_origin": "ast",
@@ -1886,11 +1997,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".edit()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L52"
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L58"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_index",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_index",
       "label": ".index()",
       "_callable": true,
       "_origin": "ast",
@@ -1898,11 +2009,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".index()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
       "source_location": "L11"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_store",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_store",
       "label": ".store()",
       "_callable": true,
       "_origin": "ast",
@@ -1910,11 +2021,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".store()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
       "source_location": "L31"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_toggleactive",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_toggleactive",
       "label": ".toggleActive()",
       "_callable": true,
       "_origin": "ast",
@@ -1922,11 +2033,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".toggleactive()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L85"
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L105"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_update",
+      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_update",
       "label": ".update()",
       "_callable": true,
       "_origin": "ast",
@@ -1934,11 +2045,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".update()",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L57"
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L63"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_create",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_create",
       "label": ".create()",
       "_callable": true,
       "_origin": "ast",
@@ -1946,11 +2057,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".create()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L33"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L26"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_destroy",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_destroy",
       "label": ".destroy()",
       "_callable": true,
       "_origin": "ast",
@@ -1958,11 +2069,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".destroy()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L94"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L93"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_edit",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_edit",
       "label": ".edit()",
       "_callable": true,
       "_origin": "ast",
@@ -1970,11 +2081,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".edit()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L65"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L58"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_index",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_index",
       "label": ".index()",
       "_callable": true,
       "_origin": "ast",
@@ -1982,11 +2093,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".index()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L12"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L11"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_store",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_store",
       "label": ".store()",
       "_callable": true,
       "_origin": "ast",
@@ -1994,11 +2105,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".store()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L38"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L31"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_toggleactive",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_toggleactive",
       "label": ".toggleActive()",
       "_callable": true,
       "_origin": "ast",
@@ -2006,11 +2117,11 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".toggleactive()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L102"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L104"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
+      "id": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
       "label": ".update()",
       "_callable": true,
       "_origin": "ast",
@@ -2018,20 +2129,8 @@
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": ".update()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L70"
-    },
-    {
-      "id": "app_http_controllers_admin_adminnewscontroller_closure_1",
-      "label": "{closure#1}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#1}()",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L18"
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L63"
     },
     {
       "id": "app_http_controllers_publicportalcontroller_closure_1",
@@ -2043,7 +2142,7 @@
       "file_type": "code",
       "norm_label": "{closure#1}()",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "app_http_controllers_publicportalcontroller_publicportalcontroller_index",
@@ -2055,7 +2154,55 @@
       "file_type": "code",
       "norm_label": ".index()",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L14"
+      "source_location": "L15"
+    },
+    {
+      "id": "app_models_gallery_gallery_getimageurlattribute",
+      "label": ".getImageUrlAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
+      "file_type": "code",
+      "norm_label": ".getimageurlattribute()",
+      "source_file": "app/Models/Gallery.php",
+      "source_location": "L28"
+    },
+    {
+      "id": "app_models_video_video_getembedurlattribute",
+      "label": ".getEmbedUrlAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
+      "file_type": "code",
+      "norm_label": ".getembedurlattribute()",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L46"
+    },
+    {
+      "id": "app_models_video_video_getthumbnailurlattribute",
+      "label": ".getThumbnailUrlAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
+      "file_type": "code",
+      "norm_label": ".getthumbnailurlattribute()",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L52"
+    },
+    {
+      "id": "app_models_video_video_getyoutubeidattribute",
+      "label": ".getYoutubeIdAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
+      "file_type": "code",
+      "norm_label": ".getyoutubeidattribute()",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L30"
     },
     {
       "id": "routes_web_closure_1",
@@ -2067,7 +2214,7 @@
       "file_type": "code",
       "norm_label": "{closure#1}()",
       "source_file": "routes/web.php",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "routes_web_closure_2",
@@ -2079,7 +2226,7 @@
       "file_type": "code",
       "norm_label": "{closure#2}()",
       "source_file": "routes/web.php",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "routes_web_get",
@@ -2091,255 +2238,15 @@
       "file_type": "code",
       "norm_label": "get /()",
       "source_file": "routes/web.php",
-      "source_location": "L36"
-    },
-    {
-      "id": "tests_feature_admineventtest_closure_1",
-      "label": "{closure#1}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#1}()",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L6"
-    },
-    {
-      "id": "tests_feature_admineventtest_closure_2",
-      "label": "{closure#2}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#2}()",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L15"
-    },
-    {
-      "id": "tests_feature_admineventtest_closure_3",
-      "label": "{closure#3}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#3}()",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L28"
-    },
-    {
-      "id": "tests_feature_admineventtest_closure_4",
-      "label": "{closure#4}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#4}()",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L46"
-    },
-    {
-      "id": "tests_feature_admineventtest_closure_5",
-      "label": "{closure#5}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#5}()",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L69"
-    },
-    {
-      "id": "tests_feature_admineventtest_closure_6",
-      "label": "{closure#6}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#6}()",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L83"
-    },
-    {
-      "id": "tests_feature_adminnewstest_closure_1",
-      "label": "{closure#1}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#1}()",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L6"
-    },
-    {
-      "id": "tests_feature_adminnewstest_closure_2",
-      "label": "{closure#2}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#2}()",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L15"
-    },
-    {
-      "id": "tests_feature_adminnewstest_closure_3",
-      "label": "{closure#3}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#3}()",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L30"
-    },
-    {
-      "id": "tests_feature_adminnewstest_closure_4",
-      "label": "{closure#4}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#4}()",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L47"
-    },
-    {
-      "id": "tests_feature_adminnewstest_closure_5",
-      "label": "{closure#5}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#5}()",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L71"
-    },
-    {
-      "id": "tests_feature_adminnewstest_closure_6",
-      "label": "{closure#6}()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "{closure#6}()",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L86"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_create",
-      "label": ".create()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".create()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L26"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_destroy",
-      "label": ".destroy()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".destroy()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L78"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_edit",
-      "label": ".edit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".edit()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L53"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_index",
-      "label": ".index()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".index()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L11"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_store",
-      "label": ".store()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".store()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L31"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_toggleactive",
-      "label": ".toggleActive()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".toggleactive()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L86"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_update",
-      "label": ".update()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".update()",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L58"
-    },
-    {
-      "id": "database_seeders_galleryseeder_galleryseeder_run",
-      "label": ".run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": ".run()",
-      "source_file": "database/seeders/GallerySeeder.php",
-      "source_location": "L10"
+      "source_location": "L37"
     },
     {
       "id": "tests_feature_admingallerytest_closure_1",
       "label": "{closure#1}()",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "{closure#1}()",
       "source_file": "tests/Feature/AdminGalleryTest.php",
@@ -2350,8 +2257,8 @@
       "label": "{closure#2}()",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "{closure#2}()",
       "source_file": "tests/Feature/AdminGalleryTest.php",
@@ -2362,8 +2269,8 @@
       "label": "{closure#3}()",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "{closure#3}()",
       "source_file": "tests/Feature/AdminGalleryTest.php",
@@ -2374,8 +2281,8 @@
       "label": "{closure#4}()",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "{closure#4}()",
       "source_file": "tests/Feature/AdminGalleryTest.php",
@@ -2386,8 +2293,8 @@
       "label": "{closure#5}()",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "{closure#5}()",
       "source_file": "tests/Feature/AdminGalleryTest.php",
@@ -2398,12 +2305,384 @@
       "label": "{closure#6}()",
       "_callable": true,
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "{closure#6}()",
       "source_file": "tests/Feature/AdminGalleryTest.php",
       "source_location": "L82"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_create",
+      "label": ".create()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".create()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L26"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_destroy",
+      "label": ".destroy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".destroy()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L92"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_edit",
+      "label": ".edit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".edit()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L57"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_index",
+      "label": ".index()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".index()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L11"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_store",
+      "label": ".store()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".store()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L31"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_toggleactive",
+      "label": ".toggleActive()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".toggleactive()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L104"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller_admineventcontroller_update",
+      "label": ".update()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".update()",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L62"
+    },
+    {
+      "id": "app_models_event_event_getimageurlattribute",
+      "label": ".getImageUrlAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".getimageurlattribute()",
+      "source_file": "app/Models/Event.php",
+      "source_location": "L27"
+    },
+    {
+      "id": "database_seeders_eventseeder_eventseeder_run",
+      "label": ".run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": ".run()",
+      "source_file": "database/seeders/EventSeeder.php",
+      "source_location": "L10"
+    },
+    {
+      "id": "tests_feature_admineventtest_closure_1",
+      "label": "{closure#1}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "{closure#1}()",
+      "source_file": "tests/Feature/AdminEventTest.php",
+      "source_location": "L6"
+    },
+    {
+      "id": "tests_feature_admineventtest_closure_2",
+      "label": "{closure#2}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "{closure#2}()",
+      "source_file": "tests/Feature/AdminEventTest.php",
+      "source_location": "L15"
+    },
+    {
+      "id": "tests_feature_admineventtest_closure_3",
+      "label": "{closure#3}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "{closure#3}()",
+      "source_file": "tests/Feature/AdminEventTest.php",
+      "source_location": "L28"
+    },
+    {
+      "id": "tests_feature_admineventtest_closure_4",
+      "label": "{closure#4}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "{closure#4}()",
+      "source_file": "tests/Feature/AdminEventTest.php",
+      "source_location": "L46"
+    },
+    {
+      "id": "tests_feature_admineventtest_closure_5",
+      "label": "{closure#5}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "{closure#5}()",
+      "source_file": "tests/Feature/AdminEventTest.php",
+      "source_location": "L69"
+    },
+    {
+      "id": "tests_feature_admineventtest_closure_6",
+      "label": "{closure#6}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "{closure#6}()",
+      "source_file": "tests/Feature/AdminEventTest.php",
+      "source_location": "L83"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_create",
+      "label": ".create()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".create()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_destroy",
+      "label": ".destroy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".destroy()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L110"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_edit",
+      "label": ".edit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".edit()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L70"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_index",
+      "label": ".index()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".index()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L12"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_store",
+      "label": ".store()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".store()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L38"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_toggleactive",
+      "label": ".toggleActive()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".toggleactive()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L122"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
+      "label": ".update()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".update()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L75"
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller_closure_1",
+      "label": "{closure#1}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#1}()",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L18"
+    },
+    {
+      "id": "app_models_news_news_getimageurlattribute",
+      "label": ".getImageUrlAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": ".getimageurlattribute()",
+      "source_file": "app/Models/News.php",
+      "source_location": "L29"
+    },
+    {
+      "id": "tests_feature_adminnewstest_closure_1",
+      "label": "{closure#1}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#1}()",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L6"
+    },
+    {
+      "id": "tests_feature_adminnewstest_closure_2",
+      "label": "{closure#2}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#2}()",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L15"
+    },
+    {
+      "id": "tests_feature_adminnewstest_closure_3",
+      "label": "{closure#3}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#3}()",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L30"
+    },
+    {
+      "id": "tests_feature_adminnewstest_closure_4",
+      "label": "{closure#4}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#4}()",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L47"
+    },
+    {
+      "id": "tests_feature_adminnewstest_closure_5",
+      "label": "{closure#5}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#5}()",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L71"
+    },
+    {
+      "id": "tests_feature_adminnewstest_closure_6",
+      "label": "{closure#6}()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "{closure#6}()",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L86"
+    },
+    {
+      "id": "app_models_servicecategory_servicecategory_services",
+      "label": ".services()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
+      "file_type": "code",
+      "norm_label": ".services()",
+      "source_file": "app/Models/ServiceCategory.php",
+      "source_location": "L27"
     },
     {
       "id": "app_http_controllers_admin_adminservicecontroller",
@@ -2469,6 +2748,28 @@
       "file_type": "code",
       "norm_label": "servicecategory.php",
       "source_file": "app/Models/ServiceCategory.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_models_video",
+      "label": "Video.php",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ServiceCategory",
+      "file_type": "code",
+      "norm_label": "video.php",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "database_seeders_serviceseeder",
+      "label": "ServiceSeeder.php",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "ServiceCategory",
+      "file_type": "code",
+      "norm_label": "serviceseeder.php",
+      "source_file": "database/seeders/ServiceSeeder.php",
       "source_location": "L1"
     },
     {
@@ -3618,7 +3919,7 @@
       "file_type": "code",
       "norm_label": "backtotop",
       "source_file": "resources/js/portal.js",
-      "source_location": "L119"
+      "source_location": "L111"
     },
     {
       "id": "resources_js_portal_categorylist",
@@ -3629,7 +3930,7 @@
       "file_type": "code",
       "norm_label": "categorylist",
       "source_file": "resources/js/portal.js",
-      "source_location": "L95"
+      "source_location": "L87"
     },
     {
       "id": "resources_js_portal_clearsearch",
@@ -3640,7 +3941,18 @@
       "file_type": "code",
       "norm_label": "clearsearch",
       "source_file": "resources/js/portal.js",
-      "source_location": "L113"
+      "source_location": "L105"
+    },
+    {
+      "id": "resources_js_portal_day_names_full",
+      "label": "DAY_NAMES_FULL",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "day_names_full",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L618"
     },
     {
       "id": "resources_js_portal_defaultservices",
@@ -3651,7 +3963,7 @@
       "file_type": "code",
       "norm_label": "defaultservices",
       "source_file": "resources/js/portal.js",
-      "source_location": "L12"
+      "source_location": "L6"
     },
     {
       "id": "resources_js_portal_emptystate",
@@ -3662,18 +3974,7 @@
       "file_type": "code",
       "norm_label": "emptystate",
       "source_file": "resources/js/portal.js",
-      "source_location": "L104"
-    },
-    {
-      "id": "resources_js_portal_eventsdata",
-      "label": "eventsData",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "portal.js",
-      "file_type": "code",
-      "norm_label": "eventsdata",
-      "source_file": "resources/js/portal.js",
-      "source_location": "L689"
+      "source_location": "L96"
     },
     {
       "id": "resources_js_portal_featuredservices",
@@ -3684,18 +3985,7 @@
       "file_type": "code",
       "norm_label": "featuredservices",
       "source_file": "resources/js/portal.js",
-      "source_location": "L86"
-    },
-    {
-      "id": "resources_js_portal_gallerydata",
-      "label": "galleryData",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "portal.js",
-      "file_type": "code",
-      "norm_label": "gallerydata",
-      "source_file": "resources/js/portal.js",
-      "source_location": "L815"
+      "source_location": "L78"
     },
     {
       "id": "resources_js_portal_mobilemenu",
@@ -3706,7 +3996,7 @@
       "file_type": "code",
       "norm_label": "mobilemenu",
       "source_file": "resources/js/portal.js",
-      "source_location": "L125"
+      "source_location": "L117"
     },
     {
       "id": "resources_js_portal_mobilemenubutton",
@@ -3717,7 +4007,29 @@
       "file_type": "code",
       "norm_label": "mobilemenubutton",
       "source_file": "resources/js/portal.js",
-      "source_location": "L122"
+      "source_location": "L114"
+    },
+    {
+      "id": "resources_js_portal_month_names_full",
+      "label": "MONTH_NAMES_FULL",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "month_names_full",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L617"
+    },
+    {
+      "id": "resources_js_portal_month_names_short",
+      "label": "MONTH_NAMES_SHORT",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "portal.js",
+      "file_type": "code",
+      "norm_label": "month_names_short",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L616"
     },
     {
       "id": "resources_js_portal_navlinks",
@@ -3728,7 +4040,7 @@
       "file_type": "code",
       "norm_label": "navlinks",
       "source_file": "resources/js/portal.js",
-      "source_location": "L595"
+      "source_location": "L530"
     },
     {
       "id": "resources_js_portal_resetfilters",
@@ -3739,7 +4051,7 @@
       "file_type": "code",
       "norm_label": "resetfilters",
       "source_file": "resources/js/portal.js",
-      "source_location": "L116"
+      "source_location": "L108"
     },
     {
       "id": "resources_js_portal_resultcount",
@@ -3750,7 +4062,7 @@
       "file_type": "code",
       "norm_label": "resultcount",
       "source_file": "resources/js/portal.js",
-      "source_location": "L98"
+      "source_location": "L90"
     },
     {
       "id": "resources_js_portal_searchbutton",
@@ -3761,7 +4073,7 @@
       "file_type": "code",
       "norm_label": "searchbutton",
       "source_file": "resources/js/portal.js",
-      "source_location": "L92"
+      "source_location": "L84"
     },
     {
       "id": "resources_js_portal_searchkeyword",
@@ -3772,7 +4084,7 @@
       "file_type": "code",
       "norm_label": "searchkeyword",
       "source_file": "resources/js/portal.js",
-      "source_location": "L110"
+      "source_location": "L102"
     },
     {
       "id": "resources_js_portal_searchresultinfo",
@@ -3783,7 +4095,7 @@
       "file_type": "code",
       "norm_label": "searchresultinfo",
       "source_file": "resources/js/portal.js",
-      "source_location": "L107"
+      "source_location": "L99"
     },
     {
       "id": "resources_js_portal_sections",
@@ -3794,7 +4106,7 @@
       "file_type": "code",
       "norm_label": "sections",
       "source_file": "resources/js/portal.js",
-      "source_location": "L592"
+      "source_location": "L527"
     },
     {
       "id": "resources_js_portal_servicecount",
@@ -3805,7 +4117,7 @@
       "file_type": "code",
       "norm_label": "servicecount",
       "source_file": "resources/js/portal.js",
-      "source_location": "L101"
+      "source_location": "L93"
     },
     {
       "id": "resources_js_portal_servicesearch",
@@ -3816,7 +4128,7 @@
       "file_type": "code",
       "norm_label": "servicesearch",
       "source_file": "resources/js/portal.js",
-      "source_location": "L89"
+      "source_location": "L81"
     },
     {
       "id": "resources_js_portal_servicesgrid",
@@ -3827,7 +4139,7 @@
       "file_type": "code",
       "norm_label": "servicesgrid",
       "source_file": "resources/js/portal.js",
-      "source_location": "L83"
+      "source_location": "L75"
     },
     {
       "id": "resources_js_portal_siteheader",
@@ -3838,7 +4150,7 @@
       "file_type": "code",
       "norm_label": "siteheader",
       "source_file": "resources/js/portal.js",
-      "source_location": "L128"
+      "source_location": "L120"
     },
     {
       "id": "claude_skills_graphify_references_github_and_merge",
@@ -4433,14 +4745,14 @@
       "source_location": "L1"
     },
     {
-      "id": "database_seeders_eventseeder",
-      "label": "EventSeeder.php",
+      "id": "database_seeders_galleryseeder",
+      "label": "GallerySeeder.php",
       "_origin": "ast",
       "community": 4,
       "community_name": "Illuminate\\Database\\Seeder",
       "file_type": "code",
-      "norm_label": "eventseeder.php",
-      "source_file": "database/seeders/EventSeeder.php",
+      "norm_label": "galleryseeder.php",
+      "source_file": "database/seeders/GallerySeeder.php",
       "source_location": "L1"
     },
     {
@@ -4466,14 +4778,14 @@
       "source_location": "L1"
     },
     {
-      "id": "database_seeders_serviceseeder",
-      "label": "ServiceSeeder.php",
+      "id": "database_seeders_videoseeder",
+      "label": "VideoSeeder.php",
       "_origin": "ast",
       "community": 4,
       "community_name": "Illuminate\\Database\\Seeder",
       "file_type": "code",
-      "norm_label": "serviceseeder.php",
-      "source_file": "database/seeders/ServiceSeeder.php",
+      "norm_label": "videoseeder.php",
+      "source_file": "database/seeders/VideoSeeder.php",
       "source_location": "L1"
     },
     {
@@ -4708,6 +5020,17 @@
       "source_location": "L1"
     },
     {
+      "id": "database_migrations_2026_09_30_000001_create_videos_table",
+      "label": "2026_09_30_000001_create_videos_table.php",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Illuminate\\Database\\Schema\\Blueprint",
+      "file_type": "code",
+      "norm_label": "2026_09_30_000001_create_videos_table.php",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L1"
+    },
+    {
       "id": "illuminate_database_migrations_migration",
       "label": "Illuminate\\Database\\Migrations\\Migration",
       "_origin": "ast",
@@ -4763,25 +5086,25 @@
       "source_location": "L1"
     },
     {
-      "id": "app_http_controllers_admin_admineventcontroller",
-      "label": "AdminEventController.php",
+      "id": "app_http_controllers_admin_admingallerycontroller",
+      "label": "AdminGalleryController.php",
       "_origin": "ast",
       "community": 50,
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
-      "norm_label": "admineventcontroller.php",
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "norm_label": "admingallerycontroller.php",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
       "source_location": "L1"
     },
     {
-      "id": "app_http_controllers_admin_adminnewscontroller",
-      "label": "AdminNewsController.php",
+      "id": "app_http_controllers_admin_adminvideocontroller",
+      "label": "AdminVideoController.php",
       "_origin": "ast",
       "community": 50,
       "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
-      "norm_label": "adminnewscontroller.php",
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "norm_label": "adminvideocontroller.php",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
       "source_location": "L1"
     },
     {
@@ -4851,58 +5174,47 @@
       "source_location": "L1"
     },
     {
-      "id": "tests_feature_admineventtest",
-      "label": "AdminEventTest.php",
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "admineventtest.php",
-      "source_file": "tests/Feature/AdminEventTest.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_feature_adminnewstest",
-      "label": "AdminNewsTest.php",
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Illuminate\\Http\\Request",
-      "file_type": "code",
-      "norm_label": "adminnewstest.php",
-      "source_file": "tests/Feature/AdminNewsTest.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_http_controllers_admin_admingallerycontroller",
-      "label": "AdminGalleryController.php",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": "admingallerycontroller.php",
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "database_seeders_galleryseeder",
-      "label": "GallerySeeder.php",
-      "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
-      "file_type": "code",
-      "norm_label": "galleryseeder.php",
-      "source_file": "database/seeders/GallerySeeder.php",
-      "source_location": "L1"
-    },
-    {
       "id": "tests_feature_admingallerytest",
       "label": "AdminGalleryTest.php",
       "_origin": "ast",
-      "community": 51,
-      "community_name": "Gallery",
+      "community": 50,
+      "community_name": "Illuminate\\Http\\Request",
       "file_type": "code",
       "norm_label": "admingallerytest.php",
       "source_file": "tests/Feature/AdminGalleryTest.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_http_controllers_admin_admineventcontroller",
+      "label": "AdminEventController.php",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "admineventcontroller.php",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "database_seeders_eventseeder",
+      "label": "EventSeeder.php",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "eventseeder.php",
+      "source_file": "database/seeders/EventSeeder.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_feature_admineventtest",
+      "label": "AdminEventTest.php",
+      "_origin": "ast",
+      "community": 51,
+      "community_name": "Event",
+      "file_type": "code",
+      "norm_label": "admineventtest.php",
+      "source_file": "tests/Feature/AdminEventTest.php",
       "source_location": "L1"
     },
     {
@@ -5330,6 +5642,61 @@
       "file_type": "code",
       "norm_label": "news/index.blade.php",
       "source_file": "resources/views/admin/news/index.blade.php",
+      "source_location": null
+    },
+    {
+      "id": "app_http_controllers_admin_adminnewscontroller",
+      "label": "AdminNewsController.php",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "adminnewscontroller.php",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_feature_adminnewstest",
+      "label": "AdminNewsTest.php",
+      "_origin": "ast",
+      "community": 61,
+      "community_name": "News",
+      "file_type": "code",
+      "norm_label": "adminnewstest.php",
+      "source_file": "tests/Feature/AdminNewsTest.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "resources_views_admin_videos_create_blade",
+      "label": "videos/create.blade.php",
+      "_origin": "ast",
+      "community": 62,
+      "community_name": "videos/create.blade.php",
+      "file_type": "code",
+      "norm_label": "videos/create.blade.php",
+      "source_file": "resources/views/admin/videos/create.blade.php",
+      "source_location": null
+    },
+    {
+      "id": "resources_views_admin_videos_edit_blade",
+      "label": "videos/edit.blade.php",
+      "_origin": "ast",
+      "community": 63,
+      "community_name": "videos/edit.blade.php",
+      "file_type": "code",
+      "norm_label": "videos/edit.blade.php",
+      "source_file": "resources/views/admin/videos/edit.blade.php",
+      "source_location": null
+    },
+    {
+      "id": "resources_views_admin_videos_index_blade",
+      "label": "videos/index.blade.php",
+      "_origin": "ast",
+      "community": 64,
+      "community_name": "videos/index.blade.php",
+      "file_type": "code",
+      "norm_label": "videos/index.blade.php",
+      "source_file": "resources/views/admin/videos/index.blade.php",
       "source_location": null
     },
     {
@@ -5854,7 +6221,7 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -5862,196 +6229,88 @@
       "source_location": "L1"
     },
     {
-      "id": "readme_1_clone_install_dependencies",
-      "label": "1. Clone & Install Dependencies",
+      "id": "readme_arsitektur_data",
+      "label": "Arsitektur Data",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. clone & install dependencies",
+      "norm_label": "arsitektur data",
       "source_file": "README.md",
-      "source_location": "L42"
+      "source_location": "L59"
     },
     {
-      "id": "readme_1_public_portal_landing_page",
-      "label": "1. Public Portal (Landing Page)",
+      "id": "readme_cara_instalasi",
+      "label": "Cara Instalasi",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "1. public portal (landing page)",
+      "norm_label": "cara instalasi",
       "source_file": "README.md",
-      "source_location": "L14"
+      "source_location": "L21"
     },
     {
-      "id": "readme_2_konfigurasi_environment",
-      "label": "2. Konfigurasi Environment",
+      "id": "readme_catatan_integrasi",
+      "label": "Catatan Integrasi",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. konfigurasi environment",
+      "norm_label": "catatan integrasi",
       "source_file": "README.md",
-      "source_location": "L51"
+      "source_location": "L66"
     },
     {
-      "id": "readme_2_secret_admin_cms_admin",
-      "label": "2. Secret Admin CMS (`/admin`)",
+      "id": "readme_fitur",
+      "label": "Fitur",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "2. secret admin cms (`/admin`)",
+      "norm_label": "fitur",
       "source_file": "README.md",
-      "source_location": "L23"
+      "source_location": "L5"
     },
     {
-      "id": "readme_3_migrasi_database_seeding",
-      "label": "3. Migrasi Database & Seeding",
+      "id": "readme_kebutuhan_sistem",
+      "label": "Kebutuhan Sistem",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3. migrasi database & seeding",
+      "norm_label": "kebutuhan sistem",
       "source_file": "README.md",
-      "source_location": "L69"
+      "source_location": "L15"
     },
     {
-      "id": "readme_4_kompilasi_aset_frontend_jalankan_server",
-      "label": "4. Kompilasi Aset Frontend & Jalankan Server",
+      "id": "readme_pengujian",
+      "label": "Pengujian",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4. kompilasi aset frontend & jalankan server",
+      "norm_label": "pengujian",
       "source_file": "README.md",
-      "source_location": "L80"
+      "source_location": "L52"
     },
     {
-      "id": "readme_catatan_integrasi_ke_website_utama",
-      "label": "\ud83d\udcc4 Catatan Integrasi ke Website Utama",
+      "id": "readme_portal_layanan_digital_diskominfo_jatim",
+      "label": "Portal Layanan Digital Diskominfo Jatim",
       "_origin": "ast",
       "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
+      "community_name": "Portal Layanan Digital Diskominfo Jatim",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udcc4 catatan integrasi ke website utama",
-      "source_file": "README.md",
-      "source_location": "L128"
-    },
-    {
-      "id": "readme_fitur_utama",
-      "label": "\ud83d\udccc Fitur Utama",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udccc fitur utama",
-      "source_file": "README.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "readme_hasil_pengujian",
-      "label": "Hasil Pengujian:",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "hasil pengujian:",
-      "source_file": "README.md",
-      "source_location": "L101"
-    },
-    {
-      "id": "readme_kredensial_default_admin_cms",
-      "label": "Kredensial Default Admin CMS:",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "kredensial default admin cms:",
-      "source_file": "README.md",
-      "source_location": "L75"
-    },
-    {
-      "id": "readme_lisensi_hak_cipta",
-      "label": "\ud83d\udcdc Lisensi & Hak Cipta",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udcdc lisensi & hak cipta",
-      "source_file": "README.md",
-      "source_location": "L135"
-    },
-    {
-      "id": "readme_panduan_instalasi_penggunaan",
-      "label": "\ud83d\ude80 Panduan Instalasi & Penggunaan",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\ude80 panduan instalasi & penggunaan",
-      "source_file": "README.md",
-      "source_location": "L40"
-    },
-    {
-      "id": "readme_pengujian_unit_feature_testing",
-      "label": "\ud83e\uddea Pengujian (Unit & Feature Testing)",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83e\uddea pengujian (unit & feature testing)",
-      "source_file": "README.md",
-      "source_location": "L93"
-    },
-    {
-      "id": "readme_persyaratan_sistem",
-      "label": "\u2699\ufe0f Persyaratan Sistem",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u2699\ufe0f persyaratan sistem",
-      "source_file": "README.md",
-      "source_location": "L32"
-    },
-    {
-      "id": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "label": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "portal layanan digital diskominfo jawa timur",
+      "norm_label": "portal layanan digital diskominfo jatim",
       "source_file": "README.md",
       "source_location": "L1"
-    },
-    {
-      "id": "readme_struktur_arsitektur_data",
-      "label": "\ud83c\udfd7\ufe0f Struktur Arsitektur Data",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "Portal Layanan Digital Diskominfo Jawa Timur",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83c\udfd7\ufe0f struktur arsitektur data",
-      "source_file": "README.md",
-      "source_location": "L110"
     },
     {
       "id": "application",
@@ -6176,6 +6435,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_admineventcontroller_admineventcontroller_store",
+      "target": "app_http_controllers_admin_admineventcontroller_admineventcontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_admin_admineventcontroller_admineventcontroller_toggleactive",
       "target": "app_http_controllers_admin_admineventcontroller_admineventcontroller_update",
       "relation": "calls",
@@ -6184,7 +6455,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L87",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_admineventcontroller_admineventcontroller_update",
+      "target": "app_http_controllers_admin_admineventcontroller_admineventcontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -6196,7 +6479,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L71",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_store",
+      "target": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -6208,7 +6503,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L88",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_update",
+      "target": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -6220,11 +6527,35 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L72",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_store",
+      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
       "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_toggleactive",
+      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
       "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
       "relation": "calls",
       "_origin": "ast",
@@ -6237,14 +6568,14 @@
     },
     {
       "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
-      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_update",
+      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_store",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L88",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -6320,6 +6651,54 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_store",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_toggleactive",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_store",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_publicportalcontroller_publicportalcontroller_index",
       "target": "app_models_servicecategory_servicecategory",
       "relation": "calls",
@@ -6328,7 +6707,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -6340,7 +6719,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -6352,7 +6731,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -6364,7 +6743,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L36",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -6376,7 +6755,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L40",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_publicportalcontroller_publicportalcontroller_index",
+      "target": "app_models_video_video",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/Http/Controllers/PublicPortalController.php",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -6464,6 +6855,18 @@
       "weight": 1.0
     },
     {
+      "source": "database_seeders_videoseeder_videoseeder_run",
+      "target": "app_models_video_video",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
       "source": "resources_js_portal_createservicecard",
       "target": "resources_js_portal_getserviceurl",
       "relation": "calls",
@@ -6472,19 +6875,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L238",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal_createservicecard",
-      "target": "resources_js_portal_getserviceiconhtml",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "resources/js/portal.js",
-      "source_location": "L239",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -6496,31 +6887,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L349",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
       "source": "resources_js_portal_initcalendarwidget",
-      "target": "resources_js_portal_updateeventposter",
+      "target": "resources_js_portal_buildeventsindex",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L769",
+      "source_location": "L661",
       "weight": 1.0
     },
     {
-      "source": "resources_js_portal_initgallerycarousel",
-      "target": "resources_js_portal_updategalleryview",
+      "source": "resources_js_portal_initcalendarwidget",
+      "target": "resources_js_portal_rendercalendarmonth",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L849",
+      "source_location": "L670",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal_initgallerycarousel_getmaxindex",
+      "target": "resources_js_portal_initgallerycarousel_getvisiblecardscount",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L806",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal_initgallerycarousel_updategalleryview",
+      "target": "resources_js_portal_initgallerycarousel_getmaxindex",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L811",
       "weight": 1.0
     },
     {
@@ -6532,7 +6947,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L422",
+      "source_location": "L379",
       "weight": 1.0
     },
     {
@@ -6544,7 +6959,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L423",
+      "source_location": "L380",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal_rendercalendarmonth",
+      "target": "resources_js_portal_updateeventposter",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
@@ -6556,7 +6983,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L335",
+      "source_location": "L300",
       "weight": 1.0
     },
     {
@@ -6568,7 +6995,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L339",
+      "source_location": "L304",
       "weight": 1.0
     },
     {
@@ -6580,7 +7007,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L379",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -6592,7 +7019,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L390",
+      "source_location": "L351",
       "weight": 1.0
     },
     {
@@ -6604,7 +7031,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L394",
+      "source_location": "L355",
       "weight": 1.0
     },
     {
@@ -6616,7 +7043,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L395",
+      "source_location": "L356",
       "weight": 1.0
     },
     {
@@ -6628,7 +7055,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L545",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -7108,7 +7535,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L163",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -7120,7 +7547,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L174",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -7132,7 +7559,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L377",
+      "source_location": "L338",
       "weight": 1.0
     },
     {
@@ -7144,7 +7571,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L417",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -7156,7 +7583,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L499",
+      "source_location": "L446",
       "weight": 1.0
     },
     {
@@ -7168,7 +7595,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L543",
+      "source_location": "L484",
       "weight": 1.0
     },
     {
@@ -7180,7 +7607,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L661",
+      "source_location": "L590",
       "weight": 1.0
     },
     {
@@ -7192,7 +7619,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L737",
+      "source_location": "L654",
       "weight": 1.0
     },
     {
@@ -7204,7 +7631,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L841",
+      "source_location": "L789",
       "weight": 1.0
     },
     {
@@ -7216,7 +7643,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "resources/js/portal.js",
-      "source_location": "L915",
+      "source_location": "L892",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal_initgallerycarousel",
+      "target": "resources_js_portal_initgallerycarousel_getmaxindex",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L805",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal_initgallerycarousel",
+      "target": "resources_js_portal_initgallerycarousel_updategalleryview",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "resources/js/portal.js",
+      "source_location": "L810",
       "weight": 1.0
     },
     {
@@ -7616,6 +8067,54 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_adminvideocontroller",
+      "target": "app_http_controllers_controller_controller",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller",
+      "target": "app_models_video_video",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller",
+      "target": "illuminate_http_request",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_publicportalcontroller",
+      "target": "app_models_video_video",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Http/Controllers/PublicPortalController.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_publicportalcontroller",
       "target": "illuminate_http_request",
       "relation": "imports",
@@ -7624,7 +8123,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -7889,6 +8388,30 @@
       "context": "import",
       "source_file": "app/Models/User.php",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video",
+      "target": "illuminate_database_eloquent_factories_hasfactory",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video",
+      "target": "illuminate_database_eloquent_model",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Models/Video.php",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -8420,6 +8943,42 @@
       "weight": 1.0
     },
     {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table",
+      "target": "illuminate_database_migrations_migration",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table",
+      "target": "illuminate_database_schema_blueprint",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table",
+      "target": "illuminate_support_facades_schema",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "database_seeders_databaseseeder",
       "target": "illuminate_database_seeder",
       "relation": "imports",
@@ -8636,6 +9195,30 @@
       "weight": 1.0
     },
     {
+      "source": "database_seeders_videoseeder",
+      "target": "app_models_video_video",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "database_seeders_videoseeder",
+      "target": "illuminate_database_seeder",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "package",
       "target": "ref_tailwindcss_vite",
       "relation": "imports",
@@ -8769,7 +9352,7 @@
     },
     {
       "source": "routes_web",
-      "target": "app_http_controllers_publicportalcontroller_publicportalcontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8781,7 +9364,7 @@
     },
     {
       "source": "routes_web",
-      "target": "illuminate_support_facades_route",
+      "target": "app_http_controllers_publicportalcontroller_publicportalcontroller",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8789,6 +9372,18 @@
       "context": "import",
       "source_file": "routes/web.php",
       "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "routes_web",
+      "target": "illuminate_support_facades_route",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "routes/web.php",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -9256,7 +9851,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L77",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -9268,7 +9863,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L52",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -9304,7 +9899,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L85",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -9316,7 +9911,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L57",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -9328,7 +9923,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L57",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -9340,7 +9935,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L78",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -9352,7 +9947,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L53",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -9388,7 +9983,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L86",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -9400,7 +9995,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -9412,7 +10007,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -9424,7 +10019,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L94",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -9436,7 +10031,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L65",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -9472,7 +10067,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L102",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -9484,7 +10079,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L70",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -9496,7 +10091,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L70",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -9644,6 +10239,90 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_destroy",
+      "target": "app_models_video_video",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_edit",
+      "target": "app_models_video_video",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_index",
+      "target": "illuminate_http_request",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_store",
+      "target": "illuminate_http_request",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_toggleactive",
+      "target": "app_models_video_video",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "target": "app_models_video_video",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "target": "illuminate_http_request",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_publicportalcontroller_publicportalcontroller_index",
       "target": "illuminate_http_request",
       "relation": "references",
@@ -9652,7 +10331,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -9836,6 +10515,18 @@
       "weight": 1.0
     },
     {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table_closure_1",
+      "target": "illuminate_database_schema_blueprint",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
       "source": "app_models_service_service_category",
       "target": "illuminate_database_eloquent_relations_belongsto",
       "relation": "references",
@@ -9994,6 +10685,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_controller",
       "target": "app_http_controllers_controller_controller",
       "relation": "contains",
@@ -10012,7 +10714,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -10023,7 +10725,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -10090,6 +10792,17 @@
       "confidence_score": 1.0,
       "source_file": "app/Models/User.php",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video",
+      "target": "app_models_video_video",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Video.php",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -11864,6 +12577,39 @@
       "weight": 1.0
     },
     {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table",
+      "target": "database_migrations_2026_09_30_000001_create_videos_table_closure_1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table",
+      "target": "database_migrations_2026_09_30_000001_create_videos_table_down",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_09_30_000001_create_videos_table",
+      "target": "database_migrations_2026_09_30_000001_create_videos_table_up",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_09_30_000001_create_videos_table.php",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "database_seeders_databaseseeder",
       "target": "database_seeders_databaseseeder_databaseseeder",
       "relation": "contains",
@@ -11938,6 +12684,17 @@
       "confidence_score": 1.0,
       "source_file": "database/seeders/UserSeeder.php",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "database_seeders_videoseeder",
+      "target": "database_seeders_videoseeder_videoseeder",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -12129,7 +12886,7 @@
     },
     {
       "source": "readme",
-      "target": "readme_portal_layanan_digital_diskominfo_jawa_timur",
+      "target": "readme_portal_layanan_digital_diskominfo_jatim",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -12139,201 +12896,69 @@
       "weight": 1.0
     },
     {
-      "source": "readme_3_migrasi_database_seeding",
-      "target": "readme_kredensial_default_admin_cms",
+      "source": "readme_portal_layanan_digital_diskominfo_jatim",
+      "target": "readme_kebutuhan_sistem",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
-      "source": "readme_fitur_utama",
-      "target": "readme_1_public_portal_landing_page",
+      "source": "readme_portal_layanan_digital_diskominfo_jatim",
+      "target": "readme_cara_instalasi",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L14",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
-      "source": "readme_fitur_utama",
-      "target": "readme_2_secret_admin_cms_admin",
+      "source": "readme_portal_layanan_digital_diskominfo_jatim",
+      "target": "readme_fitur",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "readme_panduan_instalasi_penggunaan",
-      "target": "readme_1_clone_install_dependencies",
+      "source": "readme_portal_layanan_digital_diskominfo_jatim",
+      "target": "readme_pengujian",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L42",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
-      "source": "readme_panduan_instalasi_penggunaan",
-      "target": "readme_2_konfigurasi_environment",
+      "source": "readme_portal_layanan_digital_diskominfo_jatim",
+      "target": "readme_arsitektur_data",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
-      "source": "readme_panduan_instalasi_penggunaan",
-      "target": "readme_3_migrasi_database_seeding",
+      "source": "readme_portal_layanan_digital_diskominfo_jatim",
+      "target": "readme_catatan_integrasi",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_panduan_instalasi_penggunaan",
-      "target": "readme_4_kompilasi_aset_frontend_jalankan_server",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L80",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_pengujian_unit_feature_testing",
-      "target": "readme_hasil_pengujian",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_struktur_arsitektur_data",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L110",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_fitur_utama",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_catatan_integrasi_ke_website_utama",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L128",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_lisensi_hak_cipta",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L135",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_persyaratan_sistem",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_panduan_instalasi_penggunaan",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L40",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_portal_layanan_digital_diskominfo_jawa_timur",
-      "target": "readme_pengujian_unit_feature_testing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L93",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_servicecount",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_emptystate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L104",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_searchresultinfo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L107",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -12344,7 +12969,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L110",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -12355,7 +12980,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L113",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -12366,7 +12991,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L116",
+      "source_location": "L108",
       "weight": 1.0
     },
     {
@@ -12377,18 +13002,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L119",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_defaultservices",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L12",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -12399,7 +13013,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L122",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -12410,7 +13024,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L125",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -12421,7 +13035,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L128",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -12432,18 +13046,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L210",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_getserviceiconhtml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L222",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -12454,7 +13057,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L233",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -12465,7 +13068,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L323",
+      "source_location": "L288",
       "weight": 1.0
     },
     {
@@ -12476,7 +13079,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L347",
+      "source_location": "L310",
       "weight": 1.0
     },
     {
@@ -12487,18 +13090,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L403",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_getservicesdata",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L59",
+      "source_location": "L362",
       "weight": 1.0
     },
     {
@@ -12509,7 +13101,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L592",
+      "source_location": "L527",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_getservicesdata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -12520,40 +13123,73 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L595",
+      "source_location": "L530",
       "weight": 1.0
     },
     {
       "source": "resources_js_portal",
-      "target": "resources_js_portal_eventsdata",
+      "target": "resources_js_portal_defaultservices",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L689",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
       "source": "resources_js_portal",
-      "target": "resources_js_portal_updateeventposter",
+      "target": "resources_js_portal_month_names_short",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L787",
+      "source_location": "L616",
       "weight": 1.0
     },
     {
       "source": "resources_js_portal",
-      "target": "resources_js_portal_gallerydata",
+      "target": "resources_js_portal_month_names_full",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L815",
+      "source_location": "L617",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_day_names_full",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L618",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_buildeventsindex",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L620",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_rendercalendarmonth",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L684",
       "weight": 1.0
     },
     {
@@ -12564,7 +13200,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L83",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_updateeventposter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L765",
       "weight": 1.0
     },
     {
@@ -12575,29 +13222,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_updategalleryview",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L868",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_opengallerymodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L889",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -12608,18 +13233,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "resources_js_portal",
-      "target": "resources_js_portal_closegallerymodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/js/portal.js",
-      "source_location": "L906",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -12630,7 +13244,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L92",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_opengallerymodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L868",
       "weight": 1.0
     },
     {
@@ -12641,7 +13266,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L95",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_closegallerymodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L885",
       "weight": 1.0
     },
     {
@@ -12652,7 +13288,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/js/portal.js",
-      "source_location": "L98",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_servicecount",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_emptystate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal",
+      "target": "resources_js_portal_searchresultinfo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "resources_js_portal_initgallerycarousel",
+      "target": "resources_js_portal_initgallerycarousel_getvisiblecardscount",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "resources/js/portal.js",
+      "source_location": "L798",
       "weight": 1.0
     },
     {
@@ -12674,7 +13354,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/web.php",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -12685,7 +13365,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/web.php",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -12696,7 +13376,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "routes/web.php",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -13349,6 +14029,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_controller_controller",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_publicportalcontroller_publicportalcontroller",
       "target": "app_http_controllers_controller_controller",
       "relation": "inherits",
@@ -13356,7 +14047,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -13423,6 +14114,17 @@
       "confidence_score": 1.0,
       "source_file": "app/Models/User.php",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video_video",
+      "target": "illuminate_database_eloquent_model",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Video.php",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -13522,6 +14224,17 @@
       "confidence_score": 1.0,
       "source_file": "database/seeders/UserSeeder.php",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "database_seeders_videoseeder_videoseeder",
+      "target": "illuminate_database_seeder",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -13658,6 +14371,17 @@
     },
     {
       "source": "app_http_controllers_admin_admineventcontroller_admineventcontroller",
+      "target": "app_http_controllers_admin_admineventcontroller_admineventcontroller_toggleactive",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_admineventcontroller_admineventcontroller",
       "target": "app_http_controllers_admin_admineventcontroller_admineventcontroller_index",
       "relation": "method",
       "_origin": "ast",
@@ -13697,7 +14421,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L52",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -13708,7 +14432,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L57",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -13719,18 +14443,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L77",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
-      "source": "app_http_controllers_admin_admineventcontroller_admineventcontroller",
-      "target": "app_http_controllers_admin_admineventcontroller_admineventcontroller_toggleactive",
+      "source": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller",
+      "target": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_toggleactive",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "app/Http/Controllers/Admin/AdminEventController.php",
-      "source_location": "L85",
+      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -13774,7 +14498,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L53",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -13785,7 +14509,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -13796,29 +14520,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L78",
-      "weight": 1.0
-    },
-    {
-      "source": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller",
-      "target": "app_http_controllers_admin_admingallerycontroller_admingallerycontroller_toggleactive",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Http/Controllers/Admin/AdminGalleryController.php",
-      "source_location": "L86",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
       "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller",
-      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_toggleactive",
+      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_destroy",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L102",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -13830,6 +14543,17 @@
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
       "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller",
+      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_toggleactive",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -13862,7 +14586,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L65",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -13873,18 +14597,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller",
-      "target": "app_http_controllers_admin_adminnewscontroller_adminnewscontroller_destroy",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Http/Controllers/Admin/AdminNewsController.php",
-      "source_location": "L94",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -14031,6 +14744,83 @@
       "weight": 1.0
     },
     {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_toggleactive",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_index",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_create",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_store",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_edit",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_update",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller",
+      "target": "app_http_controllers_admin_adminvideocontroller_adminvideocontroller_destroy",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Http/Controllers/Admin/AdminVideoController.php",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
       "source": "app_http_controllers_publicportalcontroller_publicportalcontroller",
       "target": "app_http_controllers_publicportalcontroller_publicportalcontroller_index",
       "relation": "method",
@@ -14038,7 +14828,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Http/Controllers/PublicPortalController.php",
-      "source_location": "L14",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_event_event",
+      "target": "app_models_event_event_getimageurlattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Event.php",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_gallery_gallery",
+      "target": "app_models_gallery_gallery_getimageurlattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Gallery.php",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_news_news",
+      "target": "app_models_news_news_getimageurlattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/News.php",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -14094,6 +14917,39 @@
       "confidence_score": 1.0,
       "source_file": "app/Models/User.php",
       "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video_video",
+      "target": "app_models_video_video_getyoutubeidattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Video.php",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video_video",
+      "target": "app_models_video_video_getembedurlattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Video.php",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_video_video",
+      "target": "app_models_video_video_getthumbnailurlattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Video.php",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -14218,6 +15074,17 @@
       "weight": 1.0
     },
     {
+      "source": "database_seeders_videoseeder_videoseeder",
+      "target": "database_seeders_videoseeder_videoseeder_run",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/seeders/VideoSeeder.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "app_models_event_event",
       "target": "illuminate_database_eloquent_factories_hasfactory",
       "relation": "mixes_in",
@@ -14295,6 +15162,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_models_video_video",
+      "target": "illuminate_database_eloquent_factories_hasfactory",
+      "relation": "mixes_in",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/Video.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
       "source": "database_factories_userfactory_userfactory_definition",
       "target": "static",
       "relation": "uses_static_prop",
@@ -14306,17 +15184,18 @@
       "weight": 1.0
     },
     {
-      "source": "readme_catatan_integrasi_ke_website_utama",
-      "target": "app_models_service_service",
+      "source": "readme_arsitektur_data",
+      "target": "app_models_servicecategory_servicecategory_services",
       "relation": "references",
       "_origin": "ast",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "context": "Service",
+      "context": "services",
       "source_file": "README.md",
-      "source_location": "L131",
+      "source_location": "L63",
       "weight": 1.0
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "aae0f4bb4808f835e9187dd80c74f0fee8fd666d"
 }

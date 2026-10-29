@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe CMS – Portal Layanan Kominfo Jawa Timur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            padding: 48px 32px;
+        }
+
+        /* === WIREFRAME WRAPPER === */
+        .wf-screen {
+            max-width: 1200px;
+            margin: 0 auto 64px;
+        }
+        .wf-screen-label {
+            font-size: 14px;
+            font-weight: 400;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+        .wf-frame {
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        /* === GRAY BOX PLACEHOLDER === */
+        .gray-box {
+            background: #d9d9d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* === TEXT LINE PLACEHOLDER === */
+        .text-line {
+            background: #bbb;
+            height: 8px;
+            border-radius: 1px;
+        }
+        .text-line.thick { height: 12px; background: #333; }
+        .text-line.medium { height: 10px; background: #555; }
+        .text-line.light { height: 6px; background: #ccc; }
+        .text-line.thin { height: 4px; background: #ddd; }
+
+        /* === LAYOUT === */
+        .cms-layout {
+            display: flex;
+            min-height: 640px;
+        }
+
+        /* === SIDEBAR === */
+        .sidebar {
+            width: 220px;
+            background: #fff;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+        .sidebar-logo {
+            padding: 18px 16px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sidebar-logo .logo-box {
+            width: 28px;
+            height: 28px;
+            background: #bbb;
+        }
+        .sidebar-logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+        .sidebar-section-label {
+            font-size: 8px;
+            font-weight: 700;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 14px 16px 4px;
+        }
+        .sidebar-nav {
+            padding: 2px 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            font-size: 11px;
+            font-weight: 500;
+            color: #666;
+            border-radius: 4px;
+        }
+        .nav-item.active {
+            background: #333;
+            color: #fff;
+        }
+        .nav-icon-box {
+            width: 14px;
+            height: 14px;
+            border: 1.5px solid currentColor;
+            flex-shrink: 0;
+        }
+        .nav-item.active .nav-icon-box { border-color: #fff; }
+        .sidebar-bottom {
+            margin-top: auto;
+            padding: 8px;
+            border-top: 1px solid #ddd;
+        }
+
+        /* === TOPBAR === */
+        .topbar {
+            border-bottom: 1px solid #ddd;
+            padding: 0 24px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+        }
+        .breadcrumb-wf {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            color: #999;
+        }
+        .breadcrumb-wf .current { color: #333; font-weight: 600; }
+        .profile-wf {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #ddd;
+            padding: 4px 10px 4px 4px;
+            border-radius: 4px;
+        }
+        .avatar-box {
+            width: 26px;
+            height: 26px;
+            background: #bbb;
+        }
+
+        /* === CONTENT === */
+        .content-area {
+            flex: 1;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-inner {
+            padding: 22px 24px;
+            flex: 1;
+        }
+
+        /* === STAT CARD === */
+        .stat-card {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 14px;
+        }
+        .stat-card .stat-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .stat-card .stat-icon {
+            width: 24px;
+            height: 24px;
+            background: #e5e5e5;
+        }
+        .stat-card .stat-number {
+            font-size: 22px;
+            font-weight: 800;
+            color: #222;
+        }
+
+        /* === TABLE === */
+        .wf-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        .wf-table th {
+            text-align: left;
+            padding: 10px 14px;
+            font-size: 8px;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid #ddd;
+            background: #fafafa;
+        }
+        .wf-table td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #eee;
+            color: #444;
+        }
+
+        /* === BUTTON === */
+        .btn-wf {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            font-size: 10px;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            background: #fff;
+            color: #444;
+        }
+        .btn-wf.dark {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+        .btn-wf.outline {
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        .btn-wf-icon {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            font-size: 9px;
+            color: #888;
+        }
+        .btn-wf-icon.danger { border-color: #ccc; background: #f5f5f5; }
+
+        /* === CARD === */
+        .wf-card {
+            border: 1px solid #ddd;
+            background: #fff;
+            overflow: hidden;
+        }
+        .wf-card-header {
+            padding: 14px 16px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* === FILTER BAR === */
+        .filter-bar {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .input-wf {
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            font-size: 10px;
+            color: #999;
+            background: #fff;
+            font-family: inherit;
+            outline: none;
+        }
+
+        /* === PAGINATION === */
+        .pagination-wf {
+            padding: 10px 14px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 9px;
+            color: #999;
+            background: #fafafa;
+        }
+        .pg-boxes {
+            display: flex;
+            gap: 3px;
+        }
+        .pg-box {
+            width: 22px;
+            height: 22px;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: 600;
+            color: #888;
+            background: #fff;
+        }
+        .pg-box.active { background: #333; color: #fff; border-color: #333; }
+
+        /* === BADGE === */
+        .badge-wf {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 8px;
+            font-weight: 600;
+            border: 1px solid #ccc;
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        /* === DOT === */
+        .dot-wf {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #333;
+        }
+        .dot-wf.off { background: #ccc; }
+
+        /* === UPLOAD ZONE === */
+        .upload-zone {
+            border: 2px dashed #ccc;
+            padding: 28px;
+            text-align: center;
+            background: #fafafa;
+        }
+        .upload-zone .upload-icon {
+            width: 32px;
+            height: 32px;
+            background: #ddd;
+            margin: 0 auto 8px;
+        }
+
+        /* === FORM LABEL === */
+        .form-label-wf {
+            font-size: 9px;
+            font-weight: 700;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .form-group-wf { margin-bottom: 14px; }
+
+        /* === GRID UTILS === */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+        .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+        .flex-col { display: flex; flex-direction: column; }
+        .gap-14 { gap: 14px; }
+        .gap-18 { gap: 18px; }
+
+        /* === TWO COL LAYOUT === */
+        .two-col { display: grid; grid-template-columns: 1fr 280px; gap: 14px; }
+
+        /* === RADIO === */
+        .radio-card {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            background: #fff;
+        }
+        .radio-card.selected { border-color: #333; background: #f5f5f5; }
+        .radio-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            flex-shrink: 0;
+        }
+        .radio-circle.checked {
+            border-color: #333;
+            background: #333;
+            box-shadow: inset 0 0 0 2px #fff;
+        }
+
+        /* === CHECKBOX === */
+        .checkbox-wf {
+            width: 12px;
+            height: 12px;
+            border: 2px solid #999;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .checkbox-wf.checked { background: #333; border-color: #333; }
+
+        /* === TOAST === */
+        .toast-wf {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 10px;
+            color: #555;
+        }
+        .toast-wf.success {
+            border-left: 3px solid #333;
+            background: #fafafa;
+        }
+        .toast-wf.danger {
+            border-left: 3px solid #666;
+            background: #f7f7f7;
+        }
+
+        /* === MODAL OVERLAY === */
+        .modal-overlay-wf {
+            position: relative;
+            min-height: 520px;
+            background: rgba(0, 0, 0, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .modal-card-wf {
+            width: 100%;
+            max-width: 440px;
+            background: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .modal-header-wf {
+            padding: 18px 20px 14px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .modal-body-wf {
+            padding: 20px;
+        }
+        .modal-footer-wf {
+            padding: 14px 20px;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        /* === EMPTY STATE === */
+        .empty-state-wf {
+            padding: 48px 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* === MOBILE DEVICE MOCKUP === */
+        .mobile-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 32px 0;
+            background: #ececec;
+        }
+        .mobile-device {
+            width: 380px;
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+        .mobile-notch {
+            height: 24px;
+            background: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 9px;
+            font-weight: 600;
+        }
+        .mobile-topbar {
+            height: 52px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+        .mobile-body {
+            position: relative;
+            min-height: 560px;
+            background: #f9f9f9;
+        }
+        .mobile-drawer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 82%;
+            height: 100%;
+            background: #fff;
+            border-right: 1px solid #ccc;
+            box-shadow: 8px 0 20px rgba(0,0,0,0.12);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+        }
+        .mobile-drawer-backdrop {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 5;
+        }
+
+        /* === LOGIN === */
+        .login-bg {
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 520px;
+            padding: 40px;
+        }
+        .login-box {
+            width: 340px;
+        }
+
+        /* === CATEGORY ITEM === */
+        .cat-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 9px 10px;
+        }
+        .cat-row:hover { background: #fafafa; }
+        .cat-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cat-icon-wf {
+            width: 26px;
+            height: 26px;
+            background: #e5e5e5;
+        }
+        .cat-count-wf {
+            padding: 2px 8px;
+            background: #eee;
+            font-size: 9px;
+            font-weight: 700;
+            color: #666;
+        }
+
+        /* === SECTION DIVIDER === */
+        .section-divider {
+            max-width: 1200px;
+            margin: 0 auto 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .section-divider::before, .section-divider::after {
+            content: '';
+            flex: 1;
+            border-top: 1px dashed #ccc;
+        }
+        .section-divider span {
+            font-size: 10px;
+            font-weight: 400;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* === INDEX === */
+        .wf-index {
+            max-width: 1200px;
+            margin: 0 auto 48px;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 24px;
+        }
+        .wf-index h2 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .wf-index p {
+            font-size: 10px;
+            color: #999;
+            margin-bottom: 16px;
+        }
+        .wf-index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 6px;
+        }
+        .wf-index-grid a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border: 1px solid #eee;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: 500;
+            color: #555;
+        }
+        .wf-index-grid a:hover { background: #f5f5f5; }
+        .wf-index-grid a .num {
+            width: 18px;
+            height: 18px;
+            background: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- =========================================================== -->
+<!-- INDEX                                                        -->
+<!-- =========================================================== -->
+<div class="wf-index">
+    <h2>Wireframe CMS — Portal Layanan Kominfo Jawa Timur</h2>
+    <p>20 screens · Hitam putih · Lengkap dengan CRUD, State Edit (Path/Domain), Modal, Empty State & Mobile Drawer · Siap import ke Figma</p>
+    <div class="wf-index-grid">
+        <a href="#s-login"><span class="num">1</span> Login</a>
+        <a href="#s-dashboard"><span class="num">2</span> Dashboard</a>
+        <a href="#s-layanan"><span class="num">3</span> Daftar Layanan</a>
+        <a href="#s-layanan-add"><span class="num">4</span> Tambah Layanan</a>
+        <a href="#s-kategori"><span class="num">5</span> Daftar Kategori</a>
+        <a href="#s-kategori-add"><span class="num">6</span> Tambah Kategori</a>
+        <a href="#s-berita"><span class="num">7</span> Daftar Berita</a>
+        <a href="#s-berita-add"><span class="num">8</span> Tambah Berita</a>
+        <a href="#s-kegiatan"><span class="num">9</span> Daftar Kegiatan</a>
+        <a href="#s-kegiatan-add"><span class="num">10</span> Tambah Kegiatan</a>
+        <a href="#s-galeri"><span class="num">11</span> Daftar Galeri</a>
+        <a href="#s-galeri-add"><span class="num">12</span> Tambah Galeri</a>
+        <a href="#s-video"><span class="num">13</span> Daftar Video</a>
+        <a href="#s-video-add"><span class="num">14</span> Tambah Video</a>
+        <a href="#s-admin"><span class="num">15</span> Administrator</a>
+        <a href="#s-admin-add"><span class="num">16</span> Tambah Admin</a>
+        <a href="#s-layanan-edit"><span class="num">17</span> Edit Layanan (Mode Path)</a>
+        <a href="#s-modal-delete"><span class="num">18</span> Modal Konfirmasi Hapus</a>
+        <a href="#s-empty-toast"><span class="num">19</span> State Kosong & Alert</a>
+        <a href="#s-mobile-cms"><span class="num">20</span> Tampilan Mobile CMS</a>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 1 — LOGIN                                                    -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-login">
+    <div class="wf-screen-label">Wireframe - 1 · Login</div>
+    <div class="wf-frame">
+        <div class="login-bg">
+            <div class="login-box">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div class="gray-box" style="width: 40px; height: 40px; margin: 0 auto 10px;"></div>
+                    <div class="text-line thick" style="width: 160px; margin: 0 auto 6px;"></div>
+                    <div class="text-line light" style="width: 220px; margin: 0 auto;"></div>
+                </div>
+                <div class="wf-card" style="padding: 24px;">
+                    <div class="form-group-wf">
+                        <span class="form-label-wf">Email</span>
+                        <input class="input-wf" style="width: 100%; padding: 10px;" placeholder="admin@kominfo.jatimprov.go.id">
+                    </div>
+                    <div class="form-group-wf">
+                        <span class="form-label-wf">Kata Sandi</span>
+                        <input class="input-wf" style="width: 100%; padding: 10px;" type="password" placeholder="••••••••">
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+                        <div class="checkbox-wf"></div>
+                        <span style="font-size: 9px; color: #888;">Ingat saya</span>
+                    </div>
+                    <div class="btn-wf dark" style="width: 100%; justify-content: center; padding: 10px;">Masuk</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 2 — DASHBOARD                                                -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Dashboard</span></div>
+<div class="wf-screen" id="s-dashboard">
+    <div class="wf-screen-label">Wireframe - 2 · Dashboard</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-logo">
+                    <div class="logo-box"></div>
+                    <div class="sidebar-logo-text">
+                        <div class="text-line medium" style="width: 80px;"></div>
+                        <div class="text-line thin" style="width: 60px;"></div>
+                    </div>
+                </div>
+                <div class="sidebar-section-label">Menu Utama</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Dashboard</div>
+                </div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Galeri Foto</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Video YouTube</div>
+                </div>
+                <div class="sidebar-section-label">Pengaturan</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Administrator</div>
+                </div>
+                <div class="sidebar-bottom">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="topbar">
+                    <div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Dashboard</span></div>
+                    <div class="profile-wf">
+                        <div class="avatar-box"></div>
+                        <div><div class="text-line" style="width: 50px; height: 6px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 30px;"></div></div>
+                    </div>
+                </div>
+                <div class="content-inner flex-col gap-18">
+                    <!-- Welcome -->
+                    <div>
+                        <div class="text-line thick" style="width: 200px; margin-bottom: 6px;"></div>
+                        <div class="text-line light" style="width: 280px;"></div>
+                    </div>
+
+                    <!-- Stat cards row 1 -->
+                    <div class="grid-4">
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 50px;"></div><div class="stat-icon"></div></div><div class="stat-number">24</div><div class="text-line thin" style="width: 80px; margin-top: 6px;"></div></div>
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 50px;"></div><div class="stat-icon"></div></div><div class="stat-number">6</div><div class="text-line thin" style="width: 90px; margin-top: 6px;"></div></div>
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 50px;"></div><div class="stat-icon"></div></div><div class="stat-number">12</div><div class="text-line thin" style="width: 70px; margin-top: 6px;"></div></div>
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 50px;"></div><div class="stat-icon"></div></div><div class="stat-number">12</div><div class="text-line thin" style="width: 70px; margin-top: 6px;"></div></div>
+                    </div>
+
+                    <!-- Quick actions -->
+                    <div style="display: flex; gap: 8px;">
+                        <div class="btn-wf dark">+ Tambah Layanan</div>
+                        <div class="btn-wf outline">+ Tambah Kategori</div>
+                        <div class="btn-wf outline">+ Tambah Berita</div>
+                        <div class="btn-wf outline">+ Tambah Kegiatan</div>
+                    </div>
+
+                    <!-- Stat cards row 2 -->
+                    <div class="grid-3">
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 40px;"></div><div class="stat-icon"></div></div><div class="stat-number">15</div><div class="text-line thin" style="width: 90px; margin-top: 6px;"></div></div>
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 50px;"></div><div class="stat-icon"></div></div><div class="stat-number">8</div><div class="text-line thin" style="width: 80px; margin-top: 6px;"></div></div>
+                        <div class="stat-card"><div class="stat-top"><div class="text-line light" style="width: 55px;"></div><div class="stat-icon"></div></div><div class="stat-number">20</div><div class="text-line thin" style="width: 85px; margin-top: 6px;"></div></div>
+                    </div>
+
+                    <!-- Two col: table + categories -->
+                    <div class="two-col">
+                        <div class="wf-card">
+                            <div class="wf-card-header">
+                                <div><div class="text-line medium" style="width: 100px; margin-bottom: 4px;"></div><div class="text-line thin" style="width: 130px;"></div></div>
+                                <span style="font-size: 9px; color: #999;">Lihat Semua →</span>
+                            </div>
+                            <table class="wf-table">
+                                <thead><tr><th>Nama</th><th>Kategori</th><th>Akses</th><th>Status</th></tr></thead>
+                                <tbody>
+                                    <tr><td><div class="text-line" style="width: 70px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 100px;"></div></td><td><div class="text-line light" style="width: 45px;"></div></td><td><span class="badge-wf">Domain</span></td><td><span class="dot-wf"></span></td></tr>
+                                    <tr><td><div class="text-line" style="width: 60px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 90px;"></div></td><td><div class="text-line light" style="width: 30px;"></div></td><td><span class="badge-wf">Path</span></td><td><span class="dot-wf"></span></td></tr>
+                                    <tr><td><div class="text-line" style="width: 65px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 110px;"></div></td><td><div class="text-line light" style="width: 50px;"></div></td><td><span class="badge-wf">Domain</span></td><td><span class="dot-wf off"></span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="wf-card">
+                            <div class="wf-card-header">
+                                <div><div class="text-line medium" style="width: 60px; margin-bottom: 4px;"></div><div class="text-line thin" style="width: 80px;"></div></div>
+                                <span style="font-size: 9px; color: #999;">Kelola</span>
+                            </div>
+                            <div style="padding: 6px 8px;">
+                                <div class="cat-row"><div class="cat-left"><div class="cat-icon-wf"></div><div><div class="text-line" style="width: 55px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 40px;"></div></div></div><div class="cat-count-wf">8</div></div>
+                                <div class="cat-row"><div class="cat-left"><div class="cat-icon-wf"></div><div><div class="text-line" style="width: 75px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 55px;"></div></div></div><div class="cat-count-wf">5</div></div>
+                                <div class="cat-row"><div class="cat-left"><div class="cat-icon-wf"></div><div><div class="text-line" style="width: 65px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 45px;"></div></div></div><div class="cat-count-wf">4</div></div>
+                                <div class="cat-row"><div class="cat-left"><div class="cat-icon-wf"></div><div><div class="text-line" style="width: 50px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 40px;"></div></div></div><div class="cat-count-wf">3</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 3 — DAFTAR LAYANAN                                           -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Layanan Digital</span></div>
+<div class="wf-screen" id="s-layanan">
+    <div class="wf-screen-label">Wireframe - 3 · Daftar Layanan</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Menu Utama</div>
+                <div class="sidebar-nav"><div class="nav-item"><div class="nav-icon-box"></div> Dashboard</div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Galeri Foto</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Video YouTube</div>
+                </div>
+                <div class="sidebar-section-label">Pengaturan</div>
+                <div class="sidebar-nav"><div class="nav-item"><div class="nav-icon-box"></div> Administrator</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar">
+                    <div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Layanan Digital</span></div>
+                    <div class="profile-wf"><div class="avatar-box"></div></div>
+                </div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 130px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 250px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Layanan</div>
+                    </div>
+                    <!-- Toast -->
+                    <div class="toast-wf">✓ Layanan berhasil ditambahkan. <span style="cursor: pointer;">✕</span></div>
+                    <!-- Filter -->
+                    <div class="filter-bar">
+                        <input class="input-wf" style="flex: 1;" placeholder="Cari nama layanan...">
+                        <select class="input-wf" style="min-width: 120px;"><option>Semua Kategori</option></select>
+                        <select class="input-wf" style="min-width: 100px;"><option>Semua Akses</option></select>
+                        <div class="btn-wf dark">Filter</div>
+                        <span style="font-size: 9px; color: #999; cursor: pointer;">Reset</span>
+                    </div>
+                    <!-- Table -->
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>#</th><th>Layanan</th><th>Kategori</th><th>Akses</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color: #ccc; font-weight: 700;">1</td>
+                                    <td><div style="display: flex; gap: 8px; align-items: center;"><div class="gray-box" style="width: 18px; height: 22px; flex-shrink: 0;"></div><div><div class="text-line" style="width: 70px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 120px;"></div></div></div></td>
+                                    <td><div class="text-line light" style="width: 50px;"></div></td>
+                                    <td><span class="badge-wf">Domain</span><div class="text-line thin" style="width: 110px; margin-top: 3px;"></div></td>
+                                    <td style="text-align: center;"><span class="dot-wf"></span> <span style="font-size: 8px; color: #888;">Aktif</span></td>
+                                    <td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ccc; font-weight: 700;">2</td>
+                                    <td><div style="display: flex; gap: 8px; align-items: center;"><div class="gray-box" style="width: 18px; height: 22px; flex-shrink: 0;"></div><div><div class="text-line" style="width: 60px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 140px;"></div></div></div></td>
+                                    <td><div class="text-line light" style="width: 35px;"></div></td>
+                                    <td><span class="badge-wf">Path</span><div class="text-line thin" style="width: 60px; margin-top: 3px;"></div></td>
+                                    <td style="text-align: center;"><span class="dot-wf"></span> <span style="font-size: 8px; color: #888;">Aktif</span></td>
+                                    <td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ccc; font-weight: 700;">3</td>
+                                    <td><div style="display: flex; gap: 8px; align-items: center;"><div class="gray-box" style="width: 18px; height: 22px; flex-shrink: 0;"></div><div><div class="text-line" style="width: 65px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 100px;"></div></div></div></td>
+                                    <td><div class="text-line light" style="width: 55px;"></div></td>
+                                    <td><span class="badge-wf">Domain</span><div class="text-line thin" style="width: 120px; margin-top: 3px;"></div></td>
+                                    <td style="text-align: center;"><span class="dot-wf off"></span> <span style="font-size: 8px; color: #ccc;">Nonaktif</span></td>
+                                    <td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination-wf">
+                            <span>1-10 dari 24</span>
+                            <div class="pg-boxes"><div class="pg-box">‹</div><div class="pg-box active">1</div><div class="pg-box">2</div><div class="pg-box">3</div><div class="pg-box">›</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 4 — TAMBAH LAYANAN                                           -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-layanan-add">
+    <div class="wf-screen-label">Wireframe - 4 · Form Tambah Layanan</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar">
+                    <div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Layanan <span style="color:#ccc;">›</span> <span class="current">Tambah Baru</span></div>
+                    <div class="profile-wf"><div class="avatar-box"></div></div>
+                </div>
+                <div class="content-inner">
+                    <div style="max-width: 520px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;">
+                                <div class="text-line thick" style="width: 140px;"></div>
+                                <div class="text-line thin" style="width: 200px;"></div>
+                            </div>
+                            <div style="padding: 18px;">
+                                <div class="grid-2" style="margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Nama Layanan *</span><input class="input-wf" style="width: 100%;" placeholder="SIMA, Data Jatim..."></div>
+                                    <div><span class="form-label-wf">Kategori *</span><select class="input-wf" style="width: 100%;"><option>Pilih Kategori</option></select></div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Slug</span>
+                                    <input class="input-wf" style="width: 100%;" placeholder="Otomatis dari nama">
+                                </div>
+                                <!-- Access type -->
+                                <div style="border: 1px solid #eee; padding: 14px; margin-bottom: 14px; background: #fafafa;">
+                                    <span class="form-label-wf" style="margin-bottom: 8px;">Mode Akses *</span>
+                                    <div class="grid-2" style="margin-bottom: 10px;">
+                                        <div class="radio-card selected"><div class="radio-circle checked"></div><div><div style="font-size: 10px; font-weight: 600;">Domain</div><div style="font-size: 8px; color: #aaa;">Subdomain mandiri</div></div></div>
+                                        <div class="radio-card"><div class="radio-circle"></div><div><div style="font-size: 10px; font-weight: 600;">Path</div><div style="font-size: 8px; color: #aaa;">Path terintegrasi</div></div></div>
+                                    </div>
+                                    <div><span class="form-label-wf">URL Domain</span><input class="input-wf" style="width: 100%;" placeholder="https://sima.kominfo.jatimprov.go.id"></div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Deskripsi</span>
+                                    <textarea class="input-wf" style="width: 100%; resize: vertical; font-family: inherit;" rows="3" placeholder="Deskripsi fungsi layanan..."></textarea>
+                                </div>
+                                <div class="grid-2" style="align-items: end; margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Urutan</span><input class="input-wf" style="width: 100%;" value="1"></div>
+                                    <div style="display: flex; align-items: center; gap: 6px; padding: 8px 0;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; color: #555;">Tampilkan di portal</span></div>
+                                </div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Layanan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 5 — DAFTAR KATEGORI                                          -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Kategori</span></div>
+<div class="wf-screen" id="s-kategori">
+    <div class="wf-screen-label">Wireframe - 5 · Daftar Kategori</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar">
+                    <div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Kategori</span></div>
+                    <div class="profile-wf"><div class="avatar-box"></div></div>
+                </div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 130px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 220px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Kategori</div>
+                    </div>
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>#</th><th>Nama</th><th>Slug</th><th>Icon</th><th style="text-align: center;">Layanan</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr><td style="color: #ccc;">1</td><td><div class="text-line" style="width: 60px;"></div></td><td style="font-size: 9px; color: #999; font-family: monospace;">aplikasi</td><td><span class="badge-wf">layout-grid</span></td><td style="text-align: center;"><span class="cat-count-wf">8</span></td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">2</td><td><div class="text-line" style="width: 80px;"></div></td><td style="font-size: 9px; color: #999; font-family: monospace;">data-informasi</td><td><span class="badge-wf">database</span></td><td style="text-align: center;"><span class="cat-count-wf">5</span></td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">3</td><td><div class="text-line" style="width: 70px;"></div></td><td style="font-size: 9px; color: #999; font-family: monospace;">infrastruktur</td><td><span class="badge-wf">server</span></td><td style="text-align: center;"><span class="cat-count-wf">4</span></td><td style="text-align: center;"><span class="dot-wf off"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 6 — TAMBAH KATEGORI                                          -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-kategori-add">
+    <div class="wf-screen-label">Wireframe - 6 · Form Tambah Kategori</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Kategori</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar">
+                    <div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Kategori <span style="color:#ccc;">›</span> <span class="current">Tambah</span></div>
+                    <div class="profile-wf"><div class="avatar-box"></div></div>
+                </div>
+                <div class="content-inner">
+                    <div style="max-width: 460px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;">
+                                <div class="text-line thick" style="width: 140px;"></div>
+                                <div class="text-line thin" style="width: 200px;"></div>
+                            </div>
+                            <div style="padding: 18px;">
+                                <div class="form-group-wf"><span class="form-label-wf">Nama Kategori *</span><input class="input-wf" style="width: 100%;" placeholder="Aplikasi, Infrastruktur..."></div>
+                                <div class="form-group-wf"><span class="form-label-wf">Slug</span><input class="input-wf" style="width: 100%;" placeholder="Otomatis dari nama"></div>
+                                <div class="form-group-wf"><span class="form-label-wf">Icon (Lucide)</span><input class="input-wf" style="width: 100%;" placeholder="layout-grid, database..."></div>
+                                <div class="form-group-wf"><span class="form-label-wf">Deskripsi</span><textarea class="input-wf" style="width: 100%; font-family: inherit;" rows="2" placeholder="Deskripsi singkat..."></textarea></div>
+                                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; color: #555;">Aktif (tampilkan di portal)</span></div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Kategori</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 7 — DAFTAR BERITA                                            -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Berita</span></div>
+<div class="wf-screen" id="s-berita">
+    <div class="wf-screen-label">Wireframe - 7 · Daftar Berita</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Berita</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Berita</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 160px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 250px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Berita</div>
+                    </div>
+                    <div class="filter-bar">
+                        <input class="input-wf" style="flex: 1;" placeholder="Cari judul berita...">
+                        <select class="input-wf" style="min-width: 120px;"><option>Semua Kategori</option></select>
+                        <div class="btn-wf dark">Filter</div>
+                    </div>
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>ID</th><th>Judul</th><th>Kategori</th><th>Tanggal</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr><td style="color: #ccc;">#1</td><td><div class="text-line" style="width: 140px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 180px;"></div></td><td><span class="badge-wf">pemerintahan</span></td><td style="font-size: 9px; color: #999;">15 Okt 2026</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">#2</td><td><div class="text-line" style="width: 160px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 150px;"></div></td><td><span class="badge-wf">digital</span></td><td style="font-size: 9px; color: #999;">12 Okt 2026</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">#3</td><td><div class="text-line" style="width: 180px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 130px;"></div></td><td><span class="badge-wf">pengumuman</span></td><td style="font-size: 9px; color: #999;">10 Okt 2026</td><td style="text-align: center;"><span class="dot-wf off"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination-wf"><span>1-10 dari 15</span><div class="pg-boxes"><div class="pg-box active">1</div><div class="pg-box">2</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 8 — TAMBAH BERITA                                            -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-berita-add">
+    <div class="wf-screen-label">Wireframe - 8 · Form Tambah Berita</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Berita</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Berita <span style="color:#ccc;">›</span> <span class="current">Tambah</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner">
+                    <div style="max-width: 540px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;">
+                                <div class="text-line thick" style="width: 130px;"></div>
+                                <div class="text-line thin" style="width: 200px;"></div>
+                            </div>
+                            <div style="padding: 18px;">
+                                <div class="form-group-wf"><span class="form-label-wf">Judul Berita *</span><input class="input-wf" style="width: 100%;" placeholder="Masukkan judul berita..."></div>
+                                <div class="form-group-wf"><span class="form-label-wf">Slug</span><input class="input-wf" style="width: 100%;" placeholder="Otomatis dari judul"></div>
+                                <div class="grid-2" style="margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Kategori *</span><select class="input-wf" style="width: 100%;"><option>Pilih Kategori</option></select></div>
+                                    <div><span class="form-label-wf">Tanggal Publikasi</span><input class="input-wf" style="width: 100%;" type="date"></div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Gambar Thumbnail</span>
+                                    <div class="upload-zone"><div class="upload-icon"></div><div style="font-size: 10px; color: #888;">Klik atau seret gambar</div><div style="font-size: 8px; color: #bbb; margin-top: 2px;">JPG, PNG, WebP — Max 2MB</div></div>
+                                </div>
+                                <div class="form-group-wf"><span class="form-label-wf">Ringkasan</span><textarea class="input-wf" style="width: 100%; font-family: inherit;" rows="2" placeholder="Ringkasan singkat..."></textarea></div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Konten Berita *</span>
+                                    <div class="gray-box" style="height: 120px; border: 1px solid #ddd;">RICH TEXT EDITOR</div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; color: #555;">Publikasikan</span></div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Berita</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 9 — DAFTAR KEGIATAN                                          -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Kegiatan</span></div>
+<div class="wf-screen" id="s-kegiatan">
+    <div class="wf-screen-label">Wireframe - 9 · Daftar Kegiatan</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Galeri Foto</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Kegiatan</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 130px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 230px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Kegiatan</div>
+                    </div>
+                    <div class="filter-bar">
+                        <input class="input-wf" style="flex: 1;" placeholder="Cari nama kegiatan...">
+                        <div class="btn-wf dark">Filter</div>
+                    </div>
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>ID</th><th>Nama Kegiatan</th><th>Tanggal</th><th>Lokasi</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr><td style="color: #ccc;">#1</td><td><div class="text-line" style="width: 130px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 160px;"></div></td><td style="font-size: 9px; color: #999;">20 Nov 2026</td><td style="font-size: 9px; color: #999;">Surabaya</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">#2</td><td><div class="text-line" style="width: 100px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 140px;"></div></td><td style="font-size: 9px; color: #999;">25 Nov 2026</td><td style="font-size: 9px; color: #999;">Gedung Negara Grahadi</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">#3</td><td><div class="text-line" style="width: 90px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 180px;"></div></td><td style="font-size: 9px; color: #999;">01 Des 2026</td><td style="font-size: 9px; color: #999;">Online (Zoom)</td><td style="text-align: center;"><span class="dot-wf off"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination-wf"><span>1-8 dari 8</span><div class="pg-boxes"><div class="pg-box active">1</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 10 — TAMBAH KEGIATAN                                         -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-kegiatan-add">
+    <div class="wf-screen-label">Wireframe - 10 · Form Tambah Kegiatan</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Kalender Kegiatan</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Kegiatan <span style="color:#ccc;">›</span> <span class="current">Tambah</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner">
+                    <div style="max-width: 520px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;"><div class="text-line thick" style="width: 140px;"></div><div class="text-line thin" style="width: 200px;"></div></div>
+                            <div style="padding: 18px;">
+                                <div class="form-group-wf"><span class="form-label-wf">Nama Kegiatan *</span><input class="input-wf" style="width: 100%;" placeholder="Nama kegiatan..."></div>
+                                <div class="form-group-wf"><span class="form-label-wf">Slug</span><input class="input-wf" style="width: 100%;" placeholder="Otomatis dari nama"></div>
+                                <div class="grid-2" style="margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Tanggal *</span><input class="input-wf" style="width: 100%;" type="date"></div>
+                                    <div><span class="form-label-wf">Lokasi</span><input class="input-wf" style="width: 100%;" placeholder="Surabaya, Online..."></div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Gambar</span>
+                                    <div class="upload-zone"><div class="upload-icon"></div><div style="font-size: 10px; color: #888;">Klik atau seret gambar</div><div style="font-size: 8px; color: #bbb; margin-top: 2px;">JPG, PNG, WebP — Max 2MB</div></div>
+                                </div>
+                                <div class="form-group-wf"><span class="form-label-wf">Deskripsi *</span><textarea class="input-wf" style="width: 100%; font-family: inherit;" rows="3" placeholder="Detail kegiatan..."></textarea></div>
+                                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; color: #555;">Tampilkan di portal</span></div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Kegiatan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 11 — DAFTAR GALERI                                           -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Galeri Foto</span></div>
+<div class="wf-screen" id="s-galeri">
+    <div class="wf-screen-label">Wireframe - 11 · Daftar Galeri Foto</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Galeri Foto</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Video YouTube</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Galeri Foto</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 100px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 230px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Foto</div>
+                    </div>
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>ID</th><th>Preview</th><th>Judul</th><th>Tanggal</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr><td style="color: #ccc;">#1</td><td><div class="gray-box" style="width: 48px; height: 34px;"></div></td><td><div class="text-line" style="width: 140px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 170px;"></div></td><td style="font-size: 9px; color: #999;">10 Okt 2026</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">#2</td><td><div class="gray-box" style="width: 48px; height: 34px;"></div></td><td><div class="text-line" style="width: 110px; margin-bottom: 3px;"></div><div class="text-line thin" style="width: 150px;"></div></td><td style="font-size: 9px; color: #999;">08 Okt 2026</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination-wf"><span>1-10 dari 20</span><div class="pg-boxes"><div class="pg-box active">1</div><div class="pg-box">2</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 12 — TAMBAH GALERI                                           -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-galeri-add">
+    <div class="wf-screen-label">Wireframe - 12 · Form Tambah Foto</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Galeri Foto</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Galeri <span style="color:#ccc;">›</span> <span class="current">Tambah</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner">
+                    <div style="max-width: 480px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;"><div class="text-line thick" style="width: 120px;"></div><div class="text-line thin" style="width: 170px;"></div></div>
+                            <div style="padding: 18px;">
+                                <div class="form-group-wf"><span class="form-label-wf">Judul Foto *</span><input class="input-wf" style="width: 100%;" placeholder="Judul atau caption"></div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Upload Gambar *</span>
+                                    <div class="upload-zone"><div class="upload-icon"></div><div style="font-size: 10px; color: #888;">Klik atau seret gambar</div><div style="font-size: 8px; color: #bbb; margin-top: 2px;">JPG, PNG, WebP — Max 2MB</div></div>
+                                </div>
+                                <div class="form-group-wf"><span class="form-label-wf">Deskripsi</span><textarea class="input-wf" style="width: 100%; font-family: inherit;" rows="2" placeholder="Deskripsi singkat..."></textarea></div>
+                                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; color: #555;">Tampilkan di portal</span></div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Foto</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 13 — DAFTAR VIDEO                                            -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Video YouTube</span></div>
+<div class="wf-screen" id="s-video">
+    <div class="wf-screen-label">Wireframe - 13 · Daftar Video</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Galeri Foto</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Video YouTube</div>
+                </div>
+                <div class="sidebar-section-label">Pengaturan</div>
+                <div class="sidebar-nav"><div class="nav-item"><div class="nav-icon-box"></div> Administrator</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Video YouTube</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 110px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 220px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Video</div>
+                    </div>
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>ID</th><th>Thumbnail</th><th>Judul</th><th>YouTube ID</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr><td style="color: #ccc;">#1</td><td><div class="gray-box" style="width: 64px; height: 36px;"></div></td><td><div class="text-line" style="width: 150px;"></div></td><td style="font-size: 9px; color: #999; font-family: monospace;">dQw4w9WgXcQ</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                                <tr><td style="color: #ccc;">#2</td><td><div class="gray-box" style="width: 64px; height: 36px;"></div></td><td><div class="text-line" style="width: 130px;"></div></td><td style="font-size: 9px; color: #999; font-family: monospace;">abc123XYZ</td><td style="text-align: center;"><span class="dot-wf"></span></td><td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 14 — TAMBAH VIDEO                                            -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-video-add">
+    <div class="wf-screen-label">Wireframe - 14 · Form Tambah Video</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Video YouTube</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Video <span style="color:#ccc;">›</span> <span class="current">Tambah</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner">
+                    <div style="max-width: 480px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;"><div class="text-line thick" style="width: 140px;"></div><div class="text-line thin" style="width: 190px;"></div></div>
+                            <div style="padding: 18px;">
+                                <div class="form-group-wf"><span class="form-label-wf">Judul Video *</span><input class="input-wf" style="width: 100%;" placeholder="Judul video..."></div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">URL YouTube *</span>
+                                    <input class="input-wf" style="width: 100%;" placeholder="https://youtube.com/watch?v=...">
+                                    <div style="font-size: 8px; color: #bbb; margin-top: 3px;">Thumbnail otomatis diambil dari URL.</div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Preview</span>
+                                    <div class="gray-box" style="height: 120px; border: 1px solid #ddd;">YOUTUBE THUMBNAIL</div>
+                                </div>
+                                <div class="form-group-wf"><span class="form-label-wf">Deskripsi</span><textarea class="input-wf" style="width: 100%; font-family: inherit;" rows="2" placeholder="Deskripsi singkat..."></textarea></div>
+                                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; color: #555;">Tampilkan di portal</span></div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Video</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 15 — ADMINISTRATOR                                           -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Administrator</span></div>
+<div class="wf-screen" id="s-admin">
+    <div class="wf-screen-label">Wireframe - 15 · Kelola Administrator</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Galeri Foto</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Video YouTube</div>
+                </div>
+                <div class="sidebar-section-label">Pengaturan</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Administrator</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Administrator</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner flex-col gap-14">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div><div class="text-line thick" style="width: 140px; margin-bottom: 5px;"></div><div class="text-line light" style="width: 240px;"></div></div>
+                        <div class="btn-wf dark">+ Tambah Admin</div>
+                    </div>
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>ID</th><th>Nama</th><th>Email</th><th>Role</th><th>Terakhir Login</th><th style="text-align: right;">Aksi</th></tr></thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color: #ccc;">#1</td>
+                                    <td><div style="display: flex; align-items: center; gap: 8px;"><div class="gray-box" style="width: 24px; height: 24px;"></div><div class="text-line" style="width: 80px;"></div></div></td>
+                                    <td style="font-size: 9px; color: #999;">admin@kominfo.go.id</td>
+                                    <td><span class="badge-wf">Super Admin</span></td>
+                                    <td style="font-size: 9px; color: #999;">26 Okt 2026</td>
+                                    <td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ccc;">#2</td>
+                                    <td><div style="display: flex; align-items: center; gap: 8px;"><div class="gray-box" style="width: 24px; height: 24px;"></div><div class="text-line" style="width: 70px;"></div></div></td>
+                                    <td style="font-size: 9px; color: #999;">editor@kominfo.go.id</td>
+                                    <td><span class="badge-wf">Editor</span></td>
+                                    <td style="font-size: 9px; color: #999;">25 Okt 2026</td>
+                                    <td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ccc;">#3</td>
+                                    <td><div style="display: flex; align-items: center; gap: 8px;"><div class="gray-box" style="width: 24px; height: 24px;"></div><div class="text-line" style="width: 90px;"></div></div></td>
+                                    <td style="font-size: 9px; color: #999;">operator@kominfo.go.id</td>
+                                    <td><span class="badge-wf">Operator</span></td>
+                                    <td style="font-size: 9px; color: #999;">24 Okt 2026</td>
+                                    <td style="text-align: right;"><div style="display: flex; gap: 4px; justify-content: flex-end;"><div class="btn-wf-icon">✎</div><div class="btn-wf-icon danger">✕</div></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 16 — TAMBAH ADMINISTRATOR                                    -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Administrator</span></div>
+<div class="wf-screen" id="s-admin-add">
+    <div class="wf-screen-label">Wireframe - 16 · Form Tambah Administrator</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Menu Utama</div>
+                <div class="sidebar-nav"><div class="nav-item"><div class="nav-icon-box"></div> Dashboard</div></div>
+                <div class="sidebar-section-label">Pengaturan</div>
+                <div class="sidebar-nav"><div class="nav-item active"><div class="nav-icon-box"></div> Administrator</div></div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Administrator <span style="color:#ccc;">›</span> <span class="current">Tambah Baru</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner">
+                    <div style="max-width: 520px;">
+                        <div style="font-size: 10px; color: #999; margin-bottom: 14px;">← Kembali ke Daftar Admin</div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="flex-direction: column; align-items: flex-start; gap: 3px;">
+                                <div class="text-line thick" style="width: 150px;"></div>
+                                <div class="text-line thin" style="width: 220px;"></div>
+                            </div>
+                            <div style="padding: 18px;">
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Nama Lengkap *</span>
+                                    <input class="input-wf" style="width: 100%;" placeholder="Contoh: Muhammad Farhan">
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Alamat Email *</span>
+                                    <input class="input-wf" style="width: 100%;" type="email" placeholder="admin@kominfo.jatimprov.go.id">
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Peran / Role Pengguna *</span>
+                                    <div class="flex-col gap-8" style="margin-top: 6px;">
+                                        <div class="radio-card selected">
+                                            <div class="radio-circle checked"></div>
+                                            <div>
+                                                <div style="font-size: 10px; font-weight: 700;">Super Admin</div>
+                                                <div style="font-size: 8px; color: #888;">Akses penuh seluruh modul, layanan, konten, dan manajemen akun</div>
+                                            </div>
+                                        </div>
+                                        <div class="radio-card">
+                                            <div class="radio-circle"></div>
+                                            <div>
+                                                <div style="font-size: 10px; font-weight: 700;">Editor Konten</div>
+                                                <div style="font-size: 8px; color: #888;">Kelola Berita, Kalender Kegiatan, Galeri Foto, dan Video</div>
+                                            </div>
+                                        </div>
+                                        <div class="radio-card">
+                                            <div class="radio-circle"></div>
+                                            <div>
+                                                <div style="font-size: 10px; font-weight: 700;">Operator Layanan</div>
+                                                <div style="font-size: 8px; color: #888;">Kelola Katalog Layanan Digital dan Kategori Layanan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-2" style="margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Kata Sandi *</span><input class="input-wf" style="width: 100%;" type="password" placeholder="••••••••"></div>
+                                    <div><span class="form-label-wf">Konfirmasi Sandi *</span><input class="input-wf" style="width: 100%;" type="password" placeholder="••••••••"></div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 14px;">
+                                    <div class="checkbox-wf checked"></div>
+                                    <span style="font-size: 10px; color: #555;">Kirim email notifikasi akun & detail login kepada user</span>
+                                </div>
+                                <div style="display: flex; justify-content: flex-end; gap: 8px; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline">Batal</div>
+                                    <div class="btn-wf dark">Simpan Administrator</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 17 — EDIT LAYANAN (MODE PATH TERINTEGRASI)                   -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>State Edit Layanan (Mode Path)</span></div>
+<div class="wf-screen" id="s-layanan-edit">
+    <div class="wf-screen-label">Wireframe - 17 · Form Edit Layanan (Mode Path Terintegrasi)</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar">
+                    <div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> Layanan <span style="color:#ccc;">›</span> <span class="current">Edit: SIMA Jatim</span></div>
+                    <div class="profile-wf"><div class="avatar-box"></div></div>
+                </div>
+                <div class="content-inner">
+                    <div style="max-width: 540px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                            <div style="font-size: 10px; color: #999;">← Kembali ke Daftar Layanan</div>
+                            <span class="badge-wf" style="background: #222; color: #fff; border-color: #222;">ID #1 · Aktif</span>
+                        </div>
+                        <div class="wf-card">
+                            <div class="wf-card-header" style="justify-content: space-between;">
+                                <div>
+                                    <div style="font-size: 12px; font-weight: 700; color: #222;">Edit Informasi Layanan</div>
+                                    <div style="font-size: 9px; color: #888; margin-top: 2px;">Terakhir diperbarui 25 Oktober 2026 oleh Super Admin</div>
+                                </div>
+                                <div class="badge-wf">Mode: Path</div>
+                            </div>
+                            <div style="padding: 18px;">
+                                <div class="grid-2" style="margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Nama Layanan *</span><input class="input-wf" style="width: 100%;" value="SIMA - Sistem Informasi Manajemen Aset"></div>
+                                    <div>
+                                        <span class="form-label-wf">Kategori *</span>
+                                        <select class="input-wf" style="width: 100%;"><option selected>Aplikasi & Tata Kelola</option></select>
+                                    </div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Slug URL</span>
+                                    <input class="input-wf" style="width: 100%;" value="sima-jatim">
+                                </div>
+                                <!-- Access mode path selected -->
+                                <div style="border: 1px solid #ccc; padding: 14px; margin-bottom: 14px; background: #fafafa;">
+                                    <span class="form-label-wf" style="margin-bottom: 8px;">Mode Akses (Sesuai Requirement Arsitektur) *</span>
+                                    <div class="grid-2" style="margin-bottom: 10px;">
+                                        <div class="radio-card">
+                                            <div class="radio-circle"></div>
+                                            <div><div style="font-size: 10px; font-weight: 600;">Domain</div><div style="font-size: 8px; color: #aaa;">Subdomain mandiri</div></div>
+                                        </div>
+                                        <div class="radio-card selected">
+                                            <div class="radio-circle checked"></div>
+                                            <div><div style="font-size: 10px; font-weight: 700;">Path (Domain Utama)</div><div style="font-size: 8px; color: #555;">Reverse proxy integrasi</div></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-wf" style="margin-bottom: 8px;">
+                                        <span class="form-label-wf">Path Domain Utama *</span>
+                                        <input class="input-wf" style="width: 100%; font-family: monospace;" value="/sima">
+                                        <div style="font-size: 8px; color: #666; margin-top: 4px; padding: 4px 8px; background: #eee;">
+                                            URL Publik: <strong>https://kominfo.jatimprov.go.id/sima</strong>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="form-label-wf">URL Asal / Subdomain Lama (Opsional)</span>
+                                        <input class="input-wf" style="width: 100%; font-family: monospace;" value="https://sima.kominfo.jatimprov.go.id">
+                                    </div>
+                                </div>
+                                <div class="form-group-wf">
+                                    <span class="form-label-wf">Deskripsi Layanan</span>
+                                    <textarea class="input-wf" style="width: 100%; resize: vertical; font-family: inherit;" rows="3">Aplikasi pengelolaan inventaris dan siklus aset pemerintah daerah di lingkungan Diskominfo Provinsi Jawa Timur.</textarea>
+                                </div>
+                                <div class="grid-2" style="align-items: center; margin-bottom: 14px;">
+                                    <div><span class="form-label-wf">Urutan Tampilan</span><input class="input-wf" style="width: 100%;" value="1"></div>
+                                    <div style="display: flex; align-items: center; gap: 6px; padding-top: 14px;"><div class="checkbox-wf checked"></div><span style="font-size: 10px; font-weight: 600; color: #333;">Layanan Aktif (tampil di portal)</span></div>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid #eee;">
+                                    <div class="btn-wf outline" style="color: #666; border-color: #ccc;">✕ Hapus Layanan</div>
+                                    <div style="display: flex; gap: 8px;">
+                                        <div class="btn-wf outline">Batal</div>
+                                        <div class="btn-wf dark">Simpan Perubahan</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 18 — MODAL KONFIRMASI HAPUS                                  -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Dialog & Feedback State</span></div>
+<div class="wf-screen" id="s-modal-delete">
+    <div class="wf-screen-label">Wireframe - 18 · Modal Konfirmasi Hapus Data</div>
+    <div class="wf-frame">
+        <div class="modal-overlay-wf">
+            <div class="modal-card-wf">
+                <div class="modal-header-wf">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div class="gray-box" style="width: 20px; height: 20px; font-size: 11px; font-weight: 800;">!</div>
+                        <div style="font-size: 11px; font-weight: 700; color: #222;">Konfirmasi Hapus Data</div>
+                    </div>
+                    <div style="font-size: 12px; color: #999; cursor: pointer;">✕</div>
+                </div>
+                <div class="modal-body-wf">
+                    <div style="text-align: center; margin-bottom: 16px;">
+                        <div class="gray-box" style="width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 50%; font-size: 18px;">✕</div>
+                        <div style="font-size: 13px; font-weight: 700; color: #222; margin-bottom: 6px;">Hapus Layanan Ini?</div>
+                        <div style="font-size: 10px; color: #666; line-height: 1.5; max-width: 320px; margin: 0 auto;">
+                            Layanan <strong>"SIMA - Sistem Informasi Manajemen Aset"</strong> akan dihapus permanen. Tindakan ini tidak dapat dibatalkan.
+                        </div>
+                    </div>
+                    <div style="background: #f5f5f5; border: 1px solid #ddd; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; font-size: 9px; color: #666;">
+                        <span>Kategori: <strong>Aplikasi</strong></span>
+                        <span>Mode: <strong>Path (/sima)</strong></span>
+                        <span class="badge-wf">ID #1</span>
+                    </div>
+                </div>
+                <div class="modal-footer-wf">
+                    <div class="btn-wf outline">Batal / Kembali</div>
+                    <div class="btn-wf dark" style="background: #222;">Ya, Hapus Data</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 19 — STATE KOSONG & NOTIFIKASI TOAST                         -->
+<!-- =========================================================== -->
+<div class="wf-screen" id="s-empty-toast">
+    <div class="wf-screen-label">Wireframe - 19 · State Kosong (Empty State) & Feedback Notifikasi</div>
+    <div class="wf-frame">
+        <div class="cms-layout">
+            <div class="sidebar">
+                <div class="sidebar-logo"><div class="logo-box"></div><div class="sidebar-logo-text"><div class="text-line medium" style="width: 80px;"></div><div class="text-line thin" style="width: 60px;"></div></div></div>
+                <div class="sidebar-section-label">Kelola Konten</div>
+                <div class="sidebar-nav">
+                    <div class="nav-item active"><div class="nav-icon-box"></div> Layanan Digital</div>
+                    <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                </div>
+                <div class="sidebar-bottom"><div class="nav-item"><div class="nav-icon-box"></div> Buka Portal Publik</div></div>
+            </div>
+            <div class="content-area">
+                <div class="topbar"><div class="breadcrumb-wf">CMS <span style="color:#ccc;">›</span> <span class="current">Layanan Digital</span></div><div class="profile-wf"><div class="avatar-box"></div></div></div>
+                <div class="content-inner flex-col gap-14">
+                    <!-- Notification toasts -->
+                    <div class="toast-wf success">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 700;">✓</span>
+                            <span>Data layanan berhasil disimpan dan diperbarui ke portal.</span>
+                        </div>
+                        <span style="color: #aaa; cursor: pointer;">✕</span>
+                    </div>
+
+                    <div class="toast-wf danger">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 700;">⚠</span>
+                            <span>Peringatan: Gagal memproses, mohon periksa kelengkapan form input.</span>
+                        </div>
+                        <span style="color: #aaa; cursor: pointer;">✕</span>
+                    </div>
+
+                    <div class="filter-bar">
+                        <input class="input-wf" style="flex: 1;" value="layanan-yang-tidak-ada-123">
+                        <select class="input-wf"><option>Semua Kategori</option></select>
+                        <div class="btn-wf dark">Filter</div>
+                        <span style="font-size: 9px; color: #999; cursor: pointer;">Reset</span>
+                    </div>
+
+                    <!-- Empty state table -->
+                    <div class="wf-card">
+                        <table class="wf-table">
+                            <thead><tr><th>#</th><th>Layanan</th><th>Kategori</th><th>Akses</th><th style="text-align: center;">Status</th><th style="text-align: right;">Aksi</th></tr></thead>
+                        </table>
+                        <div class="empty-state-wf">
+                            <div class="gray-box" style="width: 54px; height: 54px; border-radius: 8px; font-size: 20px;">∅</div>
+                            <div style="font-size: 12px; font-weight: 700; color: #333;">Tidak Ada Data Layanan Ditemukan</div>
+                            <div style="font-size: 9px; color: #888; max-width: 280px; line-height: 1.4;">
+                                Pencarian "layanan-yang-tidak-ada-123" tidak menghasilkan data apapun. Coba kata kunci lain atau bersihkan filter.
+                            </div>
+                            <div style="display: flex; gap: 8px; margin-top: 6px;">
+                                <div class="btn-wf outline">Reset Filter Pencarian</div>
+                                <div class="btn-wf dark">+ Tambah Layanan Baru</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- =========================================================== -->
+<!-- 20 — TAMPILAN MOBILE CMS (RESPONSIVE DRAWER)                 -->
+<!-- =========================================================== -->
+<div class="section-divider"><span>Responsif & Mobile View</span></div>
+<div class="wf-screen" id="s-mobile-cms">
+    <div class="wf-screen-label">Wireframe - 20 · Tampilan Mobile CMS (Responsive Drawer Sidebar)</div>
+    <div class="wf-frame">
+        <div class="mobile-wrap">
+            <div class="mobile-device">
+                <div class="mobile-notch">
+                    <span>09:41</span>
+                    <div style="display: flex; gap: 4px; align-items: center;">
+                        <span style="font-size: 7px;">LTE</span>
+                        <div style="width: 14px; height: 8px; border: 1px solid #fff; border-radius: 2px;"></div>
+                    </div>
+                </div>
+                <div class="mobile-topbar">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div class="btn-wf-icon" style="border-radius: 4px; font-size: 12px;">☰</div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div class="gray-box" style="width: 20px; height: 20px;"></div>
+                            <span style="font-size: 11px; font-weight: 700;">CMS Jatim</span>
+                        </div>
+                    </div>
+                    <div class="avatar-box" style="width: 26px; height: 26px;"></div>
+                </div>
+                <div class="mobile-body">
+                    <!-- Drawer opened state -->
+                    <div class="mobile-drawer-backdrop"></div>
+                    <div class="mobile-drawer">
+                        <div style="padding: 16px; border-bottom: 1px solid #eee; display: flex; align-items: center; justify-content: space-between;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div class="gray-box" style="width: 28px; height: 28px;"></div>
+                                <div><div style="font-size: 11px; font-weight: 800;">Kominfo Jatim</div><div style="font-size: 8px; color: #999;">CMS Portal Layanan</div></div>
+                            </div>
+                            <div style="font-size: 12px; color: #999; cursor: pointer;">✕</div>
+                        </div>
+                        <div style="padding: 12px 14px; background: #fafafa; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
+                            <div class="avatar-box" style="width: 30px; height: 30px;"></div>
+                            <div>
+                                <div style="font-size: 10px; font-weight: 700;">Super Administrator</div>
+                                <div style="font-size: 8px; color: #999;">admin@kominfo.go.id</div>
+                            </div>
+                        </div>
+                        <div style="flex: 1; padding: 10px 8px; overflow-y: auto;">
+                            <div class="sidebar-section-label" style="padding: 6px 10px;">Menu Utama</div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Dashboard</div>
+                            <div class="sidebar-section-label" style="padding: 10px 10px 6px;">Kelola Konten</div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Kategori</div>
+                            <div class="nav-item active" style="justify-content: space-between;">
+                                <div style="display: flex; align-items: center; gap: 10px;"><div class="nav-icon-box"></div> Layanan Digital</div>
+                                <span class="badge-wf" style="background: #fff; color: #222; font-size: 7px; padding: 1px 4px;">24</span>
+                            </div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Berita</div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Kalender Kegiatan</div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Galeri Foto</div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Video YouTube</div>
+                            <div class="sidebar-section-label" style="padding: 10px 10px 6px;">Pengaturan</div>
+                            <div class="nav-item"><div class="nav-icon-box"></div> Administrator</div>
+                        </div>
+                        <div style="padding: 12px; border-top: 1px solid #eee; display: flex; flex-direction: column; gap: 6px;">
+                            <div class="btn-wf outline" style="width: 100%; justify-content: center; font-size: 9px;">🌐 Lihat Portal Publik</div>
+                            <div class="btn-wf outline" style="width: 100%; justify-content: center; font-size: 9px; color: #888;">🚪 Keluar (Logout)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<div style="text-align: center; padding: 40px; font-size: 10px; color: #bbb;">
+    Wireframe CMS — Portal Layanan Kominfo Jawa Timur · 20 screens · Hitam Putih Klasik · Siap Diupload ke Figma
+</div>
+
+</body>
+</html>

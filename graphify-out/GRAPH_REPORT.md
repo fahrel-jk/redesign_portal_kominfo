@@ -1,14 +1,19 @@
-# Graph Report - redesign_portal_kominfo  (2026-09-29)
+# Graph Report - redesign_portal_kominfo  (2026-10-26)
 
 ## Corpus Check
-- 107 files · ~231,720 words
+- 114 files · ~245,499 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 23 file(s) not represented in the graph (top: (none) 17, .css 2, .graphify-bak 1)
 
 ## Summary
-- 521 nodes · 720 edges · 61 communities (21 shown, 40 thin omitted)
+- 543 nodes · 773 edges · 65 communities (22 shown, 43 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.95)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `aae0f4bb`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - ServiceCategory
@@ -20,7 +25,7 @@
 - What You Must Do When Invoked
 - package.json
 - brief_portal_layanan_kominfo_jatim.md
-- Portal Layanan Digital Diskominfo Jawa Timur
+- Portal Layanan Digital Diskominfo Jatim
 - graphify reference: extra exports and benchmark
 - bootstrap/app.php
 - AppServiceProvider
@@ -39,23 +44,22 @@
 - extraction-spec.md
 - ponytail
 - Illuminate\Http\Request
-- Gallery
+- Event
+- News
 
 ## God Nodes (most connected - your core abstractions)
 1. `ServiceCategory` - 34 edges
 2. `User` - 33 edges
-3. `Service` - 26 edges
-4. `Event` - 19 edges
-5. `Gallery` - 19 edges
-6. `News` - 19 edges
-7. `Controller` - 18 edges
-8. `What You Must Do When Invoked` - 12 edges
-9. `/graphify` - 11 edges
-10. `AdminCategoryController` - 10 edges
+3. `Service` - 25 edges
+4. `Controller` - 20 edges
+5. `Event` - 20 edges
+6. `Gallery` - 20 edges
+7. `News` - 20 edges
+8. `Video` - 15 edges
+9. `What You Must Do When Invoked` - 12 edges
+10. `/graphify` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `📄 Catatan Integrasi ke Website Utama` --references--> `Service`  [INFERRED]
-  README.md → app/Models/Service.php
 - `{closure#1}()` --calls--> `User`  [EXTRACTED]
   tests/Feature/AdminCategoryTest.php → app/Models/User.php
 - `{closure#1}()` --calls--> `User`  [EXTRACTED]
@@ -64,15 +68,17 @@
   tests/Feature/AdminGalleryTest.php → app/Models/User.php
 - `{closure#1}()` --calls--> `User`  [EXTRACTED]
   tests/Feature/AdminNewsTest.php → app/Models/User.php
+- `{closure#2}()` --calls--> `Event`  [EXTRACTED]
+  tests/Feature/AdminEventTest.php → app/Models/Event.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (61 total, 40 thin omitted)
+## Communities (65 total, 43 thin omitted)
 
 ### Community 0 - "ServiceCategory"
-Cohesion: 0.07
-Nodes (22): AdminCategoryController, AdminServiceController, Service, ServiceCategory, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Eloquent\Model, Illuminate\Database\Eloquent\Relations\BelongsTo, Illuminate\Database\Eloquent\Relations\HasMany (+14 more)
+Cohesion: 0.06
+Nodes (23): AdminCategoryController, AdminServiceController, Service, ServiceCategory, ServiceSeeder, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Eloquent\Model, Illuminate\Database\Eloquent\Relations\BelongsTo (+15 more)
 
 ### Community 1 - "composer.json"
 Cohesion: 0.04
@@ -80,7 +86,7 @@ Nodes (48): pestphp/pest-plugin, php-http/discovery, autoload, autoload-dev, psr
 
 ### Community 2 - "portal.js"
 Cohesion: 0.06
-Nodes (37): backToTop, categoryList, clearSearch, createServiceCard(), defaultServices, emptyState, eventsData, featuredServices (+29 more)
+Nodes (41): backToTop, buildEventsIndex(), categoryList, clearSearch, createServiceCard(), DAY_NAMES_FULL, defaultServices, emptyState (+33 more)
 
 ### Community 3 - "User"
 Cohesion: 0.08
@@ -88,11 +94,11 @@ Nodes (15): AdminUserController, User, UserFactory, UserSeeder, Illuminate\Datab
 
 ### Community 4 - "Illuminate\Database\Seeder"
 Cohesion: 0.12
-Nodes (8): DatabaseSeeder, EventSeeder, NewsSeeder, ServiceCategorySeeder, ServiceSeeder, Illuminate\Database\Seeder, Illuminate\Support\Str, Pdo\Mysql
+Nodes (8): DatabaseSeeder, GallerySeeder, NewsSeeder, ServiceCategorySeeder, VideoSeeder, Illuminate\Database\Seeder, Illuminate\Support\Str, Pdo\Mysql
 
 ### Community 5 - "Illuminate\Database\Schema\Blueprint"
 Cohesion: 0.08
-Nodes (16): {closure#1}(), {closure#2}(), {closure#3}(), {closure#1}(), {closure#2}(), {closure#1}(), {closure#2}(), {closure#3}() (+8 more)
+Nodes (17): {closure#1}(), {closure#2}(), {closure#3}(), {closure#1}(), {closure#2}(), {closure#1}(), {closure#2}(), {closure#3}() (+9 more)
 
 ### Community 6 - "What You Must Do When Invoked"
 Cohesion: 0.07
@@ -106,9 +112,9 @@ Nodes (19): devDependencies, axios, concurrently, laravel-vite-plugin, tailwindc
 Cohesion: 0.09
 Nodes (21): 10\. Alur Pengembangan yang Disarankan, 11\. Output / Deliverables, 12\. Acceptance Criteria, 13\. Catatan Integrasi ke Website Utama, 14\. Batasan Scope Tahap Awal, 1\. Latar Belakang, 2\. Tujuan, 3.1. Landing / Public Portal (+13 more)
 
-### Community 9 - "Portal Layanan Digital Diskominfo Jawa Timur"
-Cohesion: 0.12
-Nodes (16): 1. Clone & Install Dependencies, 1. Public Portal (Landing Page), 2. Konfigurasi Environment, 2. Secret Admin CMS (`/admin`), 3. Migrasi Database & Seeding, 4. Kompilasi Aset Frontend & Jalankan Server, 📄 Catatan Integrasi ke Website Utama, 📌 Fitur Utama (+8 more)
+### Community 9 - "Portal Layanan Digital Diskominfo Jatim"
+Cohesion: 0.22
+Nodes (7): Arsitektur Data, Cara Instalasi, Catatan Integrasi, Fitur, Kebutuhan Sistem, Pengujian, Portal Layanan Digital Diskominfo Jatim
 
 ### Community 10 - "graphify reference: extra exports and benchmark"
 Cohesion: 0.22
@@ -148,31 +154,35 @@ Nodes (4): graphify, ponytail, Safety & Integrity:, The Decision Ladder (evaluat
 
 ### Community 50 - "Illuminate\Http\Request"
 Cohesion: 0.07
-Nodes (21): AdminAuthController, AdminDashboardController, AdminEventController, AdminNewsController, Controller, PublicPortalController, Event, News (+13 more)
+Nodes (16): AdminAuthController, AdminDashboardController, AdminGalleryController, AdminVideoController, Controller, PublicPortalController, Gallery, Video (+8 more)
 
-### Community 51 - "Gallery"
+### Community 51 - "Event"
 Cohesion: 0.15
-Nodes (8): AdminGalleryController, Gallery, GallerySeeder, {closure#1}(), {closure#2}(), {closure#4}(), {closure#5}(), {closure#6}()
+Nodes (8): AdminEventController, Event, EventSeeder, {closure#1}(), {closure#2}(), {closure#4}(), {closure#5}(), {closure#6}()
+
+### Community 61 - "News"
+Cohesion: 0.16
+Nodes (7): AdminNewsController, News, {closure#1}(), {closure#2}(), {closure#4}(), {closure#5}(), {closure#6}()
 
 ## Knowledge Gaps
-- **148 isolated node(s):** `$schema`, `name`, `type`, `description`, `keywords` (+143 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 263 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **144 isolated node(s):** `$schema`, `name`, `type`, `description`, `keywords` (+139 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 271 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `User` connect `User` to `ServiceCategory`, `Illuminate\Http\Request`, `Gallery`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
-- **Why does `Service` connect `ServiceCategory` to `Portal Layanan Digital Diskominfo Jawa Timur`, `Illuminate\Http\Request`, `Illuminate\Database\Seeder`?**
+- **Why does `User` connect `User` to `ServiceCategory`, `Illuminate\Http\Request`, `Event`, `News`?**
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `ServiceCategory` connect `ServiceCategory` to `Portal Layanan Digital Diskominfo Jatim`, `Illuminate\Http\Request`, `Illuminate\Database\Seeder`?**
   _High betweenness centrality (0.039) - this node is a cross-community bridge._
-- **Why does `ServiceCategory` connect `ServiceCategory` to `Illuminate\Http\Request`, `Illuminate\Database\Seeder`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+- **Why does `Controller` connect `Illuminate\Http\Request` to `ServiceCategory`, `User`, `Illuminate\Database\Seeder`, `Event`, `News`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `$schema`, `name`, `type` to the rest of the system?**
-  _148 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _144 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ServiceCategory` be split into smaller, more focused modules?**
-  _Cohesion score 0.06821480406386067 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06493506493506493 - nodes in this community are weakly interconnected._
 - **Should `composer.json` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `portal.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06201550387596899 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05735430157261795 - nodes in this community are weakly interconnected._

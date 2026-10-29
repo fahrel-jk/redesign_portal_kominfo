@@ -48,9 +48,9 @@
     "semantic_hash": "25a307335c0719bc9a91b3f7babd186d"
   },
   "app/Http/Controllers/PublicPortalController.php": {
-    "mtime": 1790653000.5934794,
-    "seen": 1790654573.7404642,
-    "ast_hash": "e462c9ff3ed4e03e0c6aedc404d0f57c",
+    "mtime": 1790733226.324906,
+    "seen": 1792987791.0574858,
+    "ast_hash": "72e1b707fba1eadcc5ec1df8c81b1a90",
     "semantic_hash": ""
   },
   "app/Models/Service.php": {
@@ -198,9 +198,9 @@
     "semantic_hash": "36208aa42ad66fb5b369a35f65e951e6"
   },
   "database/seeders/DatabaseSeeder.php": {
-    "mtime": 1790652208.1065686,
-    "seen": 1790654573.7404935,
-    "ast_hash": "9ce91e318718233e168263ba79d5ee5c",
+    "mtime": 1790733336.6626446,
+    "seen": 1792987791.057517,
+    "ast_hash": "c7199cda4cc2146dc0b8e7687106090e",
     "semantic_hash": ""
   },
   "database/seeders/ServiceCategorySeeder.php": {
@@ -246,9 +246,9 @@
     "semantic_hash": "78f909acc19aea4717eddca5a87c1ba3"
   },
   "resources/js/portal.js": {
-    "mtime": 1790655594.6147094,
-    "seen": 1790655631.1576188,
-    "ast_hash": "0d52b5f7af1b9698bb6975a5f1625305",
+    "mtime": 1791346463.6248386,
+    "seen": 1792987791.0575278,
+    "ast_hash": "20968b968513de22a7ab6fd56f55a66a",
     "semantic_hash": ""
   },
   "resources/views/admin/categories/create.blade.php": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "resources/views/admin/layout.blade.php": {
-    "mtime": 1790652321.2634232,
-    "seen": 1790654573.7405126,
-    "ast_hash": "dd440420c6297c90d334a725bca40e47",
+    "mtime": 1790733247.9998257,
+    "seen": 1792987791.0575376,
+    "ast_hash": "797755ffeea424079d4f8d2514977ec1",
     "semantic_hash": ""
   },
   "resources/views/admin/login.blade.php": {
@@ -324,15 +324,15 @@
     "semantic_hash": "7a1277c0f574fc73f0b2299504ad8296"
   },
   "resources/views/landing.blade.php": {
-    "mtime": 1790655571.6692915,
-    "seen": 1790655631.157639,
-    "ast_hash": "c44fc0f5c1b5669ae9d0546feb620e9e",
+    "mtime": 1791346509.0697286,
+    "seen": 1792987791.0575502,
+    "ast_hash": "7edf001894e67c880697fc1d161f962b",
     "semantic_hash": ""
   },
   "resources/views/layouts/app.blade.php": {
-    "mtime": 1790655528.8583052,
-    "seen": 1790655631.1576397,
-    "ast_hash": "09f6cff5ed60f0a4eb5a44c828e212e1",
+    "mtime": 1790755584.0132377,
+    "seen": 1792987791.0575507,
+    "ast_hash": "dbfc6681214240023dfb83c2b9aa012d",
     "semantic_hash": ""
   },
   "resources/views/welcome.blade.php": {
@@ -348,9 +348,9 @@
     "semantic_hash": "3c6ce2e6d16444282b24a9aa63885563"
   },
   "routes/web.php": {
-    "mtime": 1790652288.097204,
-    "seen": 1790654573.7405257,
-    "ast_hash": "81842c694cfa7fd1fda543fbde9f49de",
+    "mtime": 1790732744.1723511,
+    "seen": 1792987791.0575533,
+    "ast_hash": "73867cd32527ada85601ae07270d06f2",
     "semantic_hash": ""
   },
   "tests/Feature/AdminAuthTest.php": {
@@ -486,9 +486,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790647884.933109,
-    "seen": 1790647906.7816575,
-    "ast_hash": "126e7a634695706a62ca96b9b95b1749",
+    "mtime": 1792545097.7615905,
+    "seen": 1792987791.0575762,
+    "ast_hash": "2ca1c38302da179e76d99ad0c0e83af8",
     "semantic_hash": ""
   },
   "brief_portal_layanan_kominfo_jatim.md": {
@@ -570,39 +570,39 @@
     "semantic_hash": ""
   },
   "app/Http/Controllers/Admin/AdminEventController.php": {
-    "mtime": 1790653349.6968303,
-    "seen": 1790654573.7404573,
-    "ast_hash": "296442c604892508819f4b141f5b315e",
+    "mtime": 1790732714.3388638,
+    "seen": 1792987791.0574772,
+    "ast_hash": "cc0b02222c1498c0bd962e7169d06e47",
     "semantic_hash": ""
   },
   "app/Http/Controllers/Admin/AdminGalleryController.php": {
-    "mtime": 1790653341.0534189,
-    "seen": 1790654573.7404585,
-    "ast_hash": "7037054d521199560b1941e52a3117bb",
+    "mtime": 1790732730.5309753,
+    "seen": 1792987791.057479,
+    "ast_hash": "3e647507ce3efc4e430e707f59176fa0",
     "semantic_hash": ""
   },
   "app/Http/Controllers/Admin/AdminNewsController.php": {
-    "mtime": 1790653258.340302,
-    "seen": 1790654573.7404592,
-    "ast_hash": "21e9e4f9bb4f82bd6dc16e82362ae89b",
+    "mtime": 1790732695.688403,
+    "seen": 1792987791.0574799,
+    "ast_hash": "985bce5e2e233cd7cf9b8eced0c59605",
     "semantic_hash": ""
   },
   "app/Models/Event.php": {
-    "mtime": 1790652070.440492,
-    "seen": 1790654573.740465,
-    "ast_hash": "d0c930ee4ca97991cb1b6a8bb7aa73f2",
+    "mtime": 1790733237.6829808,
+    "seen": 1792987791.0574868,
+    "ast_hash": "c0a3b4cde972aef45712593b6b0a03a3",
     "semantic_hash": ""
   },
   "app/Models/Gallery.php": {
-    "mtime": 1790652096.253867,
-    "seen": 1790654573.7404659,
-    "ast_hash": "e4b9baf4f0d74cd3c96e1e8fe40533b9",
+    "mtime": 1790733241.6830053,
+    "seen": 1792987791.0574877,
+    "ast_hash": "7483da4e863b1a5bb214717e70642a0a",
     "semantic_hash": ""
   },
   "app/Models/News.php": {
-    "mtime": 1790652047.8270154,
-    "seen": 1790654573.7404666,
-    "ast_hash": "02c3964d0a273f0ea75b0e89d9d7a0ad",
+    "mtime": 1790733232.128602,
+    "seen": 1792987791.0574887,
+    "ast_hash": "8d3c11b209b64bcdf02392ab25f7dc2b",
     "semantic_hash": ""
   },
   "database/migrations/2026_09_29_000001_create_news_table.php": {
@@ -642,15 +642,15 @@
     "semantic_hash": ""
   },
   "resources/views/admin/events/create.blade.php": {
-    "mtime": 1790652392.2129216,
-    "seen": 1790654573.7405074,
-    "ast_hash": "3d006b97a3a8cf6126ecdef06e7b2d82",
+    "mtime": 1790732845.0542579,
+    "seen": 1792987791.057532,
+    "ast_hash": "7dd6d367a72f31d57091bd5c0cb48169",
     "semantic_hash": ""
   },
   "resources/views/admin/events/edit.blade.php": {
-    "mtime": 1790652411.0214791,
-    "seen": 1790654573.7405083,
-    "ast_hash": "8e87966cf51fddb1085bdf1d4ae7ed90",
+    "mtime": 1790732847.064319,
+    "seen": 1792987791.057533,
+    "ast_hash": "7b2643d5bbfa8fcba40b7695649381d8",
     "semantic_hash": ""
   },
   "resources/views/admin/events/index.blade.php": {
@@ -660,15 +660,15 @@
     "semantic_hash": ""
   },
   "resources/views/admin/galleries/create.blade.php": {
-    "mtime": 1790652543.6966858,
-    "seen": 1790654573.74051,
-    "ast_hash": "352c75ecf9d5ec825ba6609faf9c27fd",
+    "mtime": 1790732894.6230824,
+    "seen": 1792987791.0575347,
+    "ast_hash": "0d61626b0df5d76fa53a27bb2105439a",
     "semantic_hash": ""
   },
   "resources/views/admin/galleries/edit.blade.php": {
-    "mtime": 1790652557.9590867,
-    "seen": 1790654573.7405107,
-    "ast_hash": "3dee286f895787789384faccab88154b",
+    "mtime": 1790732896.6309326,
+    "seen": 1792987791.0575356,
+    "ast_hash": "f44543814893b56a84a94770ad70358e",
     "semantic_hash": ""
   },
   "resources/views/admin/galleries/index.blade.php": {
@@ -678,15 +678,15 @@
     "semantic_hash": ""
   },
   "resources/views/admin/news/create.blade.php": {
-    "mtime": 1790652352.2918348,
-    "seen": 1790654573.7405143,
-    "ast_hash": "98c3a40c996331f1f28c23b191701945",
+    "mtime": 1790732796.678983,
+    "seen": 1792987791.0575392,
+    "ast_hash": "adbeaa099cabc6e989e77b5ea2b09c48",
     "semantic_hash": ""
   },
   "resources/views/admin/news/edit.blade.php": {
-    "mtime": 1790652370.9692144,
-    "seen": 1790654573.7405148,
-    "ast_hash": "72d285cda614449b43816197617eb942",
+    "mtime": 1790732798.6958635,
+    "seen": 1792987791.0575404,
+    "ast_hash": "5bdcd3bfc2ea20df325b999b6632450a",
     "semantic_hash": ""
   },
   "resources/views/admin/news/index.blade.php": {
@@ -717,6 +717,60 @@
     "mtime": 1783334811.918,
     "seen": 1790655631.1576722,
     "ast_hash": "0a547bcfe464aa8dd2f31f65f2ae4bd3",
+    "semantic_hash": ""
+  },
+  "app/Http/Controllers/Admin/AdminVideoController.php": {
+    "mtime": 1790732675.0506022,
+    "seen": 1792987791.0574834,
+    "ast_hash": "5009810753fd0aee778abe32d745ec46",
+    "semantic_hash": ""
+  },
+  "app/Models/Video.php": {
+    "mtime": 1790732632.0427234,
+    "seen": 1792987791.0574925,
+    "ast_hash": "40d26465fd0db4a94bafde1abc5a4147",
+    "semantic_hash": ""
+  },
+  "database/migrations/2026_09_30_000001_create_videos_table.php": {
+    "mtime": 1790732603.1967304,
+    "seen": 1792987791.057516,
+    "ast_hash": "a0d277a16151175203fcc6ddf8a0db22",
+    "semantic_hash": ""
+  },
+  "database/seeders/VideoSeeder.php": {
+    "mtime": 1790733332.0486016,
+    "seen": 1792987791.0575233,
+    "ast_hash": "1a88bb64741f45bc8f08f020371574a7",
+    "semantic_hash": ""
+  },
+  "resources/views/admin/videos/create.blade.php": {
+    "mtime": 1790732966.2933755,
+    "seen": 1792987791.0575476,
+    "ast_hash": "3733fe41cbe4ca584122071ce38cb475",
+    "semantic_hash": ""
+  },
+  "resources/views/admin/videos/edit.blade.php": {
+    "mtime": 1790732968.3023987,
+    "seen": 1792987791.0575483,
+    "ast_hash": "ae8a69c8ae71be9558449582bbe46c87",
+    "semantic_hash": ""
+  },
+  "resources/views/admin/videos/index.blade.php": {
+    "mtime": 1790732946.6776805,
+    "seen": 1792987791.057549,
+    "ast_hash": "7fef06f338b79365a7ac7cbc150632ff",
+    "semantic_hash": ""
+  },
+  "wireframe.html": {
+    "mtime": 1792373562.2499216,
+    "seen": 1792987791.0575786,
+    "ast_hash": "b671961c648913ed9cbf17e5c0898dee",
+    "semantic_hash": ""
+  },
+  "wireframe_cms.html": {
+    "mtime": 1792987655.344085,
+    "seen": 1792987791.0575795,
+    "ast_hash": "f5cc4e74fb10ea287b3559c682893884",
     "semantic_hash": ""
   }
 }
