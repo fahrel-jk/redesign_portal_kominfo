@@ -1,4 +1,4 @@
-@extends('admin.layout')
+﻿@extends('admin.layout')
 
 @section('title', 'Edit Kategori')
 @section('breadcrumb')
@@ -73,7 +73,7 @@
                     </div>
                     <div>
                         <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px 0;">
-                            <input type="checkbox" name="is_active" value="1" {{ old('is_active', $category->is_active) ? 'checked' : '' }} style="width: 18px; height: 18px; border-radius: 5px; accent-color: #1d4ed8;">
+                            <input type="checkbox" name="is_active" value="1" {{ old('is_active', $category->is_active) ? 'checked' : '' }} style="width: 18px; height: 18px; border-radius: 5px; accent-color: #8BC4FE;">
                             <span style="font-size: 13px; font-weight: 600; color: #334155;">Tampilkan di portal</span>
                         </label>
                     </div>
@@ -82,7 +82,7 @@
 
             <div style="display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: 28px; padding-top: 20px; border-top: 1px solid #f1f5f9;">
                 <a href="{{ route('admin.categories.index') }}" style="padding: 10px 20px; border-radius: 9px; font-size: 13px; font-weight: 700; color: #475569; text-decoration: none; background: #f1f5f9; transition: background 0.15s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'">Batal</a>
-                <button type="submit" style="padding: 10px 24px; border-radius: 9px; font-size: 13px; font-weight: 700; color: #ffffff; background: #1d4ed8; border: none; cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='#1e40af'" onmouseout="this.style.background='#1d4ed8'">Perbarui Kategori</button>
+                <button type="submit" style="padding: 10px 24px; border-radius: 9px; font-size: 13px; font-weight: 700; color: #0f172a; background: #8BC4FE; border: none; cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='#72b5fb'" onmouseout="this.style.background='#8BC4FE'">Perbarui Kategori</button>
             </div>
         </form>
     </div>

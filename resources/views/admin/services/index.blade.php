@@ -1,4 +1,4 @@
-@extends('admin.layout')
+﻿@extends('admin.layout')
 
 @section('title', 'Daftar Layanan')
 @section('breadcrumb')
@@ -14,7 +14,7 @@
             <h1 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 2px;">Layanan Digital</h1>
             <p style="font-size: 13px; color: #64748b; font-weight: 500; margin: 0;">Kelola katalog layanan, konfigurasi akses domain dan path.</p>
         </div>
-        <a href="{{ route('admin.services.create') }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #1d4ed8; color: #ffffff; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s;" onmouseover="this.style.background='#1e40af'" onmouseout="this.style.background='#1d4ed8'">
+        <a href="{{ route('admin.services.create') }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #8BC4FE; color: #0f172a; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s;" onmouseover="this.style.background='#72b5fb'" onmouseout="this.style.background='#8BC4FE'">
             <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
             Tambah Layanan
         </a>
@@ -88,7 +88,7 @@
                                 </div>
                             @else
                                 <div>
-                                    <span style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; background: #eff6ff; color: #1d4ed8; font-size: 11.5px; font-weight: 700;">
+                                    <span style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; background: rgba(139, 196, 254, 0.25); color: #0369a1; font-size: 11.5px; font-weight: 700;">
                                         <i data-lucide="globe" style="width: 12px; height: 12px;"></i> Domain
                                     </span>
                                     <div style="font-size: 11.5px; color: #64748b; margin-top: 3px; font-family: monospace; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $service->url }}</div>

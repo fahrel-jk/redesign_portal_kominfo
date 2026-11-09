@@ -1,4 +1,4 @@
-@extends('admin.layout')
+﻿@extends('admin.layout')
 
 @section('title', 'Kategori Layanan')
 @section('breadcrumb')
@@ -14,7 +14,7 @@
             <h1 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 2px;">Kategori Layanan</h1>
             <p style="font-size: 13px; color: #64748b; font-weight: 500; margin: 0;">Pengelompokan layanan digital Kominfo Jawa Timur.</p>
         </div>
-        <a href="{{ route('admin.categories.create') }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #1d4ed8; color: #ffffff; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s;" onmouseover="this.style.background='#1e40af'" onmouseout="this.style.background='#1d4ed8'">
+        <a href="{{ route('admin.categories.create') }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #8BC4FE; color: #0f172a; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s;" onmouseover="this.style.background='#72b5fb'" onmouseout="this.style.background='#8BC4FE'">
             <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
             Tambah Kategori
         </a>

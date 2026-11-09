@@ -39,9 +39,8 @@
         .cms-sidebar .nav-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 10px 16px;
-            border-radius: 10px;
+            padding: 9px 16px;
+            border-radius: 8px;
             font-size: 13.5px;
             font-weight: 600;
             color: #64748b;
@@ -53,15 +52,9 @@
             color: #334155;
         }
         .cms-sidebar .nav-item.active {
-            background: #1d4ed8;
-            color: #ffffff;
-            box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
-        }
-        .cms-sidebar .nav-item.active svg { color: #ffffff; }
-        .cms-sidebar .nav-item svg {
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
+            background: #8BC4FE;
+            color: #0f172a;
+            font-weight: 700;
         }
         
         /* Main content offset for sidebar */
@@ -120,7 +113,7 @@
             top: calc(100% + 8px);
             background: #ffffff;
             border: 1px solid #e2e8f0;
-            border-radius: 12px;
+            border-radius: 10px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             min-width: 220px;
             padding: 6px;
@@ -163,7 +156,7 @@
             <div style="display: flex; align-items: center; gap: 12px;">
                 <img src="{{ asset('images/logo_diskominfo-nobg.png') }}" alt="Logo Kominfo" style="height: 36px; width: auto;">
                 <div>
-                    <div style="font-size: 14px; font-weight: 800; color: #1e293b; letter-spacing: -0.3px;">Kominfo Jatim</div>
+                    <div style="font-size: 14px; font-weight: 700; color: #1e293b; letter-spacing: -0.3px;">Kominfo Jatim</div>
                     <div style="font-size: 11px; font-weight: 500; color: #94a3b8;">CMS Portal Layanan</div>
                 </div>
             </div>
@@ -172,57 +165,48 @@
         <!-- Navigation -->
         <nav style="flex: 1; padding: 12px; overflow-y: auto;">
             <div style="margin-bottom: 20px;">
-                <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; padding: 0 16px 8px;">Menu Utama</div>
+                <div style="font-size: 10.5px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.3px; padding: 0 16px 8px;">Menu Utama</div>
                 <a href="{{ route('admin.dashboard') }}" class="nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                    <i data-lucide="bar-chart-3"></i>
-                    <span>Dashboard</span>
+                    Dashboard
                 </a>
             </div>
 
             <div style="margin-bottom: 20px;">
-                <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; padding: 0 16px 8px;">Kelola Konten</div>
+                <div style="font-size: 10.5px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.3px; padding: 0 16px 8px;">Kelola Konten</div>
                 <div style="display: flex; flex-direction: column; gap: 2px;">
                     <a href="{{ route('admin.categories.index') }}" class="nav-item {{ request()->routeIs('admin.categories.*') ? 'active' : '' }}">
-                        <i data-lucide="layers"></i>
-                        <span>Kategori</span>
+                        Kategori
                     </a>
                     <a href="{{ route('admin.services.index') }}" class="nav-item {{ request()->routeIs('admin.services.*') ? 'active' : '' }}">
-                        <i data-lucide="layout-grid"></i>
-                        <span>Layanan Digital</span>
+                        Layanan Digital
                     </a>
                     <a href="{{ route('admin.news.index') }}" class="nav-item {{ request()->routeIs('admin.news.*') ? 'active' : '' }}">
-                        <i data-lucide="newspaper"></i>
-                        <span>Berita</span>
+                        Berita
                     </a>
                     <a href="{{ route('admin.events.index') }}" class="nav-item {{ request()->routeIs('admin.events.*') ? 'active' : '' }}">
-                        <i data-lucide="calendar"></i>
-                        <span>Kalender Kegiatan</span>
+                        Kalender Kegiatan
                     </a>
                     <a href="{{ route('admin.galleries.index') }}" class="nav-item {{ request()->routeIs('admin.galleries.*') ? 'active' : '' }}">
-                        <i data-lucide="image"></i>
-                        <span>Galeri Foto</span>
+                        Galeri Foto
                     </a>
                     <a href="{{ route('admin.videos.index') }}" class="nav-item {{ request()->routeIs('admin.videos.*') ? 'active' : '' }}">
-                        <i data-lucide="video"></i>
-                        <span>Video YouTube</span>
+                        Video YouTube
                     </a>
                 </div>
             </div>
 
             <div>
-                <div style="font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; padding: 0 16px 8px;">Pengaturan</div>
+                <div style="font-size: 10.5px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.3px; padding: 0 16px 8px;">Pengaturan</div>
                 <a href="{{ route('admin.users.index') }}" class="nav-item {{ request()->routeIs('admin.users.*') ? 'active' : '' }}">
-                    <i data-lucide="shield-check"></i>
-                    <span>Administrator</span>
+                    Administrator
                 </a>
             </div>
         </nav>
 
         <!-- Sidebar footer -->
         <div style="padding: 12px; border-top: 1px solid #e2e8f0;">
-            <a href="{{ route('portal.home') }}" target="_blank" class="nav-item" style="color: #3b82f6;">
-                <i data-lucide="external-link"></i>
-                <span>Buka Portal Publik</span>
+            <a href="{{ route('portal.home') }}" target="_blank" class="nav-item" style="color: #0369a1; background: rgba(139, 196, 254, 0.2); font-weight: 600;">
+                Buka Portal Publik
             </a>
         </div>
     </aside>
@@ -250,7 +234,7 @@
             <!-- Profile -->
             <div style="position: relative;" id="profileContainer">
                 <button onclick="toggleProfile()" style="display: flex; align-items: center; gap: 10px; background: none; border: 1px solid #e2e8f0; border-radius: 10px; padding: 6px 12px 6px 6px; cursor: pointer; transition: all 0.15s;" onmouseover="this.style.borderColor='#cbd5e1'" onmouseout="this.style.borderColor='#e2e8f0'">
-                    <div style="width: 32px; height: 32px; border-radius: 8px; background: #1d4ed8; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">
+                    <div style="width: 32px; height: 32px; border-radius: 8px; background: #8BC4FE; color: #0f172a; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">
                         {{ strtoupper(substr(Auth::user()->name ?? 'A', 0, 1)) }}
                     </div>
                     <div style="text-align: left; display: none;" class="sm:block" id="profileName">
@@ -284,7 +268,7 @@
         <main class="cms-content">
             {{-- Success toast --}}
             @if(session('success'))
-                <div class="cms-toast" style="margin-bottom: 20px; padding: 14px 18px; border-radius: 12px; background: #f0fdf4; border: 1px solid #bbf7d0; display: flex; align-items: center; justify-content: space-between;">
+                <div class="cms-toast" style="margin-bottom: 20px; padding: 14px 18px; border-radius: 8px; background: #f0fdf4; border: 1px solid #bbf7d0; display: flex; align-items: center; justify-content: space-between;">
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <div style="width: 28px; height: 28px; border-radius: 8px; background: #dcfce7; display: flex; align-items: center; justify-content: center;">
                             <i data-lucide="check" style="width: 16px; height: 16px; color: #16a34a;"></i>
@@ -298,7 +282,7 @@
             @endif
 
             @if(session('error'))
-                <div class="cms-toast" style="margin-bottom: 20px; padding: 14px 18px; border-radius: 12px; background: #fef2f2; border: 1px solid #fecaca; display: flex; align-items: center; justify-content: space-between;">
+                <div class="cms-toast" style="margin-bottom: 20px; padding: 14px 18px; border-radius: 8px; background: #fef2f2; border: 1px solid #fecaca; display: flex; align-items: center; justify-content: space-between;">
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <div style="width: 28px; height: 28px; border-radius: 8px; background: #fee2e2; display: flex; align-items: center; justify-content: center;">
                             <i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #dc2626;"></i>

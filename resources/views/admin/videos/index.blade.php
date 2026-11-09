@@ -1,4 +1,4 @@
-@extends('admin.layout')
+﻿@extends('admin.layout')
 
 @section('title', 'Kelola Video')
 @section('breadcrumb')
@@ -12,7 +12,7 @@
             <h1 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 2px;">Kelola Video YouTube</h1>
             <p style="font-size: 13px; color: #64748b; font-weight: 500; margin: 0;">Kelola daftar video YouTube yang ditampilkan di landing page.</p>
         </div>
-        <a href="{{ route('admin.videos.create') }}" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 10px; background: #1d4ed8; color: #ffffff; font-size: 13px; font-weight: 700; text-decoration: none;">
+        <a href="{{ route('admin.videos.create') }}" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 10px; background: #8BC4FE; color: #0f172a; font-size: 13px; font-weight: 700; text-decoration: none;">
             <i data-lucide="plus" style="width: 16px; height: 16px;"></i> Tambah Video
         </a>
     </div>
@@ -45,7 +45,7 @@
                         <div style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">{{ $item->title }}</div>
                     </td>
                     <td style="padding: 12px 16px;">
-                        <span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: #dbeafe; color: #1d4ed8; font-size: 11px; font-weight: 700;">{{ $item->category }}</span>
+                        <span style="display: inline-block; padding: 3px 10px; border-radius: 999px; background: rgba(139, 196, 254, 0.25); color: #0369a1; font-size: 11px; font-weight: 700;">{{ $item->category }}</span>
                     </td>
                     <td style="padding: 12px 16px; color: #64748b; font-size: 12px;">{{ $item->published_at?->format('d-m-Y H:i') ?? '-' }}</td>
                     <td style="padding: 12px 16px; text-align: center;">
@@ -58,7 +58,7 @@
                     </td>
                     <td style="padding: 12px 16px; text-align: center;">
                         <div style="display: flex; align-items: center; justify-content: center; gap: 6px;">
-                            <a href="{{ route('admin.videos.edit', $item->id) }}" style="padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; color: #1d4ed8; background: #eff6ff; text-decoration: none;">Edit</a>
+                            <a href="{{ route('admin.videos.edit', $item->id) }}" style="padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; color: #0369a1; background: rgba(139, 196, 254, 0.25); text-decoration: none;">Edit</a>
                             <form action="{{ route('admin.videos.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Hapus video ini?')" style="display: inline;">
                                 @csrf @method('DELETE')
                                 <button type="submit" style="padding: 6px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; color: #dc2626; background: #fef2f2; border: none; cursor: pointer;">Hapus</button>

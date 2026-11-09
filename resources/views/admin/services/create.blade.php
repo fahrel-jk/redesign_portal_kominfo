@@ -1,4 +1,4 @@
-@extends('admin.layout')
+﻿@extends('admin.layout')
 
 @section('title', 'Tambah Layanan')
 @section('breadcrumb')
@@ -70,14 +70,14 @@
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
                         <label style="display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 9px; background: #ffffff; border: 1px solid #e2e8f0; cursor: pointer; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#93c5fd'" onmouseout="this.querySelector('input').checked ? this.style.borderColor='#3b82f6' : this.style.borderColor='#e2e8f0'">
-                            <input type="radio" name="access_type" value="domain" {{ old('access_type', 'domain') == 'domain' ? 'checked' : '' }} onchange="toggleAccessFields('domain')" style="accent-color: #1d4ed8;">
+                            <input type="radio" name="access_type" value="domain" {{ old('access_type', 'domain') == 'domain' ? 'checked' : '' }} onchange="toggleAccessFields('domain')" style="accent-color: #8BC4FE;">
                             <div>
                                 <div style="font-size: 13px; font-weight: 700; color: #1e293b;">Domain</div>
                                 <div style="font-size: 11px; color: #94a3b8; font-weight: 500;">Subdomain mandiri</div>
                             </div>
                         </label>
                         <label style="display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 9px; background: #ffffff; border: 1px solid #e2e8f0; cursor: pointer; transition: border-color 0.15s;" onmouseover="this.style.borderColor='#93c5fd'" onmouseout="this.querySelector('input').checked ? this.style.borderColor='#3b82f6' : this.style.borderColor='#e2e8f0'">
-                            <input type="radio" name="access_type" value="path" {{ old('access_type') == 'path' ? 'checked' : '' }} onchange="toggleAccessFields('path')" style="accent-color: #1d4ed8;">
+                            <input type="radio" name="access_type" value="path" {{ old('access_type') == 'path' ? 'checked' : '' }} onchange="toggleAccessFields('path')" style="accent-color: #8BC4FE;">
                             <div>
                                 <div style="font-size: 13px; font-weight: 700; color: #1e293b;">Path</div>
                                 <div style="font-size: 11px; color: #94a3b8; font-weight: 500;">Path terintegrasi (/sima)</div>
@@ -124,7 +124,7 @@
                     </div>
                     <div>
                         <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; padding: 10px 0;">
-                            <input type="checkbox" name="is_active" value="1" {{ old('is_active', 1) ? 'checked' : '' }} style="width: 18px; height: 18px; border-radius: 5px; accent-color: #1d4ed8;">
+                            <input type="checkbox" name="is_active" value="1" {{ old('is_active', 1) ? 'checked' : '' }} style="width: 18px; height: 18px; border-radius: 5px; accent-color: #8BC4FE;">
                             <span style="font-size: 13px; font-weight: 600; color: #334155;">Tampilkan di portal</span>
                         </label>
                     </div>
@@ -133,7 +133,7 @@
 
             <div style="display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin-top: 28px; padding-top: 20px; border-top: 1px solid #f1f5f9;">
                 <a href="{{ route('admin.services.index') }}" style="padding: 10px 20px; border-radius: 9px; font-size: 13px; font-weight: 700; color: #475569; text-decoration: none; background: #f1f5f9; transition: background 0.15s;" onmouseover="this.style.background='#e2e8f0'" onmouseout="this.style.background='#f1f5f9'">Batal</a>
-                <button type="submit" style="padding: 10px 24px; border-radius: 9px; font-size: 13px; font-weight: 700; color: #ffffff; background: #1d4ed8; border: none; cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='#1e40af'" onmouseout="this.style.background='#1d4ed8'">Simpan Layanan</button>
+                <button type="submit" style="padding: 10px 24px; border-radius: 9px; font-size: 13px; font-weight: 700; color: #0f172a; background: #8BC4FE; border: none; cursor: pointer; transition: background 0.15s;" onmouseover="this.style.background='#72b5fb'" onmouseout="this.style.background='#8BC4FE'">Simpan Layanan</button>
             </div>
         </form>
     </div>

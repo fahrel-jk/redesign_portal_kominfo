@@ -83,12 +83,12 @@
 
                 <div style="margin-bottom: 24px;">
                     <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                        <input type="checkbox" name="remember" style="width: 16px; height: 16px; accent-color: #1d4ed8; border-radius: 4px;">
+                        <input type="checkbox" name="remember" style="width: 16px; height: 16px; accent-color: #8BC4FE; border-radius: 4px;">
                         <span style="font-size: 12.5px; font-weight: 500; color: #64748b;">Ingat saya di perangkat ini</span>
                     </label>
                 </div>
 
-                <button type="submit" style="width: 100%; padding: 12px; border-radius: 10px; background: #1d4ed8; color: #ffffff; font-size: 14px; font-weight: 700; border: none; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.background='#1e40af'" onmouseout="this.style.background='#1d4ed8'">
+                <button type="submit" style="width: 100%; padding: 12px; border-radius: 10px; background: #8BC4FE; color: #0f172a; font-size: 14px; font-weight: 700; border: none; cursor: pointer; transition: background 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.background='#72b5fb'" onmouseout="this.style.background='#8BC4FE'">
                     <i data-lucide="log-in" style="width: 17px; height: 17px;"></i>
                     Masuk
                 </button>

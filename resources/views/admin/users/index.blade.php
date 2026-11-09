@@ -1,4 +1,4 @@
-@extends('admin.layout')
+﻿@extends('admin.layout')
 
 @section('title', 'Administrator')
 @section('breadcrumb')
@@ -14,7 +14,7 @@
             <h1 style="font-size: 20px; font-weight: 800; color: #0f172a; margin: 0 0 2px;">Administrator</h1>
             <p style="font-size: 13px; color: #64748b; font-weight: 500; margin: 0;">Pengelola yang memiliki akses ke CMS Portal.</p>
         </div>
-        <a href="{{ route('admin.users.create') }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #1d4ed8; color: #ffffff; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s;" onmouseover="this.style.background='#1e40af'" onmouseout="this.style.background='#1d4ed8'">
+        <a href="{{ route('admin.users.create') }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #8BC4FE; color: #0f172a; border-radius: 10px; font-size: 13px; font-weight: 700; text-decoration: none; transition: background 0.15s;" onmouseover="this.style.background='#72b5fb'" onmouseout="this.style.background='#8BC4FE'">
             <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
             Tambah Admin
         </a>
@@ -38,7 +38,7 @@
                     <tr style="border-bottom: 1px solid #f8fafc;" onmouseover="this.style.background='#fafbfd'" onmouseout="this.style.background='transparent'">
                         <td style="padding: 14px 22px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
-                                <div style="width: 36px; height: 36px; border-radius: 9px; background: #1d4ed8; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0;">
+                                <div style="width: 36px; height: 36px; border-radius: 9px; background: #8BC4FE; color: #0f172a; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0;">
                                     {{ strtoupper(substr($user->name, 0, 1)) }}
                                 </div>
                                 <span style="font-weight: 700; color: #1e293b; font-size: 13.5px;">{{ $user->name }}</span>
@@ -48,7 +48,7 @@
                             {{ $user->email }}
                         </td>
                         <td style="padding: 14px 16px; text-align: center;">
-                            <span style="display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 11.5px; font-weight: 700; text-transform: capitalize; {{ $user->role === 'admin' ? 'background: #eff6ff; color: #1d4ed8;' : 'background: #f1f5f9; color: #475569;' }}">
+                            <span style="display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 11.5px; font-weight: 700; text-transform: capitalize; {{ $user->role === 'admin' ? 'background: rgba(139, 196, 254, 0.25); color: #0369a1;' : 'background: #f1f5f9; color: #475569;' }}">
                                 {{ $user->role }}
                             </span>
                         </td>
